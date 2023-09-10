@@ -1,0 +1,823 @@
+LakeID,OfficialName,Town,LakeRegion,LakeArea,BasinArea,Elevation,MaxDepth,MeanDepth,OutletType,locationName,locationType,centerLatitude,centerLongitude
+ABBEY,Abbey Pond,Ripton,West Central,3,433,1710,,,NATURAL,Abbey Pond Ripton,Pond,44.0336714,-73.0601163
+ABENAKI,Lake Abenaki,Thetford,East Central,44,645,840,11,,NATURAL with ARTIFICIAL CONTROL,Lake Abenaki Thetford,Lake (Artificial Control),43.8328472,-72.2345354
+ADAM,Adam Pond,Jamaica,Green Mtn South,7,186,900,,,,Adam Pond Jamaica,Pond,43.1089666,-72.7603735
+ADAMS (ENOSBG),Adams Pond,Enosburgh,Champlain ,11,1477,850,,,,Adams Pond Enosburg,Pond,44.8808804,-72.7201307
+ADAMS (WOODFD),Adams Reservoir,Woodford,Green Mtn South,21,821,2317,15,6,ARTIFICIAL,Adams Reservoir Woodford,Reservoir,42.886908,-73.03933
+AINSWORTH,Unnamed pond referred to by DEC as Ainsworth,Williamstown,East Central,,,875,,,,Ainsworth Pond Williamstown,Pond,44.08,-72.57
+ALBANY-NE,Unnamed pond referred to by DEC as Albany-NE,Albany,North Central,,,1635,,,,Albany-NE Pond Albany,Pond,44.75,-72.27
+ALBERT LORD,Unnamed pond referred to by DEC as Albert Lord,Cavendish,East Central,7,62,1090,,,,Albert Lord Pond Cavendish,Pond,43.43,-72.55
+ALDER,Unnamed pond referred to by DEC as Alder,Sunderland,Green Mtn South,,,2458,,,,Alder Pond Sunderland,Pond,43.07,-73.03
+AMES,Unnamed pond referred to by DEC as Ames,Albany,North Central,,,1505,,,,Ames Pond Albany,Pond,44.7,-72.3
+AMHERST,Amherst Lake,Plymouth,West Central,81,12204,1071,90,60,NATURAL with ARTIFICIAL CONTROL,Amherst Lake Plymouth,Lake (Artificial Control),43.4856261,-72.7042639
+ANDOVER,Unnamed pond referred to by DEC as Andover,Andover,West Central,11,389,1545,,,,Andover Pond Andover,Pond,43.23,-72.75
+ANNIS,Unnamed pond referred to by DEC as Annis,Barton,NE Kingdom,,,1185,,,,Annis Pond Barton,Pond,44.7,-72.1
+ANSEL,Ansel Pond,Bethel,West Central,2,544,810,,,,Ansel Pond Bethel,Pond,43.8370111,-72.6173232
+APPALACHIAN GAP,Unnamed Pond referred to by DEC as Appalachian Gap Pond,Buel's Gore,Champlain ,,,,,,,Appalachian Gap Pond Buel's Gore,Pond,44.212233,-72.934377
+ARROWHEAD MOUNTAIN,Arrowhead Mountain Lake,Milton,Champlain ,760,442880,290,30,11,ARTIFICIAL,Arrowhead Mountain Lake Milton,Reservoir,44.67,-73.1
+ATHENS,Athens Pond,Athens,Green Mtn South,21,356,1180,12,,NATURAL with ARTIFICIAL CONTROL,Athens Pond Athens,Lake (Artificial Control),43.1225778,-72.6039806
+ATHENS-357,Unnamed pond referred to by DEC as Athens - 357,Athens,Green Mtn South,6,477,1170,,,,Athens - 357 Pond Athens,Pond,43.12,-72.6
+AUSTIN,Austin Pond,Hubbardton,West Central,28,3137,442,7,,NATURAL with ARTIFICIAL CONTROL,Austin Pond Hubbardton,Lake (Artificial Control),43.72,-73.2
+BABCOCK,Unnamed pond referred to by DEC as Babcock,Sharon,East Central,,,630,,,,Babcock Pond Sharon,Pond,43.73,-72.45
+BACK,Back Pond,Brighton,NE Kingdom,10,2432,1180,,,,Back Pond Brighton,Pond,44.8142157,-71.8678726
+BAILEY,Bailey Pond,Marshfield,North Central,17,3847,1250,,,,Bailey Pond Marshfield,Pond,44.33,-72.35
+BAILEYS MILLS,Unnamed pond referred to by DEC as Baileys Mills,Chester,East Central,10,103,630,,,,Baileys Mills Pond Chester,Pond,43.3,-72.6
+BAKER (BARTON),Baker Pond,Barton,North Central,51,1439,1152,30,16,NATURAL,Baker Pond Barton,Pond,44.746438,-72.2348255
+BAKER (BRKFLD),Baker Pond,Brookfield,East Central,35,1067,1290,10,3,ARTIFICIAL,Baker Pond Brookfield,Reservoir,44.07,-72.63
+BAKERSFIELD,Unnamed pond referred to by DEC as Bakersfield,Bakersfield,Champlain ,,,780,,,,Bakersfield Pond Bakersfield,Pond,44.82,-72.78
+BAKERSFIELD-N,Unnamed pond referred to by DEC as Bakersfield - N,Bakersfield,Champlain ,10,197,720,,,,Bakersfield - N Pond Bakersfield,Pond,44.83,-72.78
+BALD HILL,Bald Hill Pond,Westmore,NE Kingdom,108,2588,1794,42,16,NATURAL,Bald Hill Pond Westmore,Pond,44.7394947,-71.9778742
+BALDWIN,Baldwin Pond,Starksboro,Champlain ,9,201,699,,,,Baldwin Pond Starksboro,Pond,44.2272783,-73.051787
+BALL MOUNTAIN,Ball Mountain Reservoir,Jamaica,Green Mtn South,85,110080,870,,,ARTIFICIAL,Ball Mountain Reservoir Jamaica,Reservoir,43.13,-72.78
+BANCROFT,Bancroft Pond,Plainfield,North Central,14,167,1470,12,,NATURAL,Bancroft Pond Plainfield,Pond,44.2472827,-72.382046
+BARBER,Barber Lake (Lake Potter),Pownal,Green Mtn South,19,170,1103,20,,NATURAL with ARTIFICIAL CONTROL,Barber Pond Pownal,Lake (Artificial Control),42.8,-73.2
+BARBOS,Barbos Lake,Sandgate,Green Mtn South,7,48,1844,,,,Barbos Lake Sandgate,Lake,43.15,-73.15
+BARKMILL,Unnamed pond referred to by DEC as Barkmill,Weathersfield,East Central,,,800,,,,Barkmill Pond Weathersfield,Pond,43.35,-72.43
+BEAN,Unnamed Pond referred to by DEC as Bean,Eden,North Central,,,1250,,,,Bean Pond Eden,Pond,44.68,-72.57
+BEAN (LYNDON),Bean Pond,Lyndon,NE Kingdom,24,223,1187,15,,NATURAL,Bean Pond Lyndon,Pond,44.5486657,-72.0714867
+BEAN (SUTTON),Bean Pond,Sutton,NE Kingdom,30,1208,1178,,,NATURAL,Bean Pond Sutton,Pond,44.6983842,-72.0862101
+BEAR,Bear Pond,Cambridge,Champlain ,1,2,3530,,,,Bear Pond Cambridge,Pond,44.5550515,-72.8045682
+BEAR MOUNTAIN,Unnamed Pond referred to by DEC as Bear Mountain,Walden,North Central,,,2155,,,,Bear Mountain Pond Walden,Pond,44.48,-72.18
+BEAVER (HARTLD),Beaver Pond,Hartland,East Central,2,157,1170,,,,Beaver Pond Hartland,Pond,43.5736814,-72.463148
+BEAVER (HOLLND),Beaver Pond,Holland,NE Kingdom,40,721,1535,80,30,NATURAL,Beaver Pond Holland,Pond,45.0047684,-71.9398184
+BEAVER (HYDEPK),Unnamed Pond referred to by DEC as Beaver,Hyde Park,North Central,16,683,1090,,,,Beaver Pond Hyde Park,Pond,44.6,-72.53
+BEAVER (MENDON),Beaver Pond,Mendon,West Central,6,349,1850,,,,Beaver Pond Mendon,Pond,43.6686787,-72.8539931
+BEAVER (PROCTR),Beaver Pond,Proctor,West Central,9,287,552,,,,Beaver Pond Proctor,Pond,43.67,-73.05
+BEAVER (ROXBRY),Beaver Pond,Roxbury,East Central,10,40,1710,,,,Beaver Pond Roxbury,Pond,44.0614517,-72.7203872
+BEAVER (WEAFLD),Unnamed Pond referred to by DEC as Beaver,Weathersfield,East Central,49,480,960,,,,Beaver Pond Weathersfield,Pond,43.4,-72.47
+BEAVER MEADOW,Unnamed Pond referred to by DEC as Beaver Meadow,Baltimore,East Central,5,178,930,,,,Beaver Meadow Pond Baltimore,Pond,44.87,-72.73
+BEAVER MEADOW BRK-L,Unnamed Pond referred to by DEC as Beaver Meadow Brook - Lower,Enosburgh,Champlain ,18,2148,700,,,,Beaver Meadow Brook - Lower Pond Enosburgh,Pond,44.9,-72.72
+BEAVER MEADOW BRK-U,Unnamed Pond referred to by DEC as Beaver Meadow Brook - Lower,Enosburgh,Champlain ,14,222,800,,,,Beaver Meadow Brook - Lower Pond Enosburgh,Pond,43.35,-72.57
+BEAVER MEADOWS,Beaver Meadows,Chittenden,West Central,3,380,1925,,,,Beaver Meadows Pond Chittenden,Pond,43.77,-72.9
+BECK,Beck Pond,Newark,NE Kingdom,6,294,1570,,,,Beck Pond Newark,Pond,44.7294949,-71.9167619
+BEEBE (HUBDTN),Beebe Pond,Hubbardton,West Central,111,1843,618,43,26,NATURAL with ARTIFICIAL CONTROL,Beebe Pond Hubbardton,Lake (Artificial Control),43.7342306,-73.1831677
+BEEBE (SUNDLD),Beebe Pond,Sunderland,Green Mtn South,8,161,2350,,,,Beebe Pond Sunderland,Pond,43.0523,-73.0320481
+BEECHER,Beecher Pond,Brighton,NE Kingdom,15,597,1227,,,,Beecher Pond Brighton,Pond,44.8117157,-71.849539
+BEETLE,Unnamed Pond referred to by DEC as Beetle,Troy,NE Kingdom,,,915,,,,Beetle Pond Troy,Pond,44.92,-72.37
+BELDING,Belding Pond,Johnson,North Central,4,86,1190,,,,Belding Pond Johnson,Pond,44.6169953,-72.7098435
+BELLEVUE,Unnamed Pond referred to by DEC as Bellevue,Fairfield,Champlain ,,,905,,,,Bellevue Pond Fairfield,Pond,44.77,-73.05
+BELVIDERE-NE,Unnamed Pond referred to by DEC as Belvidere - NE,Belvidere,Champlain ,9,426,1150,,,,Belvidere - NE Pond Belvidere,Pond,44.7675485,-72.5965061
+BERKSHIRE,Unnamed Pond referred to by DEC as Berkshire,Berkshire,Champlain ,8,1312,520,,,,Berkshire Pond Berkshire,Pond,44.97,-72.78
+BERLIN,Berlin Pond,Berlin,North Central,293,6738,976,59,27,NATURAL with ARTIFICIAL CONTROL,Berlin Pond Berlin,Lake (Artificial Control),44.18,-72.58
+BIG,Big Pond (Woodford Lake),Woodford,Green Mtn South,31,715,2265,28,13,NATURAL with ARTIFICIAL CONTROL,Big Pond Woodford,Lake (Artificial Control),42.88,-73.07
+BIG MUD,Big Mud Pond,Mount Tabor,West Central,15,267,2590,,,NATURAL,Big Mud Pond Mount Tabor,Pond,43.3142404,-72.9314907
+BIG MUDDY,Big Muddy Pond,Eden,North Central,17,123,1410,,,NATURAL,Big Muddy Pond Eden,Pond,44.7558819,-72.5995616
+BILLINGS,Billings Pond,Searsburg,Green Mtn South,4,2070,2310,,,,Billings Pond Searsburg,Pond,42.896469,-73.0084356
+BILLINGS MARSH,Billings Marsh Pond,West Haven,West Central,56,284,100,,,NATURAL,Billings Marsh Pond West Haven,Pond,43.6,-73.38
+BLACK (HUBDTN),Black Pond,Hubbardton,West Central,20,127,626,45,16,NATURAL,Black Pond Hubbardton,Pond,43.7031198,-73.2237234
+BLACK (PLYMTH),Black Pond,Plymouth,West Central,20,292,1330,7,,ARTIFICIAL,Black Pond Plymouth,Reservoir,43.55,-72.75
+BLAIR,Unnamed Pond referred to by DEC as Blair,Hancock,West Central,,,990,,,,Blair Pond Hancock,Pond,43.93,-72.85
+BLAKE,Unnamed Pond referred to by DEC as Blake,Windham,Green Mtn South,,,1780,,,,Blake Pond Windham,Pond,43.15,-72.72
+BLAKE (SHEFLD),Blake Pond,Sheffield,North Central,7,160,1550,,,,Blake Pond Sheffield,Pond,44.63533,-72.1184329
+BLAKE (SUTTON),Blake Pond,Sutton,NE Kingdom,8,102,1650,,,,Blake Pond Sutton,Pond,44.7128284,-72.0723209
+BLISS,Bliss Pond,Calais,North Central,46,591,1211,15,7,NATURAL,Bliss Pond Calais,Pond,44.3525574,-72.5006635
+BLODGETT,Unnamed Pond referred to by DEC as Blodgett,Bradford,East Central,15,2964,650,,,,Blodgett Pond Bradford,Pond,44.03,-72.1
+BLOODSUCKER,Bloodsucker Pond,Springfield,East Central,4,77,910,,,,Bloodsucker Pond Springfield,Pond,43.3370183,-72.4289783
+BLUE (CALAIS),Blue Pond,Calais,North Central,6,70,1210,,,,Blue Pond Calais,Pond,44.4117228,-72.4687192
+BLUE (HALFAX),Unnamed Pond referred to by DEC as Blue,Halifax,Green Mtn South,,,1270,,,,Blue Pond Halifax,Pond,42.8,-72.77
+BLUEBERRY,Blueberry Lake (Warren Lake),Warren,North Central,48,740,1550,16,,ARTIFICIAL,Blueberry Lake Warren,Reservoir,44.08,-72.83
+BM1145,Unnamed Pond referred to by DEC as BM1145,Plymouth,West Central,8,87,1090,,,,BM1145 Pond Plymouth,Pond,43.5,-72.72
+BM746,Unnamed Pond referred to by DEC as BM746,Brookfield,East Central,9,4370,730,,,,BM746 Pond Brookfield,Pond,44.05,-72.57
+BOG (FAIRLE),Bog Pond,Fairlee,East Central,1,16,1070,,,,Bog Pond Fairlee,Pond,43.9536785,-72.1464793
+BOLSTER,Bolster Reservoir,Barre Town,North Central,5,242,950,,,,Bolster Reservoir Barre Town,Pond,44.15,-72.53
+BOMOSEEN,Lake Bomoseen,Castleton,West Central,2360,23630,411,65,27,NATURAL with ARTIFICIAL CONTROL,Lake Bomoseen Castleton,Lake (Artificial Control),43.6442324,-73.2131665
+BOULLEY,Unnamed Pond referred to by DEC as Boulley,Johnson,North Central,,,915,,,,Boulley Pond Johnson,Pond,44.62,-72.7
+BOURN,Bourn Pond,Sunderland,Green Mtn South,55,410,2552,27,,NATURAL,Bourn Pond Sunderland,Pond,43.1061882,-73.0020474
+BRANCH,Branch Pond,Sunderland,Green Mtn South,34,315,2632,35,9,NATURAL,Branch Pond Sunderland,Pond,43.0809107,-73.0189922
+BREESE,Breese Pond,Hubbardton,West Central,22,354,552,,,NATURAL with ARTIFICIAL CONTROL,Breese Pond Hubbardton,Lake (Artificial Control),43.7139529,-73.2156679
+BREEZE,Unnamed Pond referred to by DEC as Breeze,Hartland,East Central,,,1200,,,,Breeze Pond Hartland,Pond,43.58,-72.47
+BRISTOL-NW,Unnamed Pond referred to by DEC as Bristol - NW,Bristol,Champlain ,9,104,565,,,,Bristol - NW Pond Bristol,Pond,44.17,-73.15
+BROCKLEBANK,Unnamed Pond referred to by DEC as Brocklebank,Tunbridge,East Central,7,197,1830,,,,Brocklebank Pond Tunbridge,Pond,43.93,-72.42
+BROOKSIDE,Brookside Pond,Orwell,West Central,14,2416,298,,,ARTIFICIAL,Brookside Pond Orwell,Reservoir,43.78,-73.32
+BROWN (WSTMOR),Brown Pond,Westmore,NE Kingdom,15,254,1850,,,,Brown Pond Westmore,Pond,44.7308838,-71.9820409
+BROWN (WHTHAM),Unnamed Pond referred to by DEC as Brown,Whitingham,Green Mtn South,,,1980,,,,Brown Pond Whitingham,Pond,42.77,-72.87
+BROWNINGTON,Brownington Pond,Brownington,NE Kingdom,139,3365,991,33,18,NATURAL,Brownington Pond Brownington,Pond,44.8786588,-72.1476007
+BROWNS,Browns Pond,Bakersfield,Champlain ,10,4661,550,,,,Browns Pond Bakersfield,Pond,44.82,-72.78
+BRUCE,Bruce Pond,Sheffield,North Central,27,369,1546,13,,NATURAL,Bruce Pond Sheffield,Pond,44.6403295,-72.187046
+BRUNSWICK SPRINGS,Brunswick Springs,Brunswick,NE Kingdom,16,140,930,,,,Brunswick Springs Pond Brunswick,Pond,44.73,-71.63
+BUCK,Buck Lake,Woodbury,North Central,39,225,1345,33,14,NATURAL,Buck Lake Woodbury,Lake,44.462555,-72.3995513
+BUFFALO,Unnamed Pond referred to by DEC as Buffalo,West Fairlee,East Central,,,910,,,,Buffalo Pond West Fairlee,Pond,43.97,-72.22
+BUGBEE,Unnamed Pond referred to by DEC as Bugbee,Woodford,Green Mtn South,8,1428,2171,,,,Bugbee Pond Woodford,Pond,42.88,-73.08
+BULLHEAD (BENSON),Bullhead Pond,Benson,West Central,7,53,535,,,,Bullhead Pond Benson,Pond,43.7347848,-73.331504
+BULLHEAD (MANCHR),Bullhead Pond,Manchester,Green Mtn South,5,29,730,,,,Bullhead Pond Manchester,Pond,43.2089645,-73.0176036
+BULLIS,Unnamed Pond referred to by DEC as Bullis,Franklin,Champlain ,11,3678,290,,,,Bullis Pond Franklin,Pond,44.97,-72.97
+BULLY,Unnamed Pond referred to by DEC as Bully,Wallingford,West Central,,,2120,,,,Bully Pond Wallingford,Pond,43.42,-72.92
+BURBEE,Burbee Pond,Windham,Green Mtn South,50,2479,1610,5,,ARTIFICIAL,Burbee Pond Windham,Reservoir,43.15,-72.73
+BURLESON,Burleson Pond,Berkshire,Champlain ,2,23,550,,,,Burleson Pond Berkshire,Pond,44.9739343,-72.796803
+BURNELL,Burnell Pond,Brandon,West Central,7,144,502,,,,Burnell Pond Brandon,Pond,43.8339524,-73.0759458
+BURNHAM MTN,Unnamed Pond referred to by DEC as Burnham Mtn,Topsham,North Central,8,463,1170,,,,Burnham Mtn Pond Topsham,Pond,44.18,-72.2
+BURR (PITTFD),Burr Pond,Pittsford,West Central,20,142,1170,18,,,Burr Pond Pittsford,Pond,43.6936779,-72.965941
+BURR (SUDBRY),Burr Pond,Sudbury,West Central,85,1737,514,18,14,NATURAL with ARTIFICIAL CONTROL,Burr Pond Sudbury,Lake (Artificial Control),43.77,-73.18
+BUTLER,Butler Pond,Pittsford,West Central,3,99,650,,,,Butler Pond Pittsford,Pond,43.6942326,-73.0803876
+BUTTERNUT,Unnamed Pond referred to by DEC as Butternut,Bakersfield,Champlain ,,,780,,,,Butternut Pond Bakerfield,Pond,44.8,-72.77
+BUTTON,Unnamed Pond referred to by DEC as Button,Wallingford,West Central,,,1775,,,,Button Pond Wallingford,Pond,43.47,-72.93
+C.C.C.,C.C.C. Pond,Sharon,East Central,9,174,1361,,,,C.C.C. Pond Sharon,Pond,43.82,-72.4
+CAMBRIDGEPORT,Unnamed Pond referred to by DEC as Cambridgeport,Rockingham,Green Mtn South,6,2086,600,,,,Cambridgeport Pond Rockingham,Pond,43.15,-72.55
+CAP HILL,Unnamed Pond referred to by DEC as Cap Hill,Jericho,Champlain ,9,200,1010,,,,Cap Hill Pond Jericho,Pond,44.53,-72.97
+CARLTON,Carlton Reservoir,Woodstock,East Central,4,75,1070,,,,Carlton Reservoir Woodstock,Reservoir,43.6,-72.55
+CARMI,Lake Carmi,Franklin,Champlain ,1402,7710,435,33,13,NATURAL with ARTIFICIAL CONTROL,Lake Carmi Franklin,Lake (Artificial Control),44.9714333,-72.877911
+CASPIAN,Caspian Lake,Greensboro,North Central,789,4510,1400,142,57,NATURAL with ARTIFICIAL CONTROL,Caspian Lake Greensboro,Lake (Artificial Control),44.58,-72.32
+CASTLE,Unnamed Pond referred to by DEC as Castle,Somerset,Green Mtn South,,,2018,,,,Castle Pond Somerset,Pond,42.95,-72.97
+CEDAR,Cedar Lake (Monkton Pond),Monkton,Champlain ,123,752,492,13,6,NATURAL,Cedar Lake Monkton,Lake,44.2500546,-73.1328998
+CENTER,Center Pond,Newark,NE Kingdom,79,3793,1310,72,24,,Center Pond Newark,Pond,44.7144953,-71.9198175
+CHAMPAGNE,Lake Champagne,Randolph,East Central,3,243,1310,,,,Lake Champagne Randolph,Lake,43.95,-72.6
+CHAMP-BURLINGTON BAY,Burlington Bay - Lake Champlain,Burlington,Champlain ,2532,,95,,,,Champlain Lake - Burlington Bay Burlington,Lake,44.48,-73.27
+CHAMP-ISLE LA MOTTE,Isle La Motte - Lake Champlain,Alburgh,Champlain ,26202,,95,,,,Champlain Lake - Isle La Motte Alburgh,Lake,45,-73.32
+CHAMP-MAIN LAKE,Main Section - Lake Champlain,South Hero,Champlain ,42010,,95,,,,Champlain Lake - Main Section South Hero,Lake,44.7,-73.37
+CHAMP-MALLETTS BAY,Malletts Bay - Lake Champlain,Colchester,Champlain ,13388,,95,,,,Champlain Lake - Malletts Bay Colchester,Lake,44.58,-73.28
+CHAMP-MISSISQUOI BAY,Missisquoi Bay - Lake Champlain,Alburgh,Champlain ,7998,,95,,,,Champlain Lake - Missisquoi Bay Alburgh,Lake,45,-73.17
+CHAMP-NORTHEAST ARM,Northeast Arm - Lake Champlain,Swanton,Champlain ,58184,,95,,,,Champlain Lake - Northeast Arm Swanton,Lake,44.97,-73.17
+CHAMP-OTTER CREEK,Otter Creek Section - Lake Champlain,Ferrisburgh,Champlain ,4423,,95,,,,Champlain Lake - Otter Creek Section Ferrisburgh,Lake,44.27,-73.32
+CHAMP-PORT HENRY,Port Henry Section - Lake Champlain,Ferrisburgh,Champlain ,9302,,95,,,,Champlain Lake - Port Henry Section Ferrisburgh,Lake,44.2,-73.37
+CHAMP-SHELBURNE BAY,Shelburne Bay - Lake Champlain,Shelburne,Champlain ,2249,,95,,,,Champlain Lake - Shelburne Bay Shelburne,Lake,44.43,-73.23
+CHAMP-SOUTH LAKE,Southern Section - Lake Champlain,Bridport,Champlain ,5388,,95,,,,Champlain Lake - Southern Section Bridport,Lake,44.03,-73.42
+CHAMP-ST. ALBANS BAY,St. Albans Bay - Lake Champlain,St. Albans Town,Champlain ,2499,,95,,,,Champlain Lake - St. Albans Bay St. Albans Town,Lake,44.77,-73.17
+CHANDLER (WTRFRD),Unnamed Pond referred to by DEC as Chandler,Waterford,NE Kingdom,6,1313,845,,,,Chandler Pond Wheelock,Lake (Artificial Control),44.38,-71.95
+CHANDLER (WHLOCK),Chandler Pond,Wheelock,North Central,68,1050,1256,6,,NATURAL with ARTIFICIAL CONTROL,Chandler Pond Waterford,Pond,44.53,-72.1
+CHAPELS,Chapels Pond,East Montpelier,North Central,2,295,1170,,,,Chapels Pond East Montpelier,Pond,44.3158915,-72.5192746
+CHARLES BROWN,Unnamed Pond referred to by DEC as Charles Brown,Norwich,East Central,,,700,,,,Charles Brown Pond Norwich,Pond,43.73,-72.33
+CHARLESTON,Charleston Pond (Lubber Lake),Charleston,NE Kingdom,40,67936,1059,30,,ARTIFICIAL,Charleston Pond Charleston,Reservoir,44.8928256,-72.0531538
+CHESTER,Chester Reservoir,Chester,East Central,5,399,1070,,,,Chester Reservoir Chester,Reservoir,43.28,-72.63
+CHESTNUT,Unnamed Pond referred to by DEC as Chestnut,Springfield,East Central,,,460,,,,Chestnut Pond Springfield,Pond,43.28,-72.45
+CHILDS,Childs Pond,Thetford,East Central,10,33,470,,,,Childs Pond Thetford,Pond,43.8189586,-72.1900896
+CHIPMAN,Chipman Lake (Tinmouth Pond),Tinmouth,West Central,79,535,1194,11,7,NATURAL,Chipman Lake Tinmouth,Lake,43.408405,-73.0301051
+CHITTENDEN,Chittenden Reservoir,Chittenden,West Central,702,10180,1495,46,26,ARTIFICIAL,Chittenden Reservoir Chittenden,Reservoir,43.73,-72.92
+CHOATE,Choate Pond,Orwell,West Central,11,76,850,,,,Choate Pond Orwell,Pond,43.7792288,-73.2687258
+CLARA,Clara Lake,Whitingham,Green Mtn South,18,412,1690,,,,Clara Lake Whitingham,Lake,42.7959153,-72.8800979
+CLEAR,Clear Pond,Hyde Park,North Central,8,40,1190,,,,Clear Pond Hyde Park,Pond,44.6164403,-72.5023333
+CLEVELAND,Unnamed Pond referred to by DEC as Cleveland,Coventry,NE Kingdom,,,1170,,,,Cleveland Pond Coventry,Pond,44.88,-72.28
+CLOSSON,Closson Pond,Rockingham,Green Mtn South,1,16,1170,,,,Closson Pond Rockingham,Pond,43.23,-72.48
+CLYDE,Clyde Pond,Derby,NE Kingdom,186,89292,878,20,11,ARTIFICIAL,Clyde Pond Derby,Reservoir,44.9353246,-72.1712124
+COBB,Cobb Pond,Derby,NE Kingdom,27,138,1121,,,,Cobb Pond Derby,Pond,44.9139361,-72.1345448
+COBURN,Coburn Pond,Ryegate,North Central,5,64,790,,,,Coburn Pond Ryegate,Pond,44.2517283,-72.086205
+COGGMAN,Coggman Pond,West Haven,West Central,20,368,110,12,,NATURAL,Coggman Pond West Haven,Pond,43.6206213,-73.3748356
+COITS,Coits Pond,Cabot,North Central,40,325,1334,7,,NATURAL,Coits Pond Cabot,Pond,44.4472777,-72.3295486
+COLBY,Colby Pond,Plymouth,West Central,20,314,1572,16,,ARTIFICIAL,Colby Pond Plymouth,Reservoir,43.47,-72.67
+COLCHESTER,Colchester Pond,Colchester,Champlain ,186,1259,404,42,,NATURAL with ARTIFICIAL CONTROL,Colchester Pond Colchester,Lake (Artificial Control),44.5550488,-73.1195741
+COLE,Cole Pond,Jamaica,Green Mtn South,41,282,1193,13,5,NATURAL,Cole Pond Jamaica,Pond,43.1470213,-72.8056529
+COLES,Coles Pond,Walden,North Central,125,744,2194,21,8,NATURAL with ARTIFICIAL CONTROL,Coles Pond Walden,Lake (Artificial Control),44.52,-72.22
+COLES-E,Unnamed Pond referred to by DEC as Coles - E,Stannard,North Central,,,2375,,,,Coles - E Pond Stannard,Pond,44.52,-72.2
+COLLINS,Collins Pond,Hyde Park,North Central,16,443,1225,20,,NATURAL,Collins Pond Hyde Park,Pond,44.6214402,-72.5042778
+COLTON,Colton Pond,Killington,West Central,27,501,1325,10,,ARTIFICIAL,Colton Pond Killington,Reservoir,43.7,-72.82
+COMERFORD,Comerford Reservoir,Barnet,NE Kingdom,777,307121,646,,,ARTIFICIAL,Comerford Reservoir Barnet,Reservoir,44.33,-72.02
+CONANT,Unnamed Pond referred to by DEC as Conant,Thetford,East Central,,,1070,,,,Conant Pond Thetford,Pond,43.85,-72.23
+CONCORD,Unnamed Pond referred to by DEC as Concord,Concord,NE Kingdom,,,990,,,,Concord Pond Concord,Pond,44.45,-71.78
+COOK,Cook Pond,Ludlow,Green Mtn South,3,56,1123,,,,Cook Pond Ludlow,Pond,43.4300716,-72.7070412
+COOKS (SHRWBY),Cooks Pond,Shrewsbury,West Central,12,184,1753,,,,Cooks Pond Shrewsbury,Pond,43.5117366,-72.8539905
+COOKS (WEAFLD),Cooks Pond,Weathersfield,East Central,10,218,1075,,,,Cooks Pond Weathersfield,Pond,43.3767399,-72.4500901
+COPENHAGEN,Unnamed Pond referred to by DEC as Copenhagen,Waterford,NE Kingdom,,,710,,,,Copenhagen Pond Waterford,Pond,44.35,-71.95
+COREZ,Corez Pond,Lowell,North Central,9,555,1190,,,,Corez Pond Lowell,Pond,44.7600486,-72.5234459
+COW HILL,Unnamed Pond referred to by DEC as Cow Hill,Peacham,North Central,8,185,1720,,,,Cow Hill Pond Peacham,Pond,44.38,-72.2
+COW MOUNTAIN,Cow Mountain Pond,Granby,NE Kingdom,10,128,2065,,,NATURAL,Cow Mountain Pond Granby,Pond,44.5614442,-71.7017559
+COX,Cox Reservoir,Woodstock,East Central,2,329,970,,,,Cox Reservoir Woodstock,Reservoir,43.62,-72.57
+CRANBERRY BOG,Cranberry Bog,Weybridge,Champlain ,2,128,990,,,,Cranberry Bog Pond Weybridge,Pond,44.07,-72.28
+CRANBERRY MEADOW,Cranberry Meadow Pond,Woodbury,North Central,28,1905,1092,23,,NATURAL,Cranberry Meadow Pond Woodbury,Pond,44.4208892,-72.4573301
+CRANBERRY POOL;,Cranberry Pool,Highgate,Champlain ,,,,,,,Cranberry Pool Pond Highgate,Pond,44.95,-73.14
+CRESCENT,Crescent Lake,Sharon,East Central,20,955,1162,,,,Crescent Lake Sharon,Lake,43.8,-72.42
+CROW HILL,Unnamed Pond referred to by DEC as Crow Hill,St. Johnsbury,NE Kingdom,5,328,930,,,,Crow Hill Pond St. Johnsbury,Pond,44.42,-72.05
+CRYSTAL (BARTON),Crystal Lake,Barton,NE Kingdom,763,14453,945,115,71,NATURAL with ARTIFICIAL CONTROL,Crystal Lake Barton,Lake (Artificial Control),44.7467161,-72.1762128
+CRYSTAL (HARTLD),Crystal Pond,Hartland,East Central,2,81,1350,,,,Crystal Pond Hartland,Pond,43.5936811,-72.4764817
+CRYSTAL (WILMTN),Crystal Pond,Wilmington,Green Mtn South,3,,2930,,,,Crystal Pond Wilmington,Pond,42.92,-72.92
+CURTIS,Curtis Pond,Calais,North Central,72,917,1219,31,11,NATURAL with ARTIFICIAL CONTROL,Curtis Pond Calais,Lake (Artificial Control),44.38,-72.5
+CUSHING HILL,Unnamed Pond referred to by DEC as Cushing Hill,Underhill,Champlain ,9,371,910,,,,Cushing Hill Pond Underhill,Pond,44.48,-72.9
+CUTLER,Cutler Pond,Highgate,Champlain ,25,276,250,3,,NATURAL,Cutler Pond Highgate,Pond,44.9867087,-73.0370725
+CUTTER,Cutter Pond,Williamstown,East Central,16,858,912,,,,Cutter Pond Williamstown,Pond,44.0906188,-72.5489933
+CUTTINGSVILLE,Unnamed Pond referred to by DEC as Cuttingsville,Shrewsbury,West Central,,,1530,,,,Cuttingsville Pond Shrewsbury,Pond,43.48,-72.92
+DANBY,Danby Pond,Danby,West Central,56,388,1403,6,,NATURAL,Danby Pond Danby,Pond,43.3650727,-73.0506606
+DANIELS,Daniels Pond,Glover,North Central,66,1079,1631,13,8,NATURAL,Daniels Pond Glover,Pond,44.6767173,-72.2626038
+DANIELS-W,Unnamed Pond referred to by DEC as Daniels - W,Glover,North Central,20,441,1210,,,NATURAL,Daniels - W Pond Glover,Pond,44.68,-72.28
+DANVILLE,Danville Reservoir,Danville,North Central,2,839,1585,,,,Danville Reservoir Danville,Reservoir,44.42,-72.17
+DANYOW,Danyow Pond,Ferrisburgh,Champlain ,192,380,100,,,ARTIFICIAL,Danyow Pond Ferrisburgh,Reservoir,44.18,-73.3
+DARK,Unnamed Pond referred to by DEC as Dark,Eden,North Central,,,1330,,,,Dark Pond Eden,Pond,44.75,-72.55
+DEER PARK,Deer Park Pond,Halifax,Green Mtn South,22,607,1510,9,,ARTIFICIAL,Deer Park Pond Halifax,Reservoir,42.78,-72.72
+DEER PARK-WEST,Unnamed Pond referred to by DEC as Deer Part - West,Halifax,Green Mtn South,6,247,1550,,,,Deer Part - West Pond Halifax,Pond,42.78,-72.72
+DEERFIELD-LOWER,Unnamed Pond referred to by DEC as Deerfield - Lower,Stratton,Green Mtn South,,,2215,,,,Deerfield - Lower Pond Stratton,Pond,43.03,-72.97
+DEERFIELD-N,Unnamed Pond referred to by DEC as Deerfield - N,Stratton,Green Mtn South,,,2235,,,,Deerfield - N Pond Stratton,Pond,43.03,-72.98
+DEERFIELD-UPPER,Unnamed Pond referred to by DEC as Deerfield - Upper,Stratton,Green Mtn South,,,2275,,,,Deerfield - Upper Pond Stratton,Pond,43.03,-72.97
+DENNIS,Dennis Pond,Brunswick,NE Kingdom,49,5337,1030,3,2,NATURAL,Dennis Pond Brunswick,Pond,44.7303279,-71.6578674
+DERBY,Lake Derby,Derby,NE Kingdom,207,1156,981,19,8,NATURAL,Lake Derby Derby,Lake,44.9542134,-72.1162109
+DEVILS,Unnamed Pond referred to by DEC as Devils,Alburgh,Champlain ,,,1290,,,,Devils Pond Alburgh,Pond,44.9392075,-73.2612412
+DEWEYS MILL,Deweys MILL Pond,Hartford,East Central,56,969,545,,,ARTIFICIAL,Deweys Mill Pond Hartford,Reservoir,43.65,-72.4
+DOBSON,Dobson Pond,Woodbury,North Central,9,122,1230,,,,Dobson Pond Woodbury,Pond,44.4403332,-72.4492746
+DOLLIF,Unnamed Pond referred to by DEC as Dollif,Brighton,NE Kingdom,5,640,1250,,,,Dollif Pond Brighton,Pond,44.83,-71.93
+DOUGHTY,Doughty Pond,Orwell,West Central,17,424,631,20,,NATURAL,Doughty Pond Orwell,Pond,43.7586734,-73.2828923
+DOW,Dow Pond,Middlebury,West Central,11,1672,428,,,,Dow Pond Middlebury,Pond,44.02,-73.1
+DOWNER,Unnamed Pond referred to by DEC as Downer,Sharon,East Central,,,1390,,,,Downer Pond Sharon,Pond,43.8,-72.4
+DRY,Dry Pond,Northfield,East Central,2,1296,1212,,,,Dry Pond Northfield,Pond,44.1486727,-72.6023299
+DRY RIDGE,Unnamed Pond referred to by DEC as Dry Ridge,Johnson,North Central,6,850,1270,,,,Dry Ridge Pond Johnson,Pond,44.62,-72.72
+DUBLIN,Unnamed Pond referred to by DEC as Dublin,Stratton,Green Mtn South,,,2410,,,,Dublin Pond Stratton,Pond,43.07,-72.95
+DUCK (BURKE),Duck Pond,Burke,NE Kingdom,4,32,970,,,,Duck Pond Burke,Pond,44.5997761,-71.945095
+DUCK (CRAFBY),Duck Pond,Craftsbury,North Central,9,83,1130,,,,Duck Pond Craftsbury,Pond,44.6733838,-72.3651069
+DUCK (HOLLND),Duck Pond,Holland,NE Kingdom,6,117,1530,,,,Duck Pond Holland,Pond,45.0047684,-71.9298183
+DUCK (SHEFLD),Duck Pond,Sheffield,North Central,7,173,1870,,,,Duck Pond Sheffield,Pond,44.6731069,-72.1356558
+DUCK (SHELBN),Duck Pond,Shelburne,Champlain ,4,96,170,,,,Duck Pond Shelburne,Pond,44.3778285,-73.2598487
+DUCK (SUTTON),Duck Pond,Sutton,NE Kingdom,8,141,1690,,,,Duck Pond Sutton,Pond,44.7086619,-72.0675986
+DUCK (WATRFD),Duck Pond,Waterford,NE Kingdom,16,215,946,,,NATURAL,Duck Pond Waterford,Pond,44.3933922,-71.9359261
+DUCK-E,Unnamed Pond referred to by DEC as Duck - E,Burke,NE Kingdom,,,890,,,,Duck - E Pond Burke,Pond,44.6,-71.93
+DUFRESNE,Dufresne Pond,Manchester,Green Mtn South,8,11234,719,10,,ARTIFICIAL,Dufresne Pond Manchester,Reservoir,43.18,-73.03
+DUNKLEE,Dunklee Pond,Rutland City,West Central,3,3335,590,,,,Dunklee Pond Rutland City,Pond,43.6225679,-72.9731622
+DUNMORE,Lake Dunmore,Salisbury,West Central,985,13068,569,105,28,NATURAL with ARTIFICIAL CONTROL,Lake Dunmore Salisbury,Lake (Artificial Control),43.9020068,-73.0753915
+DUTTON,Dutton Pond,Maidstone,NE Kingdom,12,115,1247,,,,Dutton Pond Maidstone,Pond,44.6403306,-71.6070316
+EAGLE,Eagle Pond,Alburgh,Champlain ,2,14,95,,,,Eagle Pond Alburgh,Pond,44.9353186,-73.2615189
+EAST,Unnamed Pond referred to by DEC as East,Somerset,Green Mtn South,,,2155,,,,East Pond Somerset,Pond,42.95,-72.95
+EAST CALAIS MILL,Unnamed Pond referred to by DEC as East Calais Mill,Calais,North Central,6,11168,850,,,,East Calais Mill Pond Calais,Pond,44.37,-72.43
+EAST LONG,East Long Pond,Woodbury,North Central,188,2223,1208,105,47,NATURAL with ARTIFICIAL CONTROL,East Long Pond Woodbury,Lake (Artificial Control),44.45,-72.35
+EAST TWIN,East Twin Pond,Athens,Green Mtn South,3,15,1150,,,,East Twin Pond Athens,Pond,43.13,-72.6
+EASTMAN,Eastman,Newbury,East Central,4,43,1250,,,,Eastman Pond Newbury,Pond,44.1311748,-72.1737048
+ECHO (CHARTN),Echo Lake,Charleston,NE Kingdom,550,15186,1249,129,58,NATURAL with ARTIFICIAL CONTROL,Echo Lake Charleston,Lake (Artificial Control),44.8603262,-71.994819
+ECHO (HUBDTN),Echo Lake (Keeler Pond),Hubbardton,West Central,54,544,621,42,23,NATURAL,Echo Lake Hubbardton,Lake,43.7458969,-73.1828902
+ECHO (PLYMTH),Echo Lake,Plymouth,West Central,104,16816,1061,91,30,NATURAL,Echo Lake Plymouth,Lake,43.4734041,-72.6998192
+EDDY,Eddy Pond,Rutland City,West Central,10,1650,590,,,,Eddy Pond Rutland City,Pond,43.5906241,-72.961217
+EDEN,Lake Eden,Eden,North Central,194,2347,1239,40,15,NATURAL with ARTIFICIAL CONTROL,Lake Eden Eden,Lake (Artificial Control),44.7225493,-72.5017778
+ELBOW,Unnamed Pond referred to by DEC as Elbow,Mendon,West Central,8,162,1870,,,,Elbow Pond Mendon,Pond,43.7,-72.87
+ELFIN,Elfin Lake,Wallingford,West Central,16,228,580,,12,,Elfin Lake Wallingford,Lake,43.4684038,-72.9884381
+ELLIGO,Lake Elligo (Eligo Pond),Greensboro,North Central,174,3238,881,100,29,NATURAL,Lake Elligo Greensboro,Lake,44.600052,-72.3551065
+ELLIS,Unnamed Pond referred to by DEC as Ellis,Dover,Green Mtn South,,,2175,,,,Ellis Pond Dover,Pond,42.98,-72.85
+ELMORE,Lake Elmore,Elmore,North Central,219,5574,1139,17,11,NATURAL with ARTIFICIAL CONTROL,Lake Elmore Elmore,Lake (Artificial Control),44.5347752,-72.5253897
+ELWIN MEADOW,Elwin Meadow,Newfane,Green Mtn South,,,1370,,,,Elwin Meadow Pond Newfane,Pond,42.97,-72.75
+ELY,Unnamed Pond referred to by DEC as Ely,Thetford,East Central,5,168,870,,,,Ely Pond Thetford,Pond,43.88,-72.22
+EMERALD,Emerald Lake,Dorset,Green Mtn South,28,3630,711,40,,NATURAL with ARTIFICIAL CONTROL,Emerald Lake Dorset,Lake (Artificial Control),43.2753523,-73.0064924
+ENOSBURG,Unnamed Pond referred to by DEC as Enosbur,Enosburgh,Champlain ,,,425,,,,Enosburg Pond Enosburg,Pond,44.9,-72.78
+EQUINOX,Equinox Pond,Manchester,Green Mtn South,15,537,1110,,,,Equinox Pond Manchester,Pond,43.1559098,-73.0898273
+EVANSVILLE,Unnamed Pond referred to by DEC as Evansville,Barton,NE Kingdom,,,1190,,,,Evansville Pond Barton,Pond,44.8,-72.17
+EWELL,Ewell Pond,Peacham,North Central,51,1981,1284,60,20,NATURAL with ARTIFICIAL CONTROL,Ewell Pond Peacham,Lake (Artificial Control),44.37,-72.17
+FAIR HAVEN-W,Unnamed Pond referred to by DEC as Fair Haven - W,Fair Haven,West Central,18,175,510,,,,Fair Haven - W Pond Fair Haven,Pond,43.62,-73.25
+FAIRFIELD,Fairfield Pond,Fairfield,Champlain ,446,3758,550,42,23,NATURAL with ARTIFICIAL CONTROL,Fairfield Pond Fairfield,Lake (Artificial Control),44.85,-72.98
+FAIRFIELD SWAMP,Fairfield Swamp Pond,Swanton,Champlain ,152,7424,640,,,ARTIFICIAL,Fairfield Swamp Pond Swanton,Reservoir,44.8,-73
+FAIRFIELD-NE,Unnamed Pond referred to by DEC as Fairfield - NE,Fairfield,Champlain ,12,320,820,,,,Fairfield - NE Pond Fairfield,Pond,44.83,-72.85
+FAIRFIELD-SE,Unnamed Pond referred to by DEC as Fairfield - SE,Fairfield,Champlain ,18,226,855,,,,Fairfield - SE Pond Fairfield,Pond,44.77,-72.93
+FAIRFIELD-SW1,Unnamed Pond referred to by DEC as Fairfield - SW1,Fairfield,Champlain ,7,82,800,,,,Fairfield - SW1 Pond Fairfield,Pond,44.77,-72.98
+FAIRFIELD-SW2,Unnamed Pond referred to by DEC as Fairfield - SW2,Fairfield,Champlain ,7,294,820,,,,Fairfield - SW2 Pond Fairfield,Pond,44.77,-72.98
+FAIRLEE,Lake Fairlee,Thetford,East Central,457,12976,678,50,23,NATURAL with ARTIFICIAL CONTROL,Lake Fairlee Thetford,Lake (Artificial Control),43.88,-72.23
+FAN,Unnamed Pond referred to by DEC as Fan,Wells,West Central,12,280,1410,,,,Fan Pond Wells,Pond,43.43,-73.15
+FAY,Unnamed Pond referred to by DEC as Fay,Strafford,East Central,10,223,1350,,,,Fay Pond Strafford,Pond,43.85,-72.43
+FELCHNER,Unnamed Pond referred to by DEC as Felchner,Northfield,East Central,12,139,1290,,,,Felchner Pond Northfield,Pond,44.13,-72.73
+FERDINAND-E,Unnamed Pond referred to by DEC as Ferdinand - E,Ferdinand,NE Kingdom,,,1150,,,,Ferdinand - E Pond Ferdinand,Pond,44.77,-71.72
+FERDINAND-NE,Unnamed Pond referred to by DEC as Ferdinand - NE,Ferdinand,NE Kingdom,,,1150,,,,Ferdinand - NE Pond Ferdinand,Pond,44.75,-71.73
+FERN,Fern Lake,Leicester,West Central,69,505,572,43,13,NATURAL,Fern Lake Leicester,Lake,43.8656187,-73.0698352
+FIFIELD,Fifield Pond,Wallingford,West Central,6,717,2110,,,,Fifield Pond Wallingford,Pond,43.4059052,-72.8876016
+FLAGG,Flagg Pond,Wheelock,North Central,111,2282,1592,6,3,NATURAL,Flagg Pond Wheelock,Pond,44.5653311,-72.2073241
+FLOOD,Unnamed Pond referred to by DEC as Flood,Peru,Green Mtn South,1,,1525,,,,Flood Pond Peru,Pond,43.23,-72.88
+FOREST (AVERLL),Forest Lake,Averill,NE Kingdom,62,1379,1665,13,,NATURAL with ARTIFICIAL CONTROL,Forest Lake Averill,Lake (Artificial Control),44.9847686,-71.6814803
+FOREST (CALAIS),Forest Lake (Nelson Pond),Calais,North Central,133,2827,1070,97,49,NATURAL,Forest Lake Calais,Lake,44.4083895,-72.4412182
+FORESTER,Forester Pond,Jamaica,Green Mtn South,16,207,1750,5,,NATURAL,Forester Pond Jamaica,Pond,43.0817446,-72.8675989
+FORTIER,Fortier Pond,Orwell,West Central,4,30,530,,,,Fortier Pond Orwell,Pond,43.7786734,-73.2431696
+FOSTERS,Fosters Pond,Peacham,North Central,61,647,1526,13,8,NATURAL,Fosters Pond Peacham,Pond,44.3297812,-72.20982
+FRENCH,Unnamed Pond referred to by DEC as French,Springfield,East Central,,,610,,,,French Pond Springfield,Pond,43.3,-72.52
+FRYING PAN,Unnamed Pond referred to by DEC as Frying Pan,Eden,North Central,,,995,,,,Frying Pan Pond Eden,Pond,44.73,-72.58
+GALE MEADOWS,Gale Meadows Pond,Londonderry,Green Mtn South,195,6573,1358,20,8,ARTIFICIAL,Gale Meadows Pond Londonderry,Reservoir,43.17,-72.87
+GALUSHA,Unnamed Pond referred to by DEC as Galusha,Topsham,North Central,5,152,1650,,,,Galusha Pond Topsham,Pond,44.15,-72.22
+GARFIELD,Unnamed Pond referred to by DEC as Garfield,Hyde Park,North Central,9,47,1110,,,,Garfield Pond Hyde Park,Pond,44.6,-72.53
+GATES,Gates Pond,Whitingham,Green Mtn South,30,1486,1617,7,,NATURAL with ARTIFICIAL CONTROL,Gates Pond Whitingham,Lake (Artificial Control),42.818693,-72.8073181
+GATES-NE,Unnamed Pond referred to by DEC as Gates - NE,Marlboro,Green Mtn South,,,1785,,,,Gates - NE Pond Marlboro,Pond,42.83,-72.8
+GEORGIA PLAINS,Unnamed Pond referred to by DEC as Georgia Plains,Georgia,Champlain ,19,3725,210,,,,Georgia Plains Pond Georgia,Pond,44.72,-73.17
+GILLETT,Gillett Pond,Richmond,Champlain ,30,1390,710,8,5,NATURAL with ARTIFICIAL CONTROL,Gillett Pond Richmond,Lake (Artificial Control),44.3531098,-72.9642886
+GILMORE,Gilmore Pond,Bristol,Champlain ,6,318,2010,,,,Gilmore Pond Bristol,Pond,44.088115,-73.0365059
+GLEN,Glen Lake,Castleton,West Central,206,2050,478,68,32,NATURAL with ARTIFICIAL CONTROL,Glen Lake Castleton,Lake (Artificial Control),43.67,-73.23
+GLOVER,Unnamed Pond referred to by DEC as Glover,Glover,North Central,,,1450,,,,Glover Pond Glover,Pond,44.7,-72.23
+GOODALL,Goodall Pond,Woodbury,North Central,7,141,1250,,,,Goodall Pond Woodbury,Pond,44.4270002,-72.4381629
+GOODSELL,Unnamed Pond referred to by DEC as Goodsell,Sheldon,Champlain ,10,86,930,,,,Goodsell Pond Sheldon,Pond,44.87,-72.85
+GOOSE,Goose Pond,Bolton,Champlain ,2,49,2790,,,,Goose Pond Bolton,Pond,44.4108874,-72.8334541
+GOSLANT ,Goslant Pond,Peacham,North Central,5,77,1370,,,,Goslant Pond Peacham,Pond,44.3028371,-72.3042666
+GOSLANTS MILL,Unnamed Pond referred to by DEC as Goslants Mill,Walden,North Central,15,7526,1670,,,,Goslants Mill Pond Walden,Pond,44.47,-72.22
+GOULDS,Unnamed Pond referred to by DEC as Goulds,Springfield,East Central,6,1651,415,,,,Goulds Pond Springfield,Pond,43.28,-72.45
+GRAFT,Unnamed Pond referred to by DEC as Graft,Brighton,NE Kingdom,12,24736,1150,,,,Graft Pond Brighton,Pond,44.82,-71.93
+GRAHAMVILLE,Unnamed Pond referred to by DEC as Grahamville,Ludlow,Green Mtn South,8,43,1030,,,,Grahamville Pond Ludlow,Pond,43.42,-72.7
+GRASS,Grass Pond,Plymouth,West Central,3,169,1570,,,,Grass Pond Plymouth,Pond,43.547014,-72.7370436
+GRAYS,Grays Pond,Lyndon,NE Kingdom,1,72,670,,,,Grays Pond Lyndon,Pond,44.4961676,-71.9900953
+GREAT AVERILL,Great Averill Pond,Norton,NE Kingdom,828,7638,1684,108,42,NATURAL with ARTIFICIAL CONTROL,Great Averill Pond Norton,Lake (Artificial Control),44.98,-71.7
+GREAT HOSMER,Great Hosmer Pond,Craftsbury,North Central,140,860,1117,57,20,NATURAL with ARTIFICIAL CONTROL,Great Hosmer Pond Craftsbury,Lake (Artificial Control),44.6947722,-72.3606624
+GREEN RIVER,Green River Reservoir,Hyde Park,North Central,554,9075,1220,93,,ARTIFICIAL,Green River Reservoir Hyde Park,Reservoir,44.629268,-72.515443
+GREENWOOD,Lake Greenwood,Woodbury,North Central,96,1138,1188,41,15,NATURAL,Lake Greenwood Woodbury,Lake,44.4586661,-72.4253853
+GRIFFITH,Griffith Lake,Peru,Green Mtn South,13,104,2618,,,NATURAL,Griffith Lake Peru,Lake,43.3028517,-72.9592692
+GRIGGS,Griggs Pond,Albany,North Central,6,160,850,,,,Griggs Pond Albany,Pond,44.77,-72.33
+GROTON,Lake Groton,Groton,North Central,422,12006,1078,35,13,NATURAL with ARTIFICIAL CONTROL,Lake Groton Groton,Lake (Artificial Control),44.2667271,-72.2662089
+GROUT,Grout Pond,Stratton,Green Mtn South,84,411,2225,33,,NATURAL,Grout Pond Stratton,Pond,43.0445226,-72.9456567
+GROUT-N,Unnamed Pond referred to by DEC as Grout - N,Stratton,Green Mtn South,,,2275,,,,Grout - N Pond Stratton,Pond,43.05,-72.95
+GUILFORD-E,Unnamed Pond referred to by DEC as Guilford - E,Guilford,Green Mtn South,5,41,600,,,,Guilford - E Pond Guilford,Pond,42.77,-72.57
+GUILLMETTES,Guillmettes Pond,Richford,Champlain ,12,510,750,,,,Guillmettes Pond Richford,Pond,44.9600459,-72.6712408
+GUT,Gut Pond,Eden,North Central,13,154,1280,,,,Gut Pond Eden,Pond,44.6931055,-72.5212233
+HALF MOON,Halfmoon Pond,Hubbardton,West Central,23,322,582,8,2,NATURAL,Halfmoon Pond Hubbardton,Lake,43.6928423,-73.2184453
+HALFMOON,Halfmoon Pond,Fletcher,Champlain ,21,194,919,25,,NATURAL,Halfmoon Pond Fletcher,Pond,44.6972716,-72.9298583
+HALFMOON COVE,Halfmoon Cove,Colchester,Champlain ,14,133,95,,,,Halfmoon Cove Pond Colchester,Pond,44.53,-73.25
+HALFWAY,Halfway Pond,Norton,NE Kingdom,22,220,1690,4,,NATURAL,Halfway Pond Norton,Pond,44.9800466,-71.8984291
+HALLADAY,Unnamed Pond referred to by DEC as Halladay,Marlboro,Green Mtn South,,,1417,,,,Halladay Pond Marlboro,Pond,42.9,-72.7
+HALLOCK,Unnamed Pond referred to by DEC as Hallock,Starksboro,Champlain ,15,207,1494,,,,Hallock Pond Starksboro,Pond,44.18,-72.97
+HALLS,Halls Lake,Newbury,East Central,85,561,779,30,17,NATURAL with ARTIFICIAL CONTROL,Halls Lake Newbury,Lake (Artificial Control),44.085898,-72.1231473
+HANCOCK (BRIGTN),Hancock Pond,Brighton,NE Kingdom,7,154,1510,,,,Hancock Pond Brighton,Pond,44.7569943,-71.8992618
+HANCOCK (STAMFD),Lake Hancock (Sucker Pond),Stamford,Green Mtn South,51,259,2267,12,,NATURAL with ARTIFICIAL CONTROL,Lake Hancock Stamford,Lake (Artificial Control),42.82508,-73.1287164
+HANCOCK MT,Unnamed Pond referred to by DEC as Hancock Mt,Rochester,East Central,14,319,1406,,,,Hancock Mt Pond Rochester,Pond,43.93,-72.82
+HAPGOOD,Hapgood Pond,Peru,Green Mtn South,7,1568,1530,,,,Hapgood Pond Peru,Pond,43.2539638,-72.8906558
+HARDWICK,Hardwick Lake,Hardwick,North Central,145,6876,797,,,ARTIFICIAL,Hardwick Lake Hardwick,Reservoir,44.52,-72.37
+HARDWOOD,Hardwood Pond,Elmore,North Central,49,185,1569,15,,NATURAL,Hardwood Pond Elmore,Pond,44.4678324,-72.4995546
+HARRIMAN (NEWBRY),Harriman Pond,Newbury,East Central,20,1438,838,35,,NATURAL,Harriman Pond Newbury,Pond,44.10312,-72.0800911
+HARRIMAN (WHITHM),Harriman Reservoir,Whitingham,Green Mtn South,2040,116840,1490,160,34,ARTIFICIAL,Harriman Reservoir Whitingham,Reservoir,42.83,-72.88
+HARTWELL,Hartwell Pond,Albany,North Central,16,623,1609,57,21,NATURAL,Hartwell Pond Albany,Pond,44.7044943,-72.293716
+HARVEYS,Harveys Lake,Barnet,North Central,351,5364,893,145,66,NATURAL with ARTIFICIAL CONTROL,Harveys Lake Barnet,Lake (Artificial Control),44.3,-72.13
+HAWKINS,Hawkins Pond,Calais,North Central,9,190,1410,,,,Hawkins Pond Calais,Pond,44.4033895,-72.5012201
+HAYSTACK,Haystack Pond,Wilmington,Green Mtn South,27,132,2984,,,NATURAL,Haystack Pond Wilmington,Pond,42.9170246,-72.9170441
+HEART,Heart Pond,Albany,North Central,6,90,1170,,,,Heart Pond Albany,Pond,44.6997721,-72.3642736
+HEARTWELLVILLE,Unnamed Pond referred to by DEC as Heartwellville,Readsboro,Green Mtn South,,,1760,,,,Heartwellville Pond Readsboro,Pond,42.83,-72.98
+HEDGEHOG GULF,Unnamed Pond referred to by DEC as Hedgehog Gulf,Athens,Green Mtn South,,,935,,,,Hedgehog Gulf Pond Athens,Pond,43.08,-72.58
+HICKORY,Unnamed Pond referred to by DEC as Hickory,Westminster,Green Mtn South,16,84,932,,,,Hickory Pond Westminster,Pond,43.03,-72.55
+HIDDEN,Hidden Lake,Marlboro,Green Mtn South,17,723,1470,6,,NATURAL with ARTIFICIAL CONTROL,Hidden Lake Marlboro,Lake (Artificial Control),42.88,-72.72
+HIGH (HUBDTN),High Pond,Hubbardton,West Central,3,20,770,,,,High Pond Hubbardton,Pond,43.7003422,-73.2117786
+HIGH (SUDBRY),High Pond,Sudbury,West Central,20,173,1033,56,26,NATURAL,High Pond Sudbury,Pond,43.7528416,-73.1531676
+HINKUM,Hinkum Pond,Sudbury,West Central,60,353,719,69,,NATURAL with ARTIFICIAL CONTROL,Hinkum Pond Sudbury,Lake (Artificial Control),43.7647857,-73.1678903
+HOLBROOK,Unnamed Pond referred to by DEC as Holbrook,West Windsor,East Central,,,1080,,,,Holbrook Pond West Windsor,Pond,43.52,-72.47
+HOLDENS,Holdens Pond,Brookfield,East Central,10,324,1194,,,,Holdens Pond Brookfield,Pond,44.03,-72.58
+HOLLAND,Holland Pond,Holland,NE Kingdom,325,4431,1430,39,17,NATURAL with ARTIFICIAL CONTROL,Holland Pond Holland,Lake (Artificial Control),44.9867132,-71.9281516
+HOMER STONE,Unnamed Pond referred to by DEC as Homer Stone,Wallingford,West Central,,,2135,,,,Homer Stone Pond Wallingford,Pond,43.42,-72.93
+HOPKINS,Unnamed Pond referred to by DEC as Hopkins,Charleston,NE Kingdom,,,1150,,,,Hopkins Pond Charleston,Pond,44.82,-71.93
+HOPKINSON,Unnamed Pond referred to by DEC as Hopkinson,Derby,NE Kingdom,,,855,,,,Hopkinson Pond Derby,Pond,44.92,-72.17
+HOPPER,Hopper Pond,Sandgate,Green Mtn South,1,733,1970,,,,Hopper Pond Sandgate,Pond,43.1506322,-73.1512175
+HORN OF THE MOON,Horn of the Moon Pond,East Montpelier,North Central,10,139,1230,,,,Horn of the Moon Pond East Montpelier,Pond,44.32,-72.55
+HORSE,Horse Pond,Greensboro,North Central,32,531,1343,4,,NATURAL,Horse Pond Greensboro,Pond,44.6175521,-72.2106577
+HORTON,unnamed pond referred to by DEC as Horton,Benson,West Central,15,,500,,,,Horton Pond Benson,Pond,43.71491,-73.34589
+HORTONIA,Lake Hortonia,Hubbardton,West Central,479,4457,484,60,19,NATURAL with ARTIFICIAL CONTROL,Lake Hortonia Hubbardton,Lake (Artificial Control),43.7500632,-73.2078906
+HOUGH,Hough Pond (Huff Pond),Sudbury,West Central,16,344,777,30,,NATURAL with ARTIFICIAL CONTROL,Hough Pond Sudbury,Lake (Artificial Control),43.78,-73.18
+HOVEY,Unnamed Pond referred to by DEC as Hovey,Hardwick,North Central,6,198,1290,,,,Hovey Pond Hardwick,Pond,44.53,-72.32
+HOWE,Howe Pond,Readsboro,Green Mtn South,52,1647,1926,33,10,NATURAL,Howe Pond Readsboro,Pond,42.7842485,-72.9859342
+HUTCHINSON,Unnamed Pond referred to by DEC as Hutchinson,Braintree,East Central,,,910,,,,Hutchinson Pond Braintree,Pond,43.98,-72.67
+INDIAN BROOK,Unnamed Pond referred to by DEC as Indian Brook,Colchester,Champlain ,16,6078,170,,,,Indian Brook Pond Colchester,Reservoir,44.53,-73.15
+INDIAN BROOK (ESSEX),Indian Brook Reservoir,Essex,Champlain ,50,761,520,22,13,ARTIFICIAL,Indian Brook Reservoir Essex,Reservoir,44.53,-73.1
+INMAN,Inman Pond,Fair Haven,West Central,85,240,592,80,34,NATURAL with ARTIFICIAL CONTROL,Inman Pond Fair Haven,Lake (Artificial Control),43.65,-73.27
+IRASBURG,Unnamed Pond referred to by DEC as Irasburg,Irasburg,NE Kingdom,,,955,,,,Irasburg Pond Irasburg,Pond,44.83,-72.32
+IROQUOIS,Lake Iroquois,Hinesburg,Champlain ,243,2418,684,37,19,NATURAL with ARTIFICIAL CONTROL,Lake Iroquois Hinesburg,Lake (Artificial Control),44.37,-73.08
+ISLAND,Island Pond,Brighton,NE Kingdom,626,6295,1172,63,31,NATURAL,Island Pond Brighton,Pond,44.8050491,-71.8706504
+JACKSONVILLE,Jacksonville Pond,Whitingham,Green Mtn South,20,3349,1450,8,,ARTIFICIAL,Jacksonville Pond Whitingham,Reservoir,42.8,-72.82
+JAY,Unnamed Pond referred to by DEC as Jay,Jay,NE Kingdom,,,1720,,,,Jay Pond Jay,Pond,44.98,-72.48
+JEROME,Unnamed Pond referred to by DEC as Jerome,Addison,Champlain ,18,320,108,,,ARTIFICIAL,Jerome Pond Addison,Reservoir,44.08,-73.33
+JEWELL BK #1,Unnamed Pond referred to by DEC as Jewell Bk #1,Ludlow,West Central,14,1143,1650,,,,Jewell Bk #1 Pond Ludlow,Reservoir,43.37,-72.72
+JEWELL BK #2,Unnamed Pond referred to by DEC as Jewell Bk #2,Ludlow,West Central,17,1323,1550,,,,Jewell Bk #2 Pond Ludlow,Reservoir,43.37,-72.73
+JEWELL BK #3,Unnamed Pond referred to by DEC as Jewell Bk #3,Ludlow,West Central,18,803,1250,,,,Jewell Bk #3 Pond Ludlow,Reservoir,43.38,-72.72
+JOBS,Jobs Pond,Westmore,NE Kingdom,39,268,1950,18,7,NATURAL with ARTIFICIAL CONTROL,Jobs Pond Westmore,Lake (Artificial Control),44.7628276,-71.9537072
+JOES (DANVLL),Joes Pond,Danville,North Central,396,18445,1551,78,21,NATURAL with ARTIFICIAL CONTROL,Joes Pond Danville,Lake (Artificial Control),44.4083904,-72.1945436
+JOES (MRSTWN),Joes Pond,Morristown,North Central,9,787,732,,,,Joes Pond Morristown,Pond,44.5058865,-72.6201157
+JOHNSON (KIRBY),Johnson Pond,Kirby,NE Kingdom,7,691,1105,,,,Johnson Pond Kirby,Pond,44.4906125,-71.867037
+JOHNSON (ORWELL),Johnson Pond,Orwell,West Central,20,140,443,18,,NATURAL,Johnson Pond Orwell,Pond,43.7667294,-73.2237247
+JOHNSON (SHRWBY),Johnson Pond,Shrewsbury,West Central,12,210,1745,,,,Johnson Pond Shrewsbury,Pond,43.5181254,-72.8453793
+JOHNSONS MILL,Unnamed Pond referred to by DEC as Johnsons Mill,Bakersfield,Champlain ,5,5098,620,,,,Johnsons Mill Pond Bakersfield,Pond,44.83,-72.75
+JONES,Jones Pond,Chelsea,East Central,2,54,1330,,,,Jones Pond Chelsea,Pond,44.0428423,-72.4953795
+JONES MILL,Jones Mill Pond,Brandon,West Central,6,3367,430,,,,Jones Mill Pond Brandon,Pond,43.7831201,-73.0617778
+JOSLIN TURN,Unnamed Pond referred to by DEC as Joslin Turn,Concord,NE Kingdom,10,165,824,,,,Joslin Turn Pond Concord,Pond,44.37,-71.83
+KEELER,Keeler Pond,Wolcott,North Central,5,544,1390,,,,Keeler Pond Wolcott,Pond,44.5747747,-72.3992744
+KEISER,Keiser Pond,Danville,North Central,33,1611,1290,20,6,NATURAL with ARTIFICIAL CONTROL,Keiser Pond Danville,Lake (Artificial Control),44.3864467,-72.1706537
+KENNY,Kenny Pond,Newfane,Green Mtn South,26,239,1250,11,,NATURAL with ARTIFICIAL CONTROL,Kenny Pond Newfane,Lake (Artificial Control),42.98,-72.7
+KENT,Kent Pond,Killington,West Central,99,2376,1525,15,6,ARTIFICIAL,Kent Pond Killington,Reservoir,43.68,-72.8
+KENT HOLLOW,Unnamed Pond referred to by DEC as Kent Hollow,Sandgate,Green Mtn South,10,579,1470,,,,Kent Hollow Pond Sandgate,Pond,43.2,-73.2
+KETTLE,Kettle Pond,Groton,North Central,109,834,1443,16,6,NATURAL,Kettle Pond Groton,Pond,44.2947817,-72.3181558
+KEYSER,Unnamed Pond referred to by DEC as Keyser,Chelsea,East Central,7,532,1170,,,,Keyser Pond Chelsea,Pond,43.95,-72.43
+KIDDER (IRABRG),Kidder Pond,Irasburg,NE Kingdom,16,216,1170,,,,Kidder Pond Irasburg,Pond,44.87,-72.32
+KIDDER (STRTON),Unnamed Pond referred to by DEC as Kidder,Stratton,Green Mtn South,,,1750,,,,Kidder Pond Stratton,Pond,43.05,-72.88
+KINGS,Kings Pond,Rochester,East Central,4,17,1010,,,,Kings Pond Rochester,Pond,43.8606204,-72.8726085
+KINGS HILL,Kings Hill Pond,Bakersfield,Champlain ,6,145,1090,,,,Kings Hill Pond Bakersfield,Pond,44.7369933,-72.784017
+KINGSTON,Unnamed Pond referred to by DEC as Kingston,Jamaica,Green Mtn South,,,1390,,,,Kingston Pond Jamaica,Pond,43.08,-72.78
+KIPLING,Unnamed Pond referred to by DEC as Kipling,Brattleboro,Green Mtn South,,,660,,,,Kipling Pond Brattleboro,Pond,42.9,-72.58
+KIRBY,Kirby Pond,Kirby,NE Kingdom,10,326,1610,,,,Kirby Pond Kirby,Pond,44.509223,-71.9156493
+KIRBY-W,Unnamed Pond referred to by DEC as Kerby - W,Kirby,NE Kingdom,,,1650,,,,Kerby - W Pond Kirby,Pond,44.5,-71.93
+KNAPP BROOK #1,Knapp Brook #1,Cavendish,East Central,25,2074,1270,12,6,ARTIFICIAL,Knapp Brook #1 Pond Cavendish,Reservoir,43.447016,-72.5662041
+KNAPP BROOK #2,Knapp Brook #2,Cavendish,East Central,35,1869,1290,20,9,ARTIFICIAL,Knapp Brook #2 Pond Cavendish,Reservoir,43.45,-72.57
+KNOB,Unnamed Pond referred to by DEC as Knob,Eden,North Central,,,1170,,,,Knob Pond Eden,Pond,44.73,-72.53
+KNOB HILL,Knob Hill Pond,Marshfield,North Central,16,137,1210,,,,Knob Hill Pond Marshfield,Pond,44.3603354,-72.3737148
+LAIRD,Laird Pond,Marshfield,North Central,12,2637,1126,,,,Laird Pond Marshfield,Pond,44.3,-72.37
+LAKE-OF-THE-CLOUDS,Lake-Of-The-Clouds,Cambridge,Champlain ,1,1,3930,,,NATURAL,Lake-Of-The-Clouds Cambridge,Lake,44.5483849,-72.8106793
+LAKOTA,Lakota Lake,Barnard,West Central,20,385,1899,11,,NATURAL with ARTIFICIAL CONTROL,Lakota Lake Barnard,Lake (Artificial Control),43.68,-72.65
+LAMOILLE,Lake Lamoille,Morristown,North Central,148,170146,540,15,5,ARTIFICIAL,Lake Lamoille Morristown,Reservoir,44.57,-72.62
+LAMSON,Lamson Pond,Brookfield,East Central,24,230,1590,,,NATURAL,Lamson Pond Brookfield,Pond,44.0633967,-72.612606
+LANDFILL,Unnamed Pond referred to by DEC as Landfill,Eden,North Central,7,34,1250,,,,Landfill Pond Eden,Pond,44.7,-72.53
+LANDGROVE,Unnamed Pond referred to by DEC as Landgrove,Landgrove,Green Mtn South,14,,1745,,,,Landgrove Pond Landgrove,Pond,43.28,-72.83
+LANPHER MEADOW,Lanpher Meadow,Eden,North Central,6,423,1310,,,,Lanpher Meadow Pond Eden,Pond,44.72,-72.6
+LAUREL,Laurel Lake,Whitingham,Green Mtn South,16,76,1630,17,,NATURAL,Laurel Lake Whitingham,Lake,42.8195263,-72.8181517
+LEECH,Leech Pond,Woodbury,North Central,4,134,1050,,,,Leech Pond Woodbury,Pond,44.421167,-72.4306625
+LEFFERTS,Lefferts Pond,Chittenden,West Central,55,3814,1501,8,,ARTIFICIAL,Lefferts Pond Chittenden,Reservoir,43.7156223,-72.901773
+LEIGHTON HILL,Unnamed Pond referred to by DEC as Leighton Hill,Newbury,East Central,6,213,890,,,,Leighton Hill Pond Newbury,Pond,44.13,-72.12
+LEVI,Levi Pond,Groton,North Central,22,152,1632,23,8,NATURAL,Levi Pond Groton,Pond,44.2672827,-72.2262078
+LEWIN,Lewin Pond,Norwich,East Central,4,24,490,,,,Lewin Pond Norwich,Pond,43.7720148,-72.2164784
+LEWIS,Lewis Pond,Lewis,NE Kingdom,68,1254,1830,8,4,NATURAL,Lewis Pond Lewis,Pond,44.8833812,-71.7806495
+LIGHT TROUT CLUB,Light Trout Club Lake,Moretown,North Central,7,2173,690,,,,Light Trout Club Lake Moretown,Pond,44.28,-72.75
+LILY (ATHENS),Lily Pond,Athens,Green Mtn South,12,159,1430,,,,Lily Pond Athens,Pond,43.08,-72.6
+LILY (CASLTN),Lily Pond,Castleton,West Central,9,70,568,,,,Lily Pond Castleton,Pond,43.6764538,-73.2140004
+LILY (LONDRY),Lily Pond,Londonderry,Green Mtn South,21,297,1490,8,,NATURAL,Lily Pond Londonderry,Pond,43.2345197,-72.7506517
+LILY (LYNDON),Lily Pond,Lyndon,NE Kingdom,8,26,810,,,,Lily Pond Lyndon,Pond,44.5231114,-71.9914843
+LILY (NORWCH),Lily Pond,Norwich,East Central,6,57,470,,,,Lily Pond Norwich,Pond,43.7425706,-72.2556457
+LILY (POULTY),Lily Pond,Poultney,West Central,22,1288,484,7,4,NATURAL,Lily Pond Poultney,Pond,43.4950694,-73.2073303
+LILY (THETFD),Unnamed Pond referred to by DEC as Lily,Thetford,East Central,19,283,852,,,,Lily Pond Thetford,Pond,43.82,-72.28
+LILY (VERNON),Lily Pond,Vernon,Green Mtn South,41,463,371,13,,NATURAL,Lily Pond Vernon,Pond,42.7370275,-72.5089777
+LILY PAD,Lily Pad Pond,Colchester,Champlain ,2,76,310,,,,Lily Pad Pond Colchester,Pond,44.5078268,-73.1617945
+LIMEHURST,Limehurst Pond,Williamstown,East Central,13,597,901,,,NATURAL,Limehurst Pond Williamstown,Pond,44.1017296,-72.5495492
+LINE (BARNRD),Line Pond,Barnard,West Central,10,110,1350,,,,Line Pond Barnard,Pond,43.7175684,-72.5675971
+LINE (HOLLND),Line Pond,Holland,NE Kingdom,5,115,1610,,,,Line Pond Holland,Pond,45.0072684,-71.9148182
+LITTLE (CALAIS),Little Pond,Calais,North Central,7,230,1190,,,,Little Pond Calais,Pond,44.3861679,-72.438162
+LITTLE (ELMORE),Little Pond,Elmore,North Central,14,102,1410,,,,Little Pond Elmore,Pond,44.4592215,-72.4970544
+LITTLE (FRANLN),Little Pond,Franklin,Champlain ,95,591,673,8,,NATURAL,Little Pond Franklin,Pond,44.9569897,-72.8284682
+LITTLE (WELLS),Little Pond,Wells,West Central,162,8989,484,5,4,NATURAL with ARTIFICIAL CONTROL,Little Pond Wells,Lake (Artificial Control),43.4322933,-73.2028855
+LITTLE (WINHLL),Little Pond,Winhall,Green Mtn South,18,133,2390,,,NATURAL,Little Pond Winhall,Pond,43.1231326,-72.9434346
+LITTLE (WOODFD),Little Pond,Woodford,Green Mtn South,16,323,2602,8,,NATURAL with ARTIFICIAL CONTROL,Little Pond Woodford,Lake (Artificial Control),42.9250793,-73.0645484
+LITTLE AVERILL,Little Averill Pond,Averill,NE Kingdom,467,2854,1740,115,52,NATURAL with ARTIFICIAL CONTROL,Little Averill Pond Averill,Lake (Artificial Control),44.9556024,-71.7162039
+LITTLE ELIGO,Little Eligo Pond,Hardwick,North Central,15,653,870,,,,Little Eligo Pond Hardwick,Pond,44.5783858,-72.36344
+LITTLE ELMORE,Little Elmore Pond,Elmore,North Central,24,316,1223,15,,NATURAL,Little Elmore Pond Elmore,Pond,44.4978315,-72.5317787
+LITTLE HOSMER,Little Hosmer Pond,Craftsbury,North Central,180,1792,1066,9,4,NATURAL with ARTIFICIAL CONTROL,Little Hosmer Pond Craftsbury,Lake (Artificial Control),44.68,-72.38
+LITTLE MUD (GRANBY),Little Mud Pond,Granby,NE Kingdom,2,3,2130,,,,Little Mud Pond Granby,Pond,44.5614442,-71.6956446
+LITTLE MUD (MTTABR),Little Mud Pond,Mount Tabor,West Central,7,330,2579,,,,Little Mud Pond Mount Tabor,Pond,43.3159069,-72.9376021
+LITTLE MUD (WINHLL),Little Mud Pond,Winhall,Green Mtn South,21,83,2270,,,,Little Mud Pond Winhall,Pond,43.1347989,-72.9831581
+LITTLE MUD (WOODBY),Little Mud Pond,Woodbury,North Central,10,160,1390,,,,Little Mud Pond Woodbury,Pond,44.38,-72.38
+LITTLE ROCK,Little Rock Pond,Wallingford,West Central,18,196,1854,,,NATURAL,Little Rock Pond Wallingford,Pond,43.4006275,-72.9562145
+LITTLE WHEELER,Little Wheeler Pond,Brunswick,NE Kingdom,9,4224,990,6,,,Little Wheeler Pond Brunswick,Pond,44.7161616,-71.6331443
+LOCKWOOD,Lockwood Pond,Lowell,North Central,1,38,2610,,,,Lockwood Pond Lowell,Pond,44.8,-72.55
+LONG (EDEN),Long Pond (Belvidere Pond),Eden,North Central,97,723,1137,6,3,NATURAL,Long Pond Eden,Pond,44.77,-72.6
+LONG (GRNSBO),Long Pond,Greensboro,North Central,100,1910,1590,33,15,NATURAL,Long Pond Greensboro,Pond,44.6256073,-72.263437
+LONG (MILTON),Long Pond,Milton,Champlain ,47,431,315,36,,NATURAL,Long Pond Milton,Pond,44.6733793,-73.191521
+LONG (NEWBRY),Long Pond,Newbury,East Central,15,242,1390,,,,Long Pond Newbury,Pond,44.1047865,-72.166482
+LONG (SHEFLD),Long Pond,Sheffield,North Central,38,204,1682,30,,NATURAL,Long Pond Sheffield,Pond,44.6767178,-72.1437116
+LONG (WESTMR),Long Pond,Westmore,NE Kingdom,90,732,1835,74,29,NATURAL,Long Pond Westmore,Pond,44.7506056,-72.0178751
+LONG HOLE,Long Hole,Mount Tabor,West Central,1,2054,2540,,,NATURAL,Long Hole Pond Mount Tabor,Pond,43.3,-72.95
+LONG MEADOW,Unnamed Pond referred to by DEC as Long Meadow,Calais,North Central,7,176,1530,,,,Long Meadow Pond Calais,Pond,44.35,-72.53
+LOST (BELVDR),Lost Pond,Belvidere,Champlain ,3,49,2350,,,,Lost Pond Belvidere,Pond,44.7906038,-72.6476214
+LOST (GEORGA),Lost Lake,Georgia,Champlain ,10,121,530,,,,Lost Lake Georgia,Lake,44.7683798,-73.0926385
+LOST (GLASBY),Lost Pond,Glastenbury,Green Mtn South,1,65,2950,,,,Lost Pond Glastenbury,Pond,42.9445236,-73.052326
+LOST (MTTABR),Lost Pond,Mount Tabor,West Central,,,2706,,,,Lost Pond Mount Tabor,Pond,43.3406287,-72.9417691
+LOST (SUNDLD),Lost Pond,Sunderland,Green Mtn South,2,299,2630,,,,Lost Pond Sunderland,Pond,43.040078,-73.0270479
+LOVES MARSH,Loves Marsh,Castleton,West Central,62,1159,414,,,ARTIFICIAL,Loves Marsh Pond Castleton,Reservoir,43.67,-73.2
+LOWELL,Lowell Lake,Londonderry,Green Mtn South,109,1313,1330,22,,NATURAL with ARTIFICIAL CONTROL,Lowell Lake Londonderry,Lake (Artificial Control),43.22,-72.77
+LOWER,Lower Pond (Lake Sunset),Hinesburg,Champlain ,58,3461,661,10,5,ARTIFICIAL,Lower Pond Hinesburg,Reservoir,44.35,-73.08
+LOWER HURRICANE,Lower Hurricane Reservoir,Hartford,East Central,7,105,1047,,,,Lower Hurricane Reservoir Hartford,Reservoir,43.65,-72.37
+LOWER MOORE,Lower Moore Pond,Plymouth,West Central,5,238,1510,,,,Lower Moore Pond Plymouth,Pond,43.52,-72.72
+LOWER ORANGE,Lower Orange Reservoir,Orange,North Central,8,7082,1190,,,,Lower Orange Reservoir Orange,Reservoir,44.17,-72.42
+LOWER SYMES,Lower Symes Pond,Ryegate,North Central,57,2636,810,9,,NATURAL,Lower Symes Pond Ryegate,Pond,44.25,-72.1
+LOWER WINOOSKI,Unnamed Pond referred to by DEC as Lower Winooski,Winooski,Champlain ,4,195,290,,,,Lower Winooski Pond Winooski,Pond,44.5,-73.17
+LOWER WORCESTER,Worcester Pond - Lower,Worcester,North Central,35,943,1067,8,,ARTIFICIAL,Worcester Pond - Lower Worcester,Reservoir,44.4,-72.53
+LYE,Unnamed Pond referred to by DEC as Lye,Winhall,Green Mtn South,,,2295,,,,Lye Pond Winhall,Pond,43.13,-72.98
+LYE BROOK-N,Unnamed Pond referred to by DEC as Lye Brook - N,Sunderland,Green Mtn South,10,96,2610,,,,Lye Brook - N Pond Sunderland,Pond,43.1,-73.03
+LYE BROOK-S,Unnamed Pond referred to by DEC as Lye Brook - S,Sunderland,Green Mtn South,18,253,2610,,,,Lye Brook - S Pond Sunderland,Pond,43.08,-73.03
+LYFORD,Lyford Pond,Walden,North Central,33,299,1683,22,8,NATURAL,Lyford Pond Walden,Pond,44.4456114,-72.2467681
+LYMAN HILL,Unnamed Pond referred to by DEC as Lyman Hill,Marlboro,Green Mtn South,9,411,1545,,,,Lyman Hill Pond Marlboro,Pond,42.87,-72.73
+MACKVILLE,Mackville Pond,Hardwick,North Central,11,2099,930,,,,Mackville Pond Hardwick,Reservoir,44.48,-72.37
+MADELEINE,Lake Madeleine,Sandgate,Green Mtn South,20,100,2175,,11,ARTIFICIAL,Lake Madeleine Sandgate,Reservoir,43.17,-73.15
+MAIDSTONE,Maidstone Lake,Maidstone,NE Kingdom,745,3103,1303,121,46,NATURAL with ARTIFICIAL CONTROL,Maidstone Lake Maidstone,Lake (Artificial Control),44.6486637,-71.6470329
+MALLETT,Unnamed Pond referred to by DEC as Mallett,Milton,Champlain ,,,295,,,,Mallett Pond Milton,Pond,44.58,-73.12
+MANCHESTERS,Unnamed Pond referred to by DEC as Manchesters,Thetford,East Central,6,223,802,,,,Manchesters Pond Thetford,Pond,43.8,-72.28
+MANSFIELD,Lake Mansfield,Stowe,North Central,38,1557,1140,18,11,ARTIFICIAL,Lake Mansfield Stowe,Reservoir,44.47,-72.82
+MARL,Marl Pond,Sutton,NE Kingdom,10,256,1570,,,,Marl Pond Sutton,Pond,44.7003288,-72.0600983
+MARLBORO-431,Unnamed Pond referred to by DEC as Marlboro - 431,Marlboro,Green Mtn South,10,1693,1415,,,,Marlboro - 431 Pond Marlboro,Pond,42.88,-72.72
+MARTIN,Unnamed Pond referred to by DEC as Martin,Williamstown,East Central,28,886,1390,,,,Martin Pond Williamstown,Pond,44.15,-72.57
+MARTINS,Martins Pond,Peacham,North Central,82,803,1548,17,11,NATURAL with ARTIFICIAL CONTROL,Martins Pond Peacham,Lake (Artificial Control),44.3,-72.22
+MATHEWSON,Unnamed Pond referred to by DEC as Mathewson,Sheffield,North Central,,,1665,,,,Mathewson Pond Sheffield,Pond,44.62,-72.07
+MAY,May Pond,Barton,NE Kingdom,116,1087,1647,31,9,NATURAL with ARTIFICIAL CONTROL,May Pond Barton,Lake (Artificial Control),44.7417164,-72.1228779
+MCALLISTER,McAllister Pond,Lowell,North Central,25,533,1290,7,,NATURAL,McAllister Pond Lowell,Pond,44.83,-72.48
+MCCONNELL,McConnell Pond,Brighton,NE Kingdom,87,3621,1274,18,,NATURAL,McConnell Pond Brighton,Pond,44.8189378,-71.8039827
+MCGOWAN-E,Unnamed Pond referred to by DEC as McGowan - E,Highgate,Champlain ,18,713,580,,,,McGowan - E Pond Highgate,Pond,44.93,-72.92
+MCGOWAN-W,Unnamed Pond referred to by DEC as McGowan - W,Highgate,Champlain ,10,252,580,,,,McGowan - W Pond Highgate,Pond,44.93,-72.92
+MCINTOSH,McIntosh Pond,Royalton,East Central,23,606,990,15,,ARTIFICIAL,McIntosh Pond Royalton,Reservoir,43.82,-72.48
+MECAWEE,Mecawee Pond,Reading,East Central,11,852,1430,,,,Mecawee Pond Reading,Pond,43.55,-72.63
+MEMPHREMAGOG,Lake Memphremagog,Newport Town,NE Kingdom,5966,416320,682,351,21,NATURAL with ARTIFICIAL CONTROL,Lake Memphremagog Newport Town,Lake (Artificial Control),44.9853239,-72.2151023
+METCALF,Metcalf Pond,Fletcher,Champlain ,81,801,729,25,7,NATURAL,Metcalf Pond Fletcher,Pond,44.7283824,-72.8840236
+MIDDLE WOODBURY,Unnamed Pond referred to by DEC as Middle Woodbury,Woodbury,North Central,9,992,1150,,,,Middle Woodbury Pond Woodbury,Pond,44.43,-72.43
+MILE,Mile Pond,Ferdinand,NE Kingdom,26,156,1240,12,,NATURAL,Mile Pond Ferdinand,Pond,44.7778273,-71.799538
+MILES,Miles Pond,Concord,NE Kingdom,215,4158,1026,55,20,NATURAL with ARTIFICIAL CONTROL,Miles Pond Concord,Lake (Artificial Control),44.45,-71.82
+MILL (BENSON),Mill Pond (Parsons Mill Pond),Benson,West Central,39,14063,225,8,,ARTIFICIAL,Mill Pond Benson,Reservoir,43.7053415,-73.2823356
+MILL (WINDSR),Mill Pond (Kennedys Pond),Windsor,East Central,77,28071,383,26,,ARTIFICIAL,Mill Pond Windsor,Reservoir,43.4711828,-72.3967575
+MILL (WOODFD),Mill Pond,Woodford,Green Mtn South,7,988,2050,,,,Mill Pond Woodford,Pond,42.9192463,-73.0273252
+MILLER (ARLTON),Unnamed Pond referred to by DEC as Miller,Arlington,Green Mtn South,11,3636,762,,,,Miller Pond Strafford,Lake (Artificial Control),43.892568,-72.3053715
+MILLER (STRFRD),Miller Pond,Strafford,East Central,64,664,1323,32,8,NATURAL with ARTIFICIAL CONTROL,Miller Pond Arlington,Pond,43.9,-72.3
+MILTON,Milton Pond,Milton,Champlain ,24,267,834,13,,NATURAL with ARTIFICIAL CONTROL,Milton Pond Milton,Lake (Artificial Control),44.6347709,-73.0631899
+MINARDS,Minards Pond,Rockingham,Green Mtn South,46,202,613,46,,NATURAL with ARTIFICIAL CONTROL,Minards Pond Rockingham,Lake (Artificial Control),43.15,-72.47
+MINK,Unnamed Pond referred to by DEC as Mink,Enosburgh,Champlain ,,,1125,,,,Mink Pond Enosburgh,Pond,44.9,-72.72
+MINSEY,Unnamed Pond referred to by DEC as Minsey,Albany,North Central,8,115,1690,,,,Minsey Pond Albany,Pond,44.72,-72.28
+MIRROR,Mirror Lake (No. 10 Pond),Calais,North Central,85,3349,1047,106,43,NATURAL with ARTIFICIAL CONTROL,Lake Mirror Calais,Lake (Artificial Control),44.4,-72.45
+MITCHELL,Lake Mitchell,Sharon,East Central,28,4652,900,16,,ARTIFICIAL,Lake Mitchell Sharon,Reservoir,43.75,-72.4
+MOLLYS,Mollys Pond,Cabot,North Central,38,1320,1631,28,,NATURAL,Mollys Pond Cabot,Pond,44.3939461,-72.2359332
+MOLLYS FALLS,Mollys Falls Reservoir,Cabot,North Central,397,14600,1230,35,18,ARTIFICIAL,Mollys Falls Reservoir Cabot,Reservoir,44.35,-72.28
+MOORE,Moore Reservoir,Waterford,NE Kingdom,1235,293580,800,,,ARTIFICIAL,Moore Reservoir Waterford,Reservoir,44.33,-71.87
+MOOSE,Unnamed Pond referred to by DEC as Moose,Morgan,NE Kingdom,10,941,1290,,,,Moose Pond Morgan,Pond,44.87,-71.92
+MOREY,Lake Morey,Fairlee,East Central,547,5101,416,43,24,NATURAL with ARTIFICIAL CONTROL,Lake Morey Fairlee,Lake (Artificial Control),43.9247901,-72.1498123
+MORRISVILLE,Unnamed Pond referred to by DEC as Morrisville,Morristown,North Central,8,4465,620,,,,Morrisville Pond Morristown,Pond,44.55,-72.6
+MOSCOW,Moscow Pond,Hubbardton,West Central,3,111,710,,,,Moscow Pond Hubbardton,Pond,43.6839534,-73.2365009
+MOSES,Moses Pond,Weston,West Central,12,105,2230,,,,Moses Pond Weston,Pond,43.33424,-72.8428774
+MOSLEY,Unnamed Pond referred to by DEC as Mosley,Hartford,East Central,,,1030,,,,Mosley Pond Hartford,Pond,43.7,-72.33
+MOUNT TABOR,Unnamed Pond referred to by DEC as Mount Tabor,Mount Tabor,West Central,,,2375,,,,Mount Tabor Pond Mount Tabor,Pond,43.38,-72.87
+MT. SNOW,Unnamed Pond referred to by DEC as Mt. Snow,Dover,Green Mtn South,,,1685,,,,Mt. Snow Pond Dover,Pond,42.97,-72.88
+MUD (BENSON),Mud Pond,Benson,West Central,8,129,492,,,,Mud Pond Benson,Pond,43.7445068,-73.3295597
+MUD (BRAINT),Mud Pond,Braintree,East Central,10,681,1370,,,,Mud Pond Braintree,Pond,43.9897866,-72.698718
+MUD (BRIGTN)-W,Mud Pond,Brighton,NE Kingdom,6,19,1250,,,,Mud Pond Brighton,Pond,44.82116,-71.821483
+MUD (BRUNWK),Mud Pond,Brunswick,NE Kingdom,5,320,1050,,,,Mud Pond Brunswick,Pond,44.7378277,-71.6709234
+MUD (CHARTN),Mud Pond,Charleston,NE Kingdom,4,356,1370,,,,Mud Pond Charleston,Pond,44.8881035,-72.0189862
+MUD (CRAFBY),Mud Pond,Craftsbury,North Central,35,422,868,7,,NATURAL,Mud Pond Craftsbury,Pond,44.6383845,-72.3942744
+MUD (EDEN),Mud Pond,Eden,North Central,1,38,1190,,,,Mud Pond Eden,Pond,44.6981054,-72.5198344
+MUD (EHAVEN),Mud Pond,East Haven,NE Kingdom,5,45,1830,,,,Mud Pond East Haven,Pond,44.5997763,-71.8156479
+MUD (GRANBY),Mud Pond,Granby,NE Kingdom,55,2128,1537,,,NATURAL,Mud Pond Granby,Pond,44.5797769,-71.7381461
+MUD (GRNSBO)-E,Mud Pond,Greensboro,North Central,9,1357,1470,,,,Mud Pond Greensboro,Pond,44.5781081,-72.3531619
+MUD (GRNSBO)-SW,Mud Pond,Greensboro,North Central,5,70,1210,,,,Mud Pond Greensboro,Pond,44.58,-72.35
+MUD (HOLLND),Mud Pond,Holland,NE Kingdom,14,359,1510,,,,Mud Pond Holland,Pond,44.9367139,-72.0281531
+MUD (HYDEPK),Mud Pond,Hyde Park,North Central,14,177,1170,,,,Mud Pond Hyde Park,Pond,44.605885,-72.5034444
+MUD (IRASBG),Mud Pond,Irasburg,NE Kingdom,5,243,1210,,,,Mud Pond Irasburg,Pond,44.7822708,-72.2409367
+MUD (LEICTR),Mud Pond,Leicester,West Central,23,290,569,10,,NATURAL,Mud Pond Leicester,Pond,43.88,-73.08
+MUD (LOWELL),Mud Pond,Lowell,North Central,2,26,1650,,,,Mud Pond Lowell,Pond,44.73,-72.47
+MUD (MARSFD),Mud Pond,Marshfield,North Central,,,,,,,Mud Pond Marshfield,Pond,44.2775598,-72.3395451
+MUD (MORGAN)-N,Mud Pond,Morgan,NE Kingdom,35,1205,1489,3,,NATURAL,Mud Pond Morgan ,Pond,44.9172696,-72.0448202
+MUD (ORWELL),Mud Pond,Orwell,West Central,10,106,670,,,,Mud Pond Orwell,Pond,43.7658956,-73.2701144
+MUD (PEACHM),Mud Pond,Peacham,North Central,34,318,1548,4,,NATURAL with ARTIFICIAL CONTROL,Mud Pond Peacham,Lake (Artificial Control),44.3072818,-72.2125974
+MUD (PERU),Mud Pond,Peru,Green Mtn South,10,371,1410,,,,Mud Pond Peru,Pond,43.2228532,-72.8706551
+MUD (SHEFLD),Mud Pond,Sheffield,North Central,5,58,1710,,,,Mud Pond Sheffield,Pond,44.6783844,-72.1389892
+MUD (THETFD),Mud Pond (Forscythie Pond),Thetford,East Central,20,437,599,7,,ARTIFICIAL,Mud Pond Thetford,Reservoir,43.85,-72.25
+MUD (WESTMR)-W,Mud Pond,Westmore,NE Kingdom,12,192,1817,,,,Mud Pond Westmore,Pond,44.7711608,-71.9464848
+MUD (WOODBY)-SE,Mud Pond,Woodbury,North Central,18,204,1393,,,NATURAL,Mud Pond Woodbury,Pond,44.4875544,-72.3945516
+MUD (WOODFD),Mud Pond,Woodford,Green Mtn South,6,23,2230,,,,Mud Pond Woodford,Pond,42.83,-73.03
+MUD CREEK,Mud Creek Pond,Alburgh,Champlain ,333,6400,99,,,ARTIFICIAL,Mud Creek Pond Alburgh,Reservoir,44.98,-73.27
+MUDD,Mudd Pond,Hubbardton,West Central,20,608,1090,7,,,Mudd Pond Hubbardton,Pond,43.7372864,-73.1462228
+MUDDY (NEWBRY),Muddy Pond,Newbury,East Central,3,152,1390,,,,Muddy Pond Newbury,Pond,44.1089531,-72.1667599
+MUDDY (RUTLDC),Muddy Pond,Rutland City,West Central,10,448,830,,,,Muddy Pond Rutland City,Pond,43.6297899,-73.0042742
+MUSSEY,Unnamed Pond referred to by DEC as Mussey,Rutland Town,West Central,,,750,,,,Mussey Pond Rutland Town,Pond,43.6,-72.95
+N.E. DEVELOPERS,Northeast Developers Pond,Wells,West Central,27,417,500,16,,ARTIFICIAL,Northeast Developers Pond Wells,Reservoir,43.43,-73.22
+NEAL,Neal Pond,Lunenburg,NE Kingdom,185,5720,1200,35,16,NATURAL with ARTIFICIAL CONTROL,Neal Pond Lunenburg,Lake (Artificial Control),44.4897795,-71.6920327
+NELSON (EMONTP),Nelson Pond,East Montpelier,North Central,10,156,1210,,,,Nelson Pond East Montpelier,Pond,44.3183914,-72.525386
+NEWARK,Newark Pond,Newark,NE Kingdom,153,554,1832,31,14,NATURAL,Newark Pond Newark,Pond,44.7175509,-71.9823186
+NEWPORT CENTER,Unnamed Pond referred to by DEC as Newport Center,Newport Town,NE Kingdom,,,760,,,,Newport Center Pond Newport Town,Pond,44.95,-72.28
+NICHOLS,Nichols Pond,Woodbury,North Central,171,2920,1128,109,,NATURAL with ARTIFICIAL CONTROL,Nichols Pond Woodbury,Lake (Artificial Control),44.45,-72.35
+NINEVAH,Lake Ninevah,Mount Holly,West Central,171,769,1755,12,6,NATURAL with ARTIFICIAL CONTROL,Lake Ninevah Mount Holly,Lake (Artificial Control),43.47,-72.75
+NORFORD,Norford Lake,Thetford,East Central,21,605,985,11,,ARTIFICIAL,Norford Lake Thetford,Reservoir,43.8,-72.3
+NORTH (BRISTL),North Pond,Bristol,Champlain ,6,33,2110,,,,North Pond Bristol,Pond,44.1033922,-73.0465064
+NORTH (BRKFLD),North Pond,Brookfield,East Central,24,829,1419,17,,NATURAL with ARTIFICIAL CONTROL,North Pond Brookfield,Lake (Artificial Control),44.0481193,-72.6189947
+NORTH (CHITDN),North Pond,Chittenden,West Central,3,35,2490,,,,North Pond Chittenden,Pond,43.7486774,-72.8859398
+NORTH (WHITHM),North Pond,Whitingham,Green Mtn South,20,229,1810,,,ARTIFICIAL,North Pond Whitingham,Reservoir,42.7550826,-72.8784309
+NORTH BENNINGTON,North Bennington Reservoir,Shaftsbury,Green Mtn South,1,934,1410,,,,North Bennington Reservoir Shaftsbury,Reservoir,42.97,-73.15
+NORTH HARTLAND,North Hartland Reservoir,Hartland,East Central,215,140800,425,,,ARTIFICIAL,North Hartland Reservoir Hartland,Reservoir,43.62,-72.37
+NORTH KING,North King Pond,Woodbury,North Central,3,32,1190,,,,North King Pond Woodbury,Pond,44.42,-72.43
+NORTH MONTPELIER,North Montpelier Pond,East Montpelier,North Central,72,32581,703,12,,ARTIFICIAL,North Montpelier Pond East Montpelier,Reservoir,44.32,-72.45
+NORTH SPRINGFIELD,North Springfield Reservoir,Springfield,East Central,290,101120,475,,,ARTIFICIAL,North Springfield Reservoir Springfield,Reservoir,43.35,-72.5
+NORTH ST. ALBANS,"St. Albans Reservoir, North",Fairfax,Champlain ,35,1036,745,28,13,ARTIFICIAL,"St. Albans Reservoir, North Fairfax",Reservoir,44.77,-73.07
+NORTH UNDERHILL,Unnamed Pond referred to by DEC as North Underhill,Underhill,Champlain ,12,1123,850,,,,North Underhill Pond Underhill,Pond,44.6,-72.93
+NORTON,Norton Pond,Norton,NE Kingdom,583,11142,1335,30,10,NATURAL with ARTIFICIAL CONTROL,Norton Pond Norton,Lake (Artificial Control),44.93,-71.87
+NOTCH,Notch Pond,Ferdinand,NE Kingdom,22,500,1555,26,,NATURAL,Notch Pond Ferdinand,Pond,44.7406056,-71.7173137
+NOYES,Noyes Pond (Seyon Pond),Groton,North Central,39,2408,1781,11,6,ARTIFICIAL,Noyes Pond Groton,Reservoir,44.23,-72.32
+NULHEGAN,Nulhegan Pond,Brighton,NE Kingdom,37,5421,1158,14,,NATURAL,Nulhegan Pond Brighton,Pond,44.791716,-71.8178717
+NUMBER ELEVEN,Unnamed Pond referred to by DEC as Number Eleven,Westford,Champlain ,12,300,710,,,,Number Eleven Pond Westford,Pond,44.62,-72.97
+OAK HILL,Unnamed Pond referred to by DEC as Oak Hill,Williston,Champlain ,8,1534,630,,,,Oak Hill Pond Williston,Pond,44.42,-73.08
+OLD MARSH,Old Marsh Pond,Fair Haven,West Central,131,1802,484,6,,NATURAL with ARTIFICIAL CONTROL,Old Marsh Pond Fair Haven,Lake (Artificial Control),43.63,-73.27
+OLYMPUS POOL,Olympus Pool,Proctor,West Central,3,96,530,,,,Olympus Pool Pond Proctor,Pond,43.65,-73.03
+ORANGE,Unnamed Pond referred to by DEC as Orange,Orange,North Central,,,1530,,,,Orange Pond Orange,Pond,44.22,-72.42
+OSMORE,Osmore Pond,Peacham,North Central,48,778,1470,12,6,NATURAL,Osmore Pond Peacham,Pond,44.3083926,-72.2781547
+OTTER,Unnamed Pond referred to by DEC as Otter,Belvidere,Champlain ,,,1350,,,,Otter Pond Belvidere,Pond,44.78,-72.63
+OXBOW,Unnamed Pond referred to by DEC as Oxbow,Swanton,Champlain ,27,190,115,,,,Oxbow Pond Swanton,Pond,44.92,-73.08
+OXBOW-2,Unnamed Pond referred to by DEC as Oxbow - 2,Fairfax,Champlain ,,,430,,,,Oxbow - 2  Pond Fairfax,Pond,44.65,-72.95
+PAGE,Page Pond,Albany,North Central,16,106,1204,,,,Page Pond Albany,Pond,44.7147718,-72.3670515
+PAINE,Unnamed Pond referred to by DEC as Paine,Northfield,East Central,,,1570,,,,Paine Pond Northfield,Pond,44.13,-72.62
+PARAN,Lake Paran,Bennington,Green Mtn South,40,9312,647,23,11,ARTIFICIAL,Lake Paran Bennington,Reservoir,42.9328561,-73.2337199
+PARKER,Lake Parker,Glover,North Central,250,5418,1299,45,25,NATURAL with ARTIFICIAL CONTROL,Lake Parker Glover,Lake (Artificial Control),44.7194941,-72.2328808
+PATCH,Patch Pond,Rutland City,West Central,20,33531,605,,,ARTIFICIAL,Patch Pond Rutland City,Reservoir,43.6309011,-72.9823293
+PAUL STREAM,Paul Stream Pond,Brunswick,NE Kingdom,20,151,1025,10,,NATURAL,Paul Stream Pond Brunswick,Pond,44.6908845,-71.6225882
+PEABODY,Unnamed Pond referred to by DEC as Peabody,Weston,West Central,,,2240,,,,Peabody Pond Weston,Pond,43.317018,-72.8439883
+PEACE,Unnamed Pond referred to by DEC as Peace,Eden,North Central,,,1840,,,,Peace Pond Eden,Pond,44.73,-72.62
+PEACHAM,Peacham Pond,Peacham,North Central,340,3750,1401,61,20,NATURAL with ARTIFICIAL CONTROL,Peacham Pond Peacham,Lake (Artificial Control),44.33,-72.27
+PECKS,Pecks Pond,Barre Town,North Central,16,443,1010,,,,Pecks Pond Barre Town,Pond,44.1681171,-72.5364945
+PENSIONER,Pensioner Pond,Charleston,NE Kingdom,173,66882,1141,39,15,NATURAL with ARTIFICIAL CONTROL,Pensioner Pond Charleston,Lake (Artificial Control),44.8736591,-72.0573206
+PERCH (BENSON),Perch Pond,Benson,West Central,24,110,527,44,16,NATURAL with ARTIFICIAL CONTROL,Perch Pond Benson,Lake (Artificial Control),43.7503403,-73.2798365
+PERCH (WOLCTT),Perch Pond,Wolcott,North Central,7,902,1190,,,,Perch Pond Wolcott,Pond,44.6108849,-72.4976109
+PERRY-JACKSON,Unnamed Pond referred to by DEC as Perry - Jackson,Cornwall,Champlain ,,,360,,,,Perry - Jackson Pond Cornwall,Pond,44,-73.2
+PERU,Unnamed Pond referred to by DEC as Peru,Peru,Green Mtn South,,,1625,,,,Peru Pond Peru,Pond,43.23,-72.9
+PHILLIPS (BENSON),unnamed pond referred to by DEC as Phillips,Benson,West Central,2,,490,,,,Phillips Pond Benson,Pond,43.71648,-73.34788
+PHILLIPS (WSTFLD),Phillips Pond,Westfield,NE Kingdom,4,77,990,,,,Phillips Pond Westfield,Pond,44.92,-72.42
+PICKEREL,Pickerel,Manchester,Green Mtn South,9,31,730,,,,Pickerel Pond Manchester,Pond,43.2064646,-73.019548
+PICKETT,Pickett Pond,Woodbury,North Central,5,416,1410,,,,Pickett Pond Woodbury,Pond,44.4395,-72.3801057
+PICKLES,Pickles Pond,Brookfield,East Central,17,268,1470,,,,Pickles Pond Brookfield,Pond,43.9970092,-72.6087154
+PICO,Pico Pond,Killington,West Central,12,581,2160,,,,Pico Pond Killington,Pond,43.6489569,-72.8123251
+PIEDMONT,Piedmont Pond,Rutland City,West Central,1,988,610,,,,Piedmont Pond Rutland City,Pond,43.6089571,-72.9570505
+PIGEON,Pigeon Pond,Groton,North Central,69,801,1954,21,11,NATURAL,Pigeon Pond Groton,Pond,44.245894,-72.3284329
+PINE,Pine Pond,Castleton,West Central,40,774,474,7,,NATURAL with ARTIFICIAL CONTROL,Pine Pond Castleton,Lake (Artificial Control),43.63,-73.2
+PINNACLE,Unnamed Pond referred to by DEC as Pinnacle,Wells,West Central,6,163,1370,,,,Pinnacle Pond Wells,Pond,43.45,-73.13
+PINNEO,Lake Pinneo,Hartford,East Central,50,150,610,11,,ARTIFICIAL,Lake Pinneo Hartford,Reservoir,43.65,-72.43
+PITCHER,Unnamed Pond referred to by DEC as Pitcher,Sutton,NE Kingdom,,,1200,,,,Pitcher Pond Sutton,Pond,44.7,-72.07
+PLEASANT VALLEY,Pleasant Valley Reservoir,Brattleboro,Green Mtn South,25,649,630,38,18,ARTIFICIAL,Pleasant Valley Reservoir Brattleboro,Reservoir,42.88,-72.62
+PLEIAD,Pleiad Lake,Hancock,West Central,6,54,2050,,,,Pleiad Lake Hancock,Lake,43.9339521,-72.9578898
+POMFRET,Unnamed Pond referred to by DEC as Pomfret,Pomfret,East Central,,,960,,,,Pomfret Pond Pomfret,Pond,43.73,-72.45
+PORTER,Porter's Pond,Ferrisburgh,Champlain ,20,188,114,10,,NATURAL,Porter's Pond Ferrisburgh,Pond,44.2,-73.32
+POTTERS,Potters Pond,Albany,North Central,5,129,850,,,,Potters Pond Albany,Pond,44.78,-72.32
+PRENTISS,Prentiss Pond,Dorset,Green Mtn South,2,207,930,,,,Prentiss Pond Dorset,Pond,43.2517421,-73.105383
+PRESTON,Preston Pond,Bolton,Champlain ,9,206,1150,,,,Preston Pond Bolton,Pond,44.423942,-72.9090114
+PRISON,Unnamed Pond referred to by DEC as Prison,Windsor,East Central,5,,1000,,,,Prison Pond Windsor,Pond,43.5,-72.43
+PROPER,Proper Pond,Highgate,Champlain ,9,157,225,,,,Proper Pond Highgate,Pond,45.0033748,-73.053183
+QUARRY (WTHFLD),Quarry Pond,Weathersfield,East Central,1,15,1030,,,,Quarry Pond Castleton,Pond,43.6,-73.17
+QUARRY (CSLTON),Unnamed Pond referred to by DEC as Quarry,Castleton,West Central,17,86,540,,,,Quarry Pond Weathersfield,Pond,43.372573,-72.5356469
+RANDOLPH-N,Unnamed Pond referred to by DEC as Randolph - N,Randolph,East Central,10,117,1470,,,,Randolph - N Pond Randolph,Pond,43.98,-72.62
+RAPONDA,Lake Raponda,Wilmington,Green Mtn South,121,616,1832,12,8,NATURAL with ARTIFICIAL CONTROL,Lake Raponda Wilmington,Lake (Artificial Control),42.8750812,-72.8175965
+RATTLESNAKE,Unnamed Pond referred to by DEC as Rattlesnake,Springfield,East Central,,,955,,,,Rattlesnake Pond Springfield,Pond,43.33,-72.43
+READING,Reading Pond,Reading,East Central,22,662,1756,10,6,NATURAL,Reading Pond Reading,Pond,43.5020148,-72.6534293
+RED,Unnamed Pond referred to by DEC as Red,Winhall,Green Mtn South,,,489,,,,Red Pond Winhall,Pond,43.17,-72.92
+RED MILL,Red Mill Pond,Woodford,Green Mtn South,7,1258,2230,,,,Red Mill Pond Woodford,Pond,42.8892467,-73.0276028
+RED ROCK,Red Rock,Addison,Champlain ,,,1240,,,,Red Rock Pond Addison,Pond,44.07,-73.28
+RESCUE,Rescue Lake,Ludlow,Green Mtn South,184,22859,1044,95,24,NATURAL with ARTIFICIAL CONTROL,Rescue Lake Ludlow,Lake (Artificial Control),43.45,-72.7
+RESERVOIR,Reservoir Pond (Lake Pauline),Ludlow,Green Mtn South,32,23468,1040,47,,ARTIFICIAL,Reservoir Pond Ludlow,Reservoir,43.43,-72.7
+REVOIR,Unnamed Pond referred to by DEC as Revoir,Coventry,NE Kingdom,,,700,,,,Revoir Pond Coventry,Pond,44.85,-72.2
+REYNOLDS,Reynolds Reservoir,Proctor,West Central,3,86,790,,,,Reynolds Reservoir Proctor,Pond,43.65,-73.03
+RICHARDS,Unnamed Pond referred to by DEC as Richards,Marshfield,North Central,14,704,1090,,,,Richards Pond Marshfield,Pond,44.37,-72.35
+RICHMOND,Richmond Pond,Richmond,Champlain ,24,539,730,,,NATURAL,Richmond Pond Richmond,Pond,44.4178307,-72.9467898
+RICHVILLE,Richville Pond,Shoreham,West Central,129,17920,253,8,3,ARTIFICIAL,Richville Pond Shoreham,Reservoir,43.85,-73.27
+RICKER,Ricker Pond,Groton,North Central,95,13622,1051,31,12,NATURAL with ARTIFICIAL CONTROL,Ricker Pond Groton,Lake (Artificial Control),44.2470054,-72.244541
+RIDDEL,Riddel Pond,Orange,North Central,15,1294,1590,,,,Riddel Pond Orange,Pond,44.1408963,-72.3495433
+RIPTON-NW,Unnamed Pond referred to by DEC as Ripton - NW,Ripton,West Central,8,352,1590,,,,Ripton - NW Pond Ripton,Pond,44.03,-73.05
+RITTERBUSH,Ritterbush Pond,Eden,North Central,14,373,1041,,,,Ritterbush Pond Eden,Pond,44.7469932,-72.5990058
+RITTERBUSH MEADOW,Unnamed Pond referred to by DEC as Ritterbush Meadow,Eden,North Central,10,921,935,,,,Ritterbush Meadow Pond Eden,Pond,44.75,-72.58
+ROACH,Roach Pond,Hubbardton,West Central,20,145,534,7,,,Roach Pond Hubbardton,Pond,43.7156197,-73.2053899
+ROBINSON,Unnamed Pond referred to by DEC as Robinson,Northfield,East Central,7,2553,1290,,,,Robinson Pond Northfield,Pond,44.12,-72.62
+ROCKY,Rocky Pond,Rutland City,West Central,8,74,861,,,,Rocky Pond Rutland City,Pond,43.6267345,-73.0034408
+ROGERS,Unnamed Pond referred to by DEC as Rogers,Westford,Champlain ,,,675,,,,Rogers Pond Westford,Pond,44.6,-73.05
+ROOD,Rood Pond,Williamstown,East Central,23,343,1306,52,25,NATURAL with ARTIFICIAL CONTROL,Rood Pond Williamstown,Lake (Artificial Control),44.0770076,-72.5889944
+ROOT,Root Pond,Benson,West Central,18,578,412,56,,NATURAL,Root Pond Benson,Pond,43.678953,-73.3495587
+ROSS,Unnamed Pond referred to by DEC as Ross,Morristown,North Central,,,820,,,,Ross Pond Morristown,Pond,44.52,-72.65
+ROULEAU,Rouleau Pond,Williamstown,East Central,1,913,970,,,,Rouleau Pond Williamstown,Pond,44.12,-72.55
+ROUND (EDEN),Round Pond,Eden,North Central,10,98,1206,,,,Round Pond Eden,Pond,44.7064385,-72.5265014
+ROUND (HOLLND),Round Pond,Holland,NE Kingdom,14,42,1516,,,,Round Pond Holland,Pond,45.0019907,-71.9250961
+ROUND (MILTON),Round Pond,Milton,Champlain ,22,117,390,31,,NATURAL,Round Pond Milton,Pond,44.6117133,-73.2195746
+ROUND (NEWBRY),Round Pond,Newbury,East Central,30,260,1241,23,,NATURAL,Round Pond Newbury,Pond,44.1053421,-72.1589818
+ROUND (SHEFLD),Round Pond,Sheffield,North Central,13,154,1631,,,,Round Pond Sheffield,Pond,44.6775511,-72.1503784
+ROWE,Unnamed Pond referred to by DEC as Rowe,West Windsor,East Central,7,263,770,,,,Rowe Pond West Windsor,Pond,43.47,-72.5
+ROXBURY FLAT,Unnamed Pond referred to by DEC as Roxbury Flat,Roxbury,East Central,13,1806,990,,,,Roxbury Flat Pond Roxbury,Pond,44.08,-72.73
+ROYALTON HILL,Unnamed Pond referred to by DEC as Royalton Hill,Royalton,East Central,11,199,1370,,,,Royalton Hill Pond Royalton,Pond,43.78,-72.57
+RUNNEMEDE,Lake Runnemede (Evarts Pond),Windsor,East Central,62,133,322,13,,ARTIFICIAL,Lake Runnemede Windsor,Reservoir,43.4839605,-72.3892576
+RUSH,Rush,Eden,North Central,14,131,1290,,,,Rush Pond Eden,Pond,44.6711614,-72.5312238
+RUSS,Russ Pond,Elmore,North Central,7,59,1290,,,,Russ Pond Elmore,Pond,44.4625546,-72.5303891
+RUTLAND CITY,Rutland City Reservoir,Rutland Town,West Central,13,49,930,,,,Rutland City Reservoir Rutland Town,Reservoir,43.65,-72.95
+RYDER,Ryder Pond,Whitingham,Green Mtn South,14,115,1630,,,,Ryder Pond Whitingham,Pond,42.82,-72.85
+RYEGATE CENTER,Unnamed Pond referred to by DEC as Ryegate Center,Ryegate,North Central,7,187,1250,,,,Ryegate Center Pond Ryegate,Pond,44.22,-72.12
+SABIN,Sabin Pond (Woodbury Lake),Calais,North Central,142,9014,922,58,18,NATURAL,Sabin Pond Calais,Pond,44.4042231,-72.4162173
+SADAWGA,Sadawga Pond,Whitingham,Green Mtn South,194,1169,1670,10,6,NATURAL with ARTIFICIAL CONTROL,Sadawga Pond Whitingham,Lake (Artificial Control),42.78036,-72.8762088
+SALEM,Lake Salem,Derby,NE Kingdom,764,84133,963,70,20,NATURAL,Lake Salem Derby,Lake,44.9292138,-72.1037106
+SALMON,Unnamed Pond referred to by DEC as Salmon,Putney,Green Mtn South,6,464,1090,,,,Salmon Pond Putney,Pond,42.98,-72.58
+SANGMAN,Unnamed Pond referred to by DEC as Sangman,Pittsford,West Central,,,590,,,,Sangman Pond Pittsford,Pond,43.68,-72.98
+SARAH MOORES,Sarah Moores Pond,Barnet,North Central,13,288,975,,,,Sarah Moores Pond Barnet,Pond,44.323671,-72.0698169
+SARGENT,Sargent Pond (Unsargent Pond),Coventry,NE Kingdom,6,1306,930,,,,Sargent Pond Coventry,Pond,43.6770107,-73.075665
+SAWDUST,Sawdust Pond,Newark,NE Kingdom,15,2751,1775,,,,Sawdust Pond Newark,Pond,44.7317172,-71.970374
+SAXE,Unnamed Pond referred to by DEC as Saxe,Highgate,Champlain ,5,350,235,,,,Saxe Pond Highgate,Pond,44.97,-73.07
+SCHOFIELD,Schofield Pond,Hyde Park,North Central,29,936,1268,23,,NATURAL,Schofield Pond Hyde Park,Pond,44.6494951,-72.5317793
+SCHWARTZ,Unnamed Pond referred to by DEC as Schwartz,Morristown,North Central,,,1250,,,,Schwartz Pond Morristown,Pond,44.53,-72.68
+SCOTCH,Unnamed Pond referred to by DEC as Scotch,Fair Haven,West Central,,,350,,,,Scotch Pond Fair Haven,Pond,43.62,-73.27
+SEARSBURG,Searsbury Reservoir,Searsburg,Green Mtn South,25,98,1756,,,ARTIFICIAL,Searsburg Reservoir Searsburg,Reservoir,42.92,-72.93
+SEYMOUR,Seymour Lake,Morgan,NE Kingdom,1769,12920,1279,167,70,NATURAL with ARTIFICIAL CONTROL,Seymour Lake Morgan,Lake (Artificial Control),44.8969923,-71.9817632
+SHADOW (CONCRD),Shadow Lake,Concord,NE Kingdom,128,1649,1336,55,14,NATURAL,Shadow Lake Concord,Lake,44.4003367,-71.8734249
+SHADOW (GLOVER),Shadow Lake,Glover,North Central,210,3575,1396,139,55,NATURAL with ARTIFICIAL CONTROL,Shadow Lake Glover,Lake (Artificial Control),44.668103,-72.226571
+SHADOW (WOODBY),Shadow Pond,Woodbury,North Central,2,115,1190,,,,Shadow Pond Woodbury,Pond,44.4653327,-72.4137185
+SHAFTSBURY,Shaftsbury Lake,Shaftsbury,Green Mtn South,27,2311,848,7,,ARTIFICIAL,Shaftsbury Lake Shaftsbury,Reservoir,43.02,-73.18
+SHARON-E,Unnamed Pond referred to by DEC as Sharon - E,Sharon,East Central,8,304,1370,,,,Sharon - E Pond Sharon,Pond,43.78,-72.4
+SHAWVILLE,Unnamed Pond referred to by DEC as Shawville,Highgate,Champlain ,11,288,580,,,,Shawville Pond Highgate,Pond,44.93,-72.93
+SHELBURNE,Shelburne Pond,Shelburne,Champlain ,452,4922,332,25,11,NATURAL,Shelburne Pond Shelburne,Pond,44.3867182,-73.1606809
+SHELDON,Unnamed Pond referred to by DEC as Sheldon,Fair Haven,West Central,2,124,717,,,,Sheldon Pond Fair Haven,Pond,43.67,-73.27
+SHERMAN,Sherman Reservoir,Whitingham,Green Mtn South,160,143000,1102,,,ARTIFICIAL,Sherman Reservoir Whitingham,Reservoir,42.73,-72.92
+SHIPPEE,Shippee Pond,Whitingham,Green Mtn South,24,366,1692,6,,NATURAL with ARTIFICIAL CONTROL,Shippee Pond Whitingham,Lake (Artificial Control),42.7467495,-72.8348185
+SILVER (BARNRD),Silver Lake,Barnard,West Central,84,1091,1307,32,16,NATURAL with ARTIFICIAL CONTROL,Silver Lake Barnard,Lake (Artificial Control),43.7297902,-72.6106541
+SILVER (GEORGA),Silver Lake,Georgia,Champlain ,27,127,783,30,,NATURAL with ARTIFICIAL CONTROL,Silver Lake Georgia,Lake (Artificial Control),44.72,-73.07
+SILVER (LEICTR),Silver Lake,Leicester,West Central,101,413,1250,70,29,ARTIFICIAL,Silver Lake Leicester,Reservoir,43.88,-73.05
+SIMONDS,Simonds Reservoir,Hartford,East Central,1,504,710,,,,Simonds Reservoir Hartford,Reservoir,43.63,-72.35
+SIMPSONVILLE,Unnamed Pond referred to by DEC as Simpsonville,Townshend,Green Mtn South,12,433,990,,,,Simpsonville Pond Townshend,Pond,43.07,-72.63
+SKYLIGHT,Skylight Pond,Ripton,West Central,2,17,3350,,,NATURAL,Skylight Pond Ripton,Pond,43.9867293,-72.9351127
+SLAYTON (WOODBY),Slayton Pond,Woodbury,North Central,8,166,1470,,,,Slayton Pond Woodbury,Pond,44.4400553,-72.472331
+SMITH (COVNTY),Smith Pond (Sargent Pond),Coventry,NE Kingdom,8,141,974,,,,Smith Pond Coventry,Pond,44.92,-72.28
+SMITH (PITTFD),Smith Pond,Pittsford,West Central,6,57,370,,,,Smith Pond Pittsford,Pond,43.7186767,-73.06261
+SMITH (WOODBY),Smith Pond,Woodbury,North Central,4,90,1170,,,,Smith Pond Woodbury,Pond,44.4295,-72.4642749
+SODOM,Sodom Pond,East Montpelier,North Central,21,1850,1058,5,,NATURAL,Sodom Pond East Montpelier,Pond,44.3256137,-72.4998296
+SOMERSET,Somerset Reservoir,Somerset,Green Mtn South,1568,16313,2134,85,24,ARTIFICIAL,Somerset Reservoir Somerset,Reservoir,43.009708,-72.952621
+SOMERSET-N,Unnamed Pond referred to by DEC as Somerset - N,Somerset,Green Mtn South,,,2155,,,,Somerset - N Pond Somerset,Pond,43.02,-72.97
+SOMERSET-W,Unnamed Pond referred to by DEC as Somerset - W,Somerset,Green Mtn South,,,2130,,,,Somerset - W Pond Somerset,Pond,43,-72.95
+SOUTH (BRKFLD),South Pond,Brookfield,East Central,16,365,1423,10,,NATURAL,South Pond Brookfield,Pond,44.0414527,-72.6214946
+SOUTH (CHITDN),South Pond,Chittenden,West Central,10,254,2266,,,,South Pond Chittenden,Pond,43.7159001,-72.8751057
+SOUTH (EDEN),South Pond,Eden,North Central,103,1382,1196,66,,NATURAL with ARTIFICIAL CONTROL,South Pond Eden,Lake (Artificial Control),44.68,-72.53
+SOUTH (MARLBR),South Pond,Marlboro,Green Mtn South,68,344,1650,35,15,NATURAL,South Pond Marlboro,Pond,42.8445262,-72.7128712
+SOUTH AMERICA,South America Pond,Ferdinand,NE Kingdom,29,509,1747,4,,NATURAL,South American Pond Ferdinand,Pond,44.7056067,-71.7431474
+SOUTH BAY,South Bay,Newport City,NE Kingdom,470,,682,,,,South Bay Pond Newport City,Pond,44.93,-72.2
+SOUTH DOLLOFF,South Dolloff Pond,Sutton,NE Kingdom,3,768,1450,,,,South Dolloff Pond Sutton,Pond,44.694218,-72.0314863
+SOUTH KING,South King Pond,Woodbury,North Central,4,58,1190,,,,South King Pond Woodbury,Pond,44.42,-72.43
+SOUTH LONDONDERRY,Unnamed Pond referred to by DEC as South Londonderry,Londonderry,Green Mtn South,,,1170,,,,South Londonderry Pond Londonderry,Pond,43.2,-72.82
+SOUTH MECAWEE,Unnamed Pond referred to by DEC as South Mecawee,Reading,East Central,2,294,1580,,,NATURAL,South Mecawee Pond Reading,Pond,43.53,-72.63
+SOUTH READING,Unnamed Pond referred to by DEC as South Reading,Reading,East Central,12,644,1410,,,,South Reading Pond Reading,Pond,43.47,-72.6
+SOUTH RICHFORD,Unnamed Pond referred to by DEC as South Richford,Richford,Champlain ,12,295,970,,,,South Richford Pond Richford,Pond,44.95,-72.65
+SOUTH ST. ALBANS,"St. Albans Reservoir, South",Fairfax,Champlain ,27,1346,717,23,13,ARTIFICIAL,"St. Albans Reservoir, South Fairfax",Reservoir,44.75,-73.07
+SOUTH STREAM,South Stream Pond,Pownal,Green Mtn South,24,3456,1150,,,ARTIFICIAL,South Stream Pond Pownal,Reservoir,42.82,-73.18
+SOUTH VILLAGE,South Village Pond,Dorset,Green Mtn South,5,85,750,,,,South Village Pond Dorset,Pond,43.2278531,-73.013159
+SOUTH WOODBURY,Unnamed Pond referred to by DEC as South Woodbury,Woodbury,North Central,6,1990,1030,,,,South Woodbury Pond Woodbury,Pond,44.42,-72.42
+SPECTACLE,Spectacle Pond,Brighton,NE Kingdom,103,1024,1173,15,8,NATURAL,Spectacle Pond Brighton,Pond,44.8006048,-71.8503722
+SPOONERVILLE,Unnamed Pond referred to by DEC as Spoonerville,Chester,East Central,8,154,730,,,,Spoonerville Pond Chester,Pond,43.32,-72.55
+SPRING (BRANDN),Spring Pond,Brandon,West Central,5,86,490,,,,Spring Pond Brandon,Pond,43.8356192,-73.0637234
+SPRING (SHRWBY),Spring Lake (Shrewsbury Pond),Shrewsbury,West Central,66,275,1476,84,35,NATURAL,Spring Lake Shrewsbury,Lake,43.4959033,-72.918992
+SPRINGFIELD,Springfield Reservoir,Weathersfield,East Central,10,1696,677,,,ARTIFICIAL,Springfield Reservoir Weathersfield,Reservoir,43.35,-72.48
+SPRUCE (ORWELL),Spruce Pond,Orwell,West Central,25,283,638,25,,NATURAL,Spruce Pond Orwell,Pond,43.7639512,-73.2773368
+SPRUCE (WILMTN),Spruce Pond,Wilmington,Green Mtn South,12,987,1645,,,ARTIFICIAL,Spruce Pond Wilmington,Reservoir,42.85,-72.83
+ST. CATHERINE,Lake St. Catherine,Wells,West Central,904,7447,484,68,37,NATURAL,Lake St. Catherine Wells,Lake,43.47,-73.22
+STAMFORD,Stamford Pond,Stamford,Green Mtn South,12,260,2370,,,,Stamford Pond Stamford,Pond,42.8223028,-73.0651034
+STANDING,Standing Pond,Sharon,East Central,15,76,1326,,,,Standing Pond Sharon,Pond,43.8175682,-72.425373
+STANNARD,Stannard Pond,Stannard,North Central,25,125,2310,11,,NATURAL,Stannard Pond Stannard,Pond,44.5300544,-72.1653782
+STANNARD-E,Unnamed Pond referred to by DEC as Stannard - E,Stannard,North Central,,,2220,,,,Stannard - E Pond Stannard,Pond,44.53,-72.18
+STAPLES,Staples Pond,Williamstown,East Central,15,326,890,,,,Staples Pond Williamstown,Pond,44.085341,-72.5626049
+STAR,Star Lake,Mount Holly,West Central,63,709,1851,8,5,NATURAL with ARTIFICIAL CONTROL,Star Lake Mount Holly,Lake (Artificial Control),43.419516,-72.8162108
+STEAM MILL,Unnamed Pond referred to by DEC as Steam Mill,Walden,North Central,,,2195,,,,Steam Mill Pond Walden,Pond,44.5,-72.15
+STEARNS,Unnamed Pond referred to by DEC as Stearns,Holland,NE Kingdom,,,1530,,,,Stearns Pond Holland,Pond,44.95,-72.98
+STERLING,Sterling Pond,Cambridge,Champlain ,8,17,3008,,,NATURAL,Sterling Pond Cambridge,Pond,44.555885,-72.7742894
+STEVENS,Stevens Pond,Maidstone,NE Kingdom,26,178,919,9,,ARTIFICIAL,Stevens Pond Maidstone,Reservoir,44.5983874,-71.5706412
+STILES,Stiles Pond,Waterford,NE Kingdom,135,3884,877,33,11,NATURAL with ARTIFICIAL CONTROL,Stiles Pond Waterford,Lake (Artificial Control),44.42,-71.93
+STILLWATER,Stillwater Pond,Charleston,NE Kingdom,5,2643,1310,,,,Stillwater Pond Charleston,Pond,44.8397709,-71.9295403
+STONY,Unnamed Pond referred to by DEC as Stony,Eden,North Central,,,1230,,,,Stony Pond Eden,Pond,44.7,-72.6
+STOUGHTON,Stoughton Pond,Weathersfield,East Central,56,19257,502,20,9,ARTIFICIAL,Stoughton Pond Weathersfield,Reservoir,43.3792397,-72.4998126
+STRAFFORD,Unnamed Pond referred to by DEC as Strafford,Strafford,East Central,18,209,1330,,,,Strafford Pond Strafford,Pond,43.85,-72.43
+STRATTON,Stratton Pond,Stratton,Green Mtn South,46,264,2555,18,,NATURAL,Stratton Pond Stratton,Pond,43.1039661,-72.9698243
+STRATTON SKI AREA,Unnamed Pond referred to by DEC as Stratton Ski Area,Winhall,Green Mtn South,,,1705,,,ARTIFICIAL,Stratton Ski Area Pond Winhall,Reservoir,43.12,-72.9
+STUART,Stuart Pond,Lyndon,NE Kingdom,4,115,830,,,,Stuart Pond Lyndon,Pond,44.5061672,-72.0145404
+SUGAR HILL,Sugar Hill Reservoir,Goshen,West Central,63,1667,1768,35,22,ARTIFICIAL,Sugar Hill Reservoir Goshen,Reservoir,43.92,-73
+SUGAR HOLLOW,Sugar Hollow Pond,Pittsford,West Central,21,278,750,3,,NATURAL with ARTIFICIAL CONTROL,Sugar Hollow Pond Pittsford,Lake (Artificial Control),43.7564542,-73.0281656
+SUKES,Sukes Pond,Brighton,NE Kingdom,9,58,1521,,,,Sukes Pond Brighton,Pond,44.7544943,-71.8964839
+SUNRISE,Sunrise Lake,Benson,West Central,57,1775,496,43,26,NATURAL with ARTIFICIAL CONTROL,Sunrise Lake Benson,Lake (Artificial Control),43.77,-73.27
+SUNSET (BENSON),Sunset Lake,Benson,West Central,202,1192,497,118,50,NATURAL with ARTIFICIAL CONTROL,Sunset Lake Benson,Lake (Artificial Control),43.7564513,-73.2709476
+SUNSET (BRKFLD),Sunset Lake,Brookfield,East Central,25,2664,1272,32,,NATURAL with ARTIFICIAL CONTROL,Sunset Lake Brookfield,Lake (Artificial Control),44.03,-72.6
+SUNSET (MARLBR),Sunset Lake,Marlboro,Green Mtn South,96,507,1370,35,,NATURAL with ARTIFICIAL CONTROL,Sunset Lake Marlboro,Lake (Artificial Control),42.92,-72.68
+SWAMP,Swamp Pond,Leicester,West Central,5,29,350,,,,Swamp Pond Leicester,Pond,43.8545066,-73.1478918
+SWEENEY,Sweeney Pond,Glover,North Central,9,70,1950,,,,Sweeney Pond Glover,Pond,44.6953279,-72.2767709
+SWEET,Sweet Pond,Guilford,Green Mtn South,20,682,970,11,,ARTIFICIAL,Sweet Pond Guilford,Reservoir,42.7539718,-72.6353693
+TABER,Unnamed Pond referred to by DEC as Taber,Stowe,North Central,,,2290,,,,Taber Pond Stowe,Pond,44.45,-72.7
+TABOR,Tabor Pond,Calais,North Central,5,6,1170,,,,Tabor Pond Calais,Pond,44.3883899,-72.4784412
+TAMARACK,Unnamed Pond referred to by DEC as Tamarack,Wolcott,North Central,,,1210,,,,Tamarack Pond Wolcott,Pond,44.57,-72.42
+TELEPHONE,Unnamed Pond referred to by DEC as Telephone,Chester,East Central,15,349,850,,,,Telephone Pond Chester,Pond,43.27,-72.55
+TENNY,Tenny Pond (Hanson Pond),Newbury,East Central,10,144,1130,,,,Tenny Pond Newbury,Pond,44.17,-72.12
+THE FISH,The Fish Pond,Newbury,East Central,6,380,590,,,,The Fish Pond Newbury,Pond,44.08,-72.07
+THE POGUE,The Pogue,Woodstock,East Central,11,80,1150,,,,The Pogue Pond Woodstock,Pond,43.63,-72.55
+THOMPSONBURG,Unnamed Pond referred to by DEC as Thompsonburg,Londonderry,Green Mtn South,,,1310,,,,Thompsonburg Pond Londonderry,Pond,43.2,-72.78
+THOMPSONS,Thompsons Pond,Pownal,Green Mtn South,28,548,1406,8,,ARTIFICIAL,Thompsons Pond Pownal,Reservoir,42.78,-73.18
+THURMAN W. DIX,Thurman W. Dix Reservoir,Orange,North Central,123,5985,1276,24,11,NATURAL with ARTIFICIAL CONTROL,Thurman W. Dix Reservoir Orange,Lake (Artificial Control),44.18,-72.42
+TICKLENAKED,Ticklenaked Pond,Ryegate,North Central,54,1444,885,51,16,NATURAL with ARTIFICIAL CONTROL,Ticklenaked Pond Ryegate,Lake (Artificial Control),44.1892294,-72.0987041
+TILDYS,Tildys Pond (Clark Pond),Glover,North Central,33,1078,1233,24,13,NATURAL,Tildys Pond Glover,Pond,44.65,-72.2
+TIMBER RIDGE,Unnamed Pond referred to by DEC as Timber Ridge,Windham,Green Mtn South,,,1920,,,,Timber Ridge Pond Windham,Pond,43.18,-72.72
+TINY,Tiny Pond,Ludlow,Green Mtn South,29,616,1758,17,,NATURAL,Tiny Pond Ludlow,Pond,43.4603488,-72.724542
+TOAD (CHARTN),Toad Pond,Charleston,NE Kingdom,22,2166,1146,4,,NATURAL,Toad Pond Charleston,Pond,44.8489373,-72.0475981
+TOAD (MORGAN),Toad Pond,Morgan,NE Kingdom,12,576,1810,,,,Toad Pond Morgan,Pond,44.9206031,-71.9400961
+TOWNSHEND,Townshend Reservoir,Townshend,Green Mtn South,108,177920,478,,,ARTIFICIAL,Townshend Reservoir Townshend,Reservoir,43.05,-72.7
+TRACER,Unnamed Pond referred to by DEC as Tracer,Reading,East Central,,,1730,,,,Tracer Pond Reading,Pond,43.47,-72.62
+TROUT BROOK,Unnamed Pond referred to by DEC as Trout Brook,Berkshire,Champlain ,5,1134,490,,,,Trout Brook Pond Berkshire,Pond,44.93,-72.78
+TROY,Unnamed Pond referred to by DEC as Troy,Troy,NE Kingdom,,,690,,,,Troy Pond Troy,Pond,44.98,-72.4
+TULIP,Unnamed Pond referred to by DEC as Tulip,Whitingham,Green Mtn South,,,1780,,,,Tulip Pond Whitingham,Pond,42.83,-72.83
+TUNBRIDGE TROUT,Tunbridge Trout Pond,Tunbridge,East Central,5,229,1370,,,,Tunbridge Trout Pond Tunbridge,Pond,43.8584008,-72.456208
+TURTLE,Turtle Pond,Holland,NE Kingdom,27,1228,1438,34,,NATURAL,Turtle Pond Holland,Pond,44.9933797,-71.9198182
+TURTLEHEAD,Turtlehead Pond,Marshfield,North Central,69,3707,1279,18,7,NATURAL with ARTIFICIAL CONTROL,Turtlehead Pond Marshfield,Lake (Artificial Control),44.3258919,-72.330657
+TUTTLE (BRUNWK),Tuttle Pond,Brunswick,NE Kingdom,14,176,994,,,,Tuttle Pond Brunswick,Pond,44.7064397,-71.6270329
+TUTTLE (HARDWK),Tuttle Pond,Hardwick,North Central,21,342,1410,6,,NATURAL,Tuttle Pond Hardwick,Pond,44.5581086,-72.310105
+TWIN,Twin Ponds,Brookfield,East Central,16,438,1208,,,,Twin Ponds Brookfield,Pond,44.0611747,-72.5795493
+UNDERPASS,Underpass Pond,Morgan,NE Kingdom,3,314,1270,,,,Underpass Pond Morgan,Pond,44.8692149,-71.9020399
+UNION,Unnamed Pond referred to by DEC as Union,Northfield,East Central,,,1430,,,,Union Pond Northfield,Pond,44.18,-72.72
+UNKNOWN (AVYGOR),Unknown Pond,Avery's Gore,NE Kingdom,19,296,2330,,,NATURAL,Unknown Pond Avery's Gore,Pond,44.9106032,-71.8428726
+UNKNOWN (FERDND),Unknown Pond,Ferdinand,NE Kingdom,12,186,1667,,,,Unknown Pond Ferdinand,Pond,44.6650522,-71.7214797
+UPPER DANVILLE,Unnamed Pond referred to by DEC as Upper Danville,Danville,North Central,19,252,1960,,,,Upper Danville Pond Danville,Pond,44.43,-72.18
+UPPER FRYING PAN,Unnamed Pond referred to by DEC as Upper Frying Pan,Eden,North Central,,,1390,,,,Upper Frying Pan Pond Eden,Pond,44.73,-72.6
+UPPER HURRICANE,Upper Hurricane Reservoir,Hartford,East Central,4,76,1090,,,,Upper Hurricane Reservoir Hartford,Reservoir,43.65,-72.37
+UPPER MOORE,Upper Moore Pond,Plymouth,West Central,3,203,1530,,,,Upper Moore Pond Plymouth,Pond,43.52,-72.72
+UPPER SYMES,Upper Symes Pond,Ryegate,North Central,20,2035,910,5,,NATURAL,Upper Symes Pond Ryegate,Pond,44.25,-72.12
+UPPER WINOOSKI,Unnamed Pond referred to by DEC as Upper Winooski,Winooski,Champlain ,10,176,290,,,,Upper Winooski Pond Winooski,Pond,44.5,-73.17
+UPPER WORCESTER,Worcester Pond - Upper,Worcester,North Central,11,581,1090,,,,Worcester Pond - Upper Worcester,Pond,44.4053338,-72.5306657
+VAIL,Vail Pond,Sutton,NE Kingdom,16,142,1493,,,,Vail Pond Sutton,Pond,44.7053286,-72.073432
+VALLEY,Valley Lake (Dog Pond),Woodbury,North Central,88,472,1207,70,24,NATURAL with ARTIFICIAL CONTROL,Valley Lake Woodbury,Lake (Artificial Control),44.447,-72.441
+VERGENNES WATERSHED,Vergennes Watershed,Bristol,Champlain ,15,101,381,,,,Vergennes Watershed Pond Bristol,Pond,44.15,-73.13
+VERNON HATCHERY,Unnamed Pond referred to by DEC as Vernon Hatchery,Vernon,Green Mtn South,10,,300,,,,Vernon Hatchery Pond Vernon,Pond,42.75,-72.5
+VERSHIRE-E,Unnamed Pond referred to by DEC as Vershire - E,Vershire,East Central,10,608,1130,,,,Vershire - E Pond Vershire,Pond,43.97,-72.25
+VIEW,View Pond,Woodstock,East Central,4,216,990,,,,View Pond Woodstock,Pond,43.6014586,-72.5228716
+VONDELL,Vondell Reservoir,Woodstock,East Central,10,405,1130,,,ARTIFICIAL,Vondell Reservoir Woodstock,Reservoir,43.63,-72.57
+WAITS,Unnamed Pond referred to by DEC as Waits,Topsham,North Central,6,660,1110,,,,Waits Pond Topsham,Pond,44.08,-72.3
+WALDEN-S,Unnamed Pond referred to by DEC as Walden - S,Walden,North Central,8,90,1550,,,,Walden - S Pond Walden,Pond,44.43,-72.23
+WALKER (COVNTY),Walker Pond,Coventry,NE Kingdom,18,204,973,9,,NATURAL,Walker Pond Coventry,Pond,44.93,-72.27
+WALKER (HUBDTN),Walker Pond,Hubbardton,West Central,13,312,1050,,,,Walker Pond Hubbardton,Pond,43.7425642,-73.140945
+WALKER (NEWARK),Walker Pond,Newark,NE Kingdom,3,45,1750,,,,Walker Pond Newark,Pond,44.7408835,-71.9170398
+WALLACE,Wallace Pond,Canaan,NE Kingdom,532,19382,1317,62,27,NATURAL with ARTIFICIAL CONTROL,Wallace Pond Canaan,Lake (Artificial Control),45.0119905,-71.6256445
+WALLINGFORD,Wallingford Pond,Wallingford,West Central,87,1470,2165,28,7,NATURAL,Wallingford Pond Wallingford,Pond,43.4145161,-72.9095466
+WALTON,Walton Pond,Woodbury,North Central,13,128,1312,,,,Walton Pond Woodbury,Pond,44.4450553,-72.4303852
+WANTASTIQUET,Wantastiquet Pond,Weston,West Central,44,1201,1770,14,,ARTIFICIAL,Wantastiquet Pond Weston,Reservoir,43.3,-72.82
+WAPANACKI,Wapanacki Lake,Wolcott,North Central,21,285,1270,23,,ARTIFICIAL,Wapanacki Lake Wolcott,Reservoir,44.5589417,-72.4006633
+WARDEN,Warden Pond,Barnet,North Central,46,1085,993,68,30,NATURAL,Warden Pond Barnet,Pond,44.3300597,-72.0781505
+WARNER,Unnamed Pond referred to by DEC as Warner,Jay,NE Kingdom,,,975,,,,Warner Pond Jay,Pond,44.98,-72.43
+WATERBURY,Waterbury Reservoir,Waterbury,North Central,839,69760,592,100,,ARTIFICIAL,Waterbury Reservoir Waterbury,Reservoir,44.38,-72.77
+WATERFORD-E,Unnamed Pond referred to by DEC as Waterford - E,Waterford,NE Kingdom,5,195,970,,,,Waterford - E Pond Waterford,Pond,44.4,-71.92
+WATSON,Watson Pond,Calais,North Central,11,102,1190,,,,Watson Pond Calais,Pond,43.0748013,-72.5081447
+WEATHERHEAD HOLLOW,Weatherhead Hollow,Guilford,Green Mtn South,33,620,711,10,5,ARTIFICIAL,Weatherhead Hollow Pond Guilford,Reservoir,42.73,-72.62
+WEATHERSFIELD,Unnamed Pond referred to by DEC as Weathersfield,Weathersfield,East Central,,,968,,,,Weathersfield Pond Weathersfield,Pond,43.37,-72.47
+WEAVER,Unnamed Pond referred to by DEC as Weaver,Grafton,Green Mtn South,12,334,780,,,,Weaver Pond Grafton,Pond,43.18,-72.57
+WEST FAIRLEE,Unnamed Pond referred to by DEC as West Fairlee,West Fairlee,East Central,15,5956,690,,,,West Fairlee Pond West Fairlee,Pond,43.92,-72.23
+WEST HILL,West Hill Pond,Cabot,North Central,46,1476,1135,13,,ARTIFICIAL,West Hill Pond Cabot,Reservoir,44.4177364,-72.3429895
+WEST MOUNTAIN,West Mountain Pond,Maidstone,NE Kingdom,60,2311,1235,12,,NATURAL,West Mountain Pond Maidstone,Pond,44.6892181,-71.6620338
+WEST TWIN,West Twin Pond,Athens,Green Mtn South,1,1,1150,,,,West Twin Pond Athens,Pond,43.13,-72.6
+WESTFORD,Westford Pond,Westford,Champlain ,9,338,790,,,,Westford Pond Westford,Pond,44.5958824,-73.0648544
+WESTMINSTER-E,Unnamed Pond referred to by DEC as Westminster - E,Westminster,Green Mtn South,16,60,233,,,,Westminster - E Pond Westminster,Pond,43.1,-72.45
+WESTMINSTER-W,Unnamed Pond referred to by DEC as Westminster - W,Westminster,Green Mtn South,8,1121,800,,,,Westminster - W Pond Westminster,Pond,43.05,-72.53
+WHEELER (BARTON),Wheeler Pond,Barton,NE Kingdom,15,742,1450,,,,Wheeler Pond Barton,Pond,44.7153349,-72.10115745
+WHEELER (BRUNWK),Wheeler Pond,Brunswick,NE Kingdom,66,4159,1028,35,13,NATURAL,Wheeler Pond Brunswick,Pond,44.708384,-71.6395333
+WHEELER (WOODBY),Wheeler Pond,Woodbury,North Central,4,64,1230,,,,Wheeler Pond Woodbury,Pond,44.43,-72.45
+WHEELOCK,Wheelock Pond,Calais,North Central,4,128,1230,,,,Wheelock Pond Calais,Pond,44.4,-72.48
+WHITCOMB,Whitcomb Pond,Williamstown,East Central,1,638,1170,,,,Whitcomb Pond Williamstown,Pond,44.12,-72.57
+WHITEHOUSE,Whitehouse Pond,Vershire,East Central,5,29,1590,,,,Whitehouse Pond Vershire,Pond,43.98,-72.37
+WILEY;,Unnamed Pond referred to by DEC as Wiley,Eden,North Central,,,1290,,,,Wiley Pond Eden,Pond,44.67,-72.53
+WILLARD,Unnamed Pond referred to by DEC as Willard,Mount Tabor,West Central,,,2120,,,,Willard Pond Mount Tabor,Pond,43.38,-72.92
+WILLIAMSTOWN-NE,Unnamed Pond referred to by DEC as Williamstown - NE,Williamstown,East Central,7,106,1490,,,,Williamstown - NE Pond Williamstown,Pond,44.13,-72.47
+WILLOUGHBY,Lake Willoughby,Westmore,NE Kingdom,1687,12256,1170,308,140,NATURAL with ARTIFICIAL CONTROL,Lake Willoughby Westmore,Lake (Artificial Control),44.7519942,-72.0628763
+WILMOT,Unnamed Pond referred to by DEC as Wilmot,Thetford,East Central,,,610,,,,Wilmot Pond Thetford,Pond,43.78,-72.23
+WINDHAM,Unnamed Pond referred to by DEC as Windham,Stratton,Green Mtn South,,,2290,,,,Windham Pond Stratton,Pond,43.12,-72.93
+WINHALL,Unnamed Pond referred to by DEC as Winhall,Stratton,Green Mtn South,16,150,2610,,,,Winhall Pond Stratton,Pond,43.1,-72.98
+WINONA,Winona Lake (Bristol Pond),Bristol,Champlain ,248,2564,467,9,4,NATURAL with ARTIFICIAL CONTROL,Winona Lake Bristol,Lake (Artificial Control),44.1731125,-73.0870642
+WOLCOTT,Wolcott Pond,Wolcott,North Central,74,920,1196,23,9,NATURAL with ARTIFICIAL CONTROL,Wolcott Pond Wolcott,Lake (Artificial Control),44.56532569,-72.42045722
+WOODBURY,Unnamed Pond referred to by DEC as Woodbury,Woodbury,North Central,,,1155,,,,Woodbury Pond Woodbury,Pond,44.43,-72.42
+WOODWARD,Woodward Reservoir,Plymouth,West Central,106,1878,1343,48,22,NATURAL with ARTIFICIAL CONTROL,Woodward Reservoir Plymouth,Lake (Artificial Control),43.56577923,-72.75853066
+WORDEN,Unnamed Pond referred to by DEC as Worden,Marlboro,Green Mtn South,,,1545,,,,Worden Pond Malboro,Pond,42.9,-72.77
+WRIGHT,Wright Reservoir,Hartford,East Central,4,53,1047,,,,Wright Reservoir Hartford,Reservoir,43.65,-72.35
+WRIGHTSVILLE,Wrightsville Reservoir,East Montpelier,North Central,190,44008,620,19,,ARTIFICIAL,Wrightsville Reservoir East Montpelier,Reservoir,44.32345335,-72.57340942
+YAW,Yaw Pond,Readsboro,Green Mtn South,2,2007,2010,,,,Yaw Pond Readsboro,Pond,42.8470252,-73.0131576
+ZACK WOODS,Zack Woods Pond,Hyde Park,North Central,23,36,1179,55,,NATURAL,Zack Woods Pond Hyde Park,Pond,44.6106072,-72.5012221
