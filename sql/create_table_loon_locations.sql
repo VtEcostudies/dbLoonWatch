@@ -9,9 +9,10 @@ create table if not exists vt_loon_locations (
 --\COPY vt_loon_locations FROM 'C:\Users\jtloo\Documents\VCE\LoonWeb\loonWatchData\csv_import\LoonWatch_Sampling_Locations.csv' DELIMITER ',' CSV HEADER
 select * from vt_loon_locations where locationArea > 200;
 
+ALTER TABLE vt_loon_locations ADD CONSTRAINT loon_location_unique UNIQUE(locationName);
 --add foreign key waterBodyId 
 alter table vt_loon_locations add column waterBodyId text;
-alter table vt_loon_locations ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterBodyId) REFERENCES vt_water_bodies (wbTextId);
+alter table vt_loon_locations ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterBodyId) REFERENCES vt_water_body (wbTextId);
 --add foreign key locationTownId
 alter table vt_loon_locations add column locationTownId integer;
 alter table vt_loon_locations ADD CONSTRAINT fk_loon_location_town_id FOREIGN KEY (locationTownId) REFERENCES vt_town ("townId");
@@ -54,20 +55,20 @@ update vt_loon_locations set locationTown='Eden' where locationName='South (Eden
 --exact match loon locationName == water body and town == town
 update vt_loon_locations l
 set waterBodyId=wbTextId
-from vt_water_bodies b
+from vt_water_body b
 where upper(l.locationName) = upper(b.wbTextId)
 and l.locationTown = b.wbTownName;
 
 --select loon locations with town == town and loon lake area == waterbody area
 select * from vt_loon_locations l
-join vt_water_bodies b 
+join vt_water_body b 
 on upper(l.locationTown) = upper(b.wbTownName)
 and l.locationArea = b.lakeArea;
 
 --exact match towns == towns and loon lake area == waterbody area
 update vt_loon_locations l
 set waterBodyId=wbTextId
-from vt_water_bodies b
+from vt_water_body b
 where upper(l.locationTown) = upper(b.wbTownName)
 and l.locationArea = b.lakeArea;
 
@@ -78,14 +79,14 @@ where waterBodyId is null;
 
 --select loon lake name 1st token == water body 1st token and town == town
 select * from vt_loon_locations l
-join vt_water_bodies b
+join vt_water_body b
 on (string_to_array(upper(l.locationName), ' '))[1] = (string_to_array(upper(b.wbTextId), ' '))[1]
 and upper(l.locationTown) = upper(b.wbTownName)
 where waterBodyId is null;
 
 update vt_loon_locations l
 set waterBodyId=wbTextId
-from vt_water_bodies b
+from vt_water_body b
 where (string_to_array(upper(l.locationName), ' '))[1] = (string_to_array(upper(b.wbTextId), ' '))[1]
 and upper(l.locationTown) = upper(b.wbTownName)
 and waterBodyId is null;
@@ -96,8 +97,10 @@ from vt_loon_locations l
 where waterBodyId is null;
 
 select * from vt_loon_locations l
-join vt_water_bodies b on 1=1
+join vt_water_body b on 1=1
 where waterBodyId is null
 and upper(b.wbOfficialName) like '%' || (string_to_array(upper(l.locationName), ' '))[1] || '%';
 
-select * from vt_water_bodies where lower(wbFullName) like '%clyde%';
+select * from vt_water_body where lower(wbFullName) like '%clyde%';
+
+select * from vt_loon_locations;
