@@ -18,7 +18,7 @@ create table if not exists vt_water_body (
 	--wbGeoBorder GEOMETRY(Geometry, 4326)
 );
 --Import data using psql:
---\COPY vt_water_body FROM 'C:\Users\jtloo\Documents\VCE\LoonWeb\loonWatchData\csv_import\Official_Lake_List_VT_2023.csv' DELIMITER ',' CSV HEADER
+--\COPY vt_water_body FROM 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_import\Official_Lake_List_VT_2023.csv' DELIMITER ',' CSV HEADER
 
 --find duplicate wbTextIds
 select wbTextId, count(wbTextId) from vt_water_body

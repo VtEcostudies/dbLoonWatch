@@ -52,20 +52,20 @@ update vt_loon_locations set locationTown='Newport City' where locationName='Sou
 update vt_loon_locations set locationTown='Elmore' where locationName='Hardwood';
 update vt_loon_locations set locationTown='Eden' where locationName='South (Eden)';
 
---exact match loon locationName == water body and town == town
+--update waterBodyId where loon locationName == waterBodyId and town == town
 update vt_loon_locations l
 set waterBodyId=wbTextId
 from vt_water_body b
 where upper(l.locationName) = upper(b.wbTextId)
 and l.locationTown = b.wbTownName;
 
---select loon locations with town == town and loon lake area == waterbody area
+--select loon locations where town == town and loon locationArea == waterbody lakeArea
 select * from vt_loon_locations l
 join vt_water_body b 
 on upper(l.locationTown) = upper(b.wbTownName)
 and l.locationArea = b.lakeArea;
 
---exact match towns == towns and loon lake area == waterbody area
+--update waterBodyId where town == town and loon locationArea == waterbody lakeArea
 update vt_loon_locations l
 set waterBodyId=wbTextId
 from vt_water_body b
@@ -77,13 +77,14 @@ select * from vt_loon_locations l
 join vt_town on locationTownId="townId"
 where waterBodyId is null;
 
---select loon lake name 1st token == water body 1st token and town == town
+--select loon locationName 1st token == waterBodyId 1st token and town == town
 select * from vt_loon_locations l
 join vt_water_body b
 on (string_to_array(upper(l.locationName), ' '))[1] = (string_to_array(upper(b.wbTextId), ' '))[1]
 and upper(l.locationTown) = upper(b.wbTownName)
 where waterBodyId is null;
 
+--update waterBodyId where loon locationName 1st token == waterBodyId 1st token and town == town
 update vt_loon_locations l
 set waterBodyId=wbTextId
 from vt_water_body b
@@ -96,11 +97,110 @@ select (string_to_array(upper(l.locationName), ' '))[1], *
 from vt_loon_locations l
 where waterBodyId is null;
 
-select * from vt_loon_locations l
-join vt_water_body b on 1=1
-where waterBodyId is null
-and upper(b.wbOfficialName) like '%' || (string_to_array(upper(l.locationName), ' '))[1] || '%';
+--handle these on case-by-case basis:
+/*
+"Clyde River - Buck Flats" - Eric says this is truly a 'new' water body not in the official Lakes list. It's a river.
+"Adamant" - See below. Adamant Pond in Calais, VT is not in vt_water_bodies.
+"Little Salem" - See below. Little Salem Pond is an historical name not differentiated from Salem Pond in Derby, VT.
+"Memphremagog" - Is correct. It wasn't matched because town name was different.
+"Townsend Res." - Townsend is misspelled. vt_water_body has a Townshend Reservoir.
+"Happenstance Farm" - Didn't exist. Had to create one.
+"Nelson" - Nelson Pond in Woodbury, VT is Forest (Calais) in vt_water_bodies
+"WrightSurveyille" - Typo. This is Wrightsville Reservoir in East Montpelier
+*/
 
-select * from vt_water_body where lower(wbFullName) like '%clyde%';
+--Adamant Pond, Calais, VT is not in vt_water_bodies:
+--https://geodata.vermont.gov/datasets/VTANR::lakes-inventory/explore?location=44.332249%2C-72.501288%2C15.00
+select * from vt_loon_locations where lower(locationName) like '%adamant%';
+select * from vt_water_body where lower(wbTextId) like '%adamant%';
+select * from vt_water_body where lower(wbTownName) like '%calais%';
+CREATE TEMP TABLE tmp (like vt_water_body);
+INSERT INTO tmp SELECT * FROM vt_water_body WHERE wbTextId = 'ABENAKI';
+UPDATE tmp SET wbTextId = 'ADAMANT';
+UPDATE tmp SET 
+wbArea=20,
+wbTownName='Calais',
+wbElevation=null,
+wbMaxDepth=null, 
+wbMeanDepth=null,
+wbOfficialName=null,
+wbRegion='North Central',
+wbBasinArea=null,
+wbOutletType=null,
+wbFullName='Adamant Pond',
+wbType='Pond',
+wbCenterLatitude=44.334050, 
+wbCenterLongitude=-72.502490
+WHERE wbTextId='ADAMANT';
+INSERT INTO vt_water_body SELECT * FROM tmp;
+SELECT * FROM vt_water_body WHERE wbTextId ='ADAMANT';
+DROP TABLE tmp;
+UPDATE vt_loon_locations set waterBodyId='ADAMANT' WHERE locationName='Adamant';	
 
-select * from vt_loon_locations;
+--Nelson Pond in Woodbury, VT is Forest (Calais) in vt_water_bodies
+--https://geodata.vermont.gov/datasets/VTANR::lakes-inventory/explore?location=44.404647%2C-72.440308%2C15.00
+select * from vt_loon_locations where lower(locationName) like '%nelson%';
+select * from vt_water_body where wbTextId like '%FOREST (CALAIS)%';
+update vt_loon_locations set waterBodyId='FOREST (CALAIS)' WHERE locationName='Nelson';
+
+--Little Salem Pond is an historical name not differentiated from Salem Pond in Derby, VT
+--https://geodata.vermont.gov/datasets/VTANR::lakes-inventory/explore?location=44.927270%2C-72.102205%2C14.00
+select * from vt_loon_locations where lower(locationName) like '%little salem%';
+select * from vt_water_body where wbTextId like '%SALEM%';
+update vt_loon_locations set waterBodyId='SALEM' WHERE locationName='Little Salem';
+--insert new wbTextId='LITTLE SALEM' into vt_water_body, copied from 'SALEM'
+CREATE TEMP TABLE tmp (like vt_water_body);
+INSERT INTO tmp SELECT * FROM vt_water_body WHERE wbTextId = 'SALEM';
+UPDATE tmp SET wbTextId = 'LITTLE SALEM';
+UPDATE tmp SET wbArea = (SELECT locationArea FROM vt_loon_locations WHERE locationName='Little Salem');
+INSERT INTO vt_water_body SELECT * from tmp;
+SELECT * FROM vt_water_body WHERE wbTextId='LITTLE SALEM';
+UPDATE vt_water_body SET wbCenterLatitude=44.915, wbCenterLongitude=-72.091 WHERE wbTextId='LITTLE SALEM';
+
+--Memphremagog didn't match because towns don't match
+select * from vt_loon_locations where lower(locationName) like '%memphremagog%';
+select * from vt_water_body where wbTextId like '%MEMPHREMAGOG%';
+update vt_loon_locations set waterBodyId='MEMPHREMAGOG' WHERE locationName='Memphremagog';
+
+--Townsend Res. is misspelled
+--vt_water_bodies has a Townshend Reservoir
+select * from vt_loon_locations where lower(locationName) like '%townsend%';
+update vt_loon_locations set locationName='Townshend Res.' where locationName='Townsend Res.';
+select * from vt_water_body where wbTextId like '%TOWNSHEND%';
+update vt_loon_locations set waterBodyId='TOWNSHEND' WHERE locationName='Townshend Res.';
+
+--Happenstance Farm is tiny, private, and isn't in vt_water_body
+select * from vt_loon_locations where lower(locationName) like '%happenstance%';
+select * from vt_water_body where lower(wbTextId) like '%happenstance%'; --Does not exist
+update vt_loon_locations set waterBodyId='HAPPENSTANCE' WHERE locationName='Happenstance Farm';
+--insert new wbTextId='LITTLE SALEM' into vt_water_body, copied from 'SALEM'
+CREATE TEMP TABLE tmp (like vt_water_body);
+INSERT INTO tmp SELECT * FROM vt_water_body WHERE wbTextId = 'ABENAKI';
+UPDATE tmp SET wbTextId = 'HAPPENSTANCE';
+UPDATE tmp SET 
+wbArea=12,
+wbTownName='Goshen',
+wbElevation=1640,
+wbMaxDepth=null, 
+wbMeanDepth=null,
+wbOfficialName=null,
+wbRegion=(select wbRegion from vt_water_body WHERE wbTextId='DUNMORE'),
+wbBasinArea=null,
+wbOutletType=null,
+wbFullName='Happenstance Farm Pond',
+wbType='Pond',
+wbCenterLatitude=44.8899, 
+wbCenterLongitude=-73.0091 
+WHERE wbTextId='HAPPENSTANCE';
+INSERT INTO vt_water_body SELECT * from tmp;
+DROP TABLE tmp;
+UPDATE vt_water_body 
+	SET wbRegion=(SELECT wbRegion FROM vt_water_body WHERE wbTextId='DUNMORE') WHERE wbTextId='HAPPENSTANCE';
+
+SELECT * FROM vt_water_body WHERE wbTextId='HAPPENSTANCE';
+update vt_loon_locations set waterBodyId='HAPPENSTANCE' WHERE locationName='Happenstance Farm';
+
+select * from vt_water_body where lower(wbTextId) like '%wrightsville%';
+update vt_loon_locations set locationName='Wrightsville' where locationName='WrightSurveyille';
+update vt_loon_locations set locationTown='East Montpelier' where locationName='Wrightsville';
+update vt_loon_locations set waterBodyId='WRIGHTSVILLE' WHERE locationName='Wrightsville';
