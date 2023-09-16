@@ -1,11 +1,12 @@
---COPY 
+COPY 
 (
 SELECT
 --date_part('year', lwIngestDate) || '-' || lwIngestLocation || '-' || COALESCE(lwIngestStart, '00:00:00') AS "eventID",
 date_part('year', lwIngestDate) 
-	|| '-' || lwIngestLocation 
+	|| '-' || waterBodyId
 	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
 AS "eventID",
+/*
 (
 	SELECT COUNT(lwIngestLocation)
 	FROM loonWatch_ingest lwi
@@ -15,6 +16,7 @@ AS "eventID",
 ) AS "surveyYearLocationCount",
 row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation 
    ORDER BY date_part('year', lwIngestDate), lwIngestLocation ) AS "surveyYearLocationIter",
+*/
 'Area Survey' AS "samplingProtocol",
 'Observer Time' AS "samplingEffort",
 locationArea AS "sampleSizeValue",
@@ -37,34 +39,125 @@ FROM loonWatch_ingest li
 INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
 INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
 ) 
---TO 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_export\loonwatch_sampling_event.csv' delimiter ',' csv header;
-/*
+TO 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_export\loonwatch_sampling_event.csv' delimiter ',' csv header;
+
 COPY (
 SELECT
-eventID
-occurrenceID
-basisOfRecord
-recordedBy
-individualCount
-organismQuantity
-organismQuantityType
-occurrenceStatus
-scientificName
-kingdom
-phylum
-class
-order
-family
-infraspecificEpithet
-taxonRank
-type
-ownerInstitutionCode
-lwIngestLocation AS "",
-lwIngestObserverName AS "observerName",
-	
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+AS "eventID",
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-Ad'
+AS "occurrenceID",
+'Human Observation' AS "basisOfRecord",
+lwIngestObserverName AS "recordedBy",
+lwIngestAdult AS "individualCount",
+'Present' AS "occurrenceStatus",
+'Gavia immer' AS "scientificName",
+'Animalia' AS "kingdom",
+'Chordata' AS "phylum",
+'Aves' AS "class",
+'Gaviiformes' AS "order",
+'Gaviidae' AS "family",
+'Species' AS "taxonRank",
+'Event' AS "type",
+'VCE' AS "ownerInstitutionCode"
 FROM loonWatch_ingest li
-INNER JOIN vt_loon_location ll ON locationName=lwIngestLocation
-INNER JOIN vt_water_body wb ON wbTextId=lw.waterBodyId
+INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
+INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
+WHERE lwIngestAdult > 0
+
+UNION
+
+SELECT
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+AS "eventID",
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-SA'
+AS "occurrenceID",
+'Human Observation' AS "basisOfRecord",
+lwIngestObserverName AS "recordedBy",
+lwIngestSubAdult AS "individualCount",
+'Present' AS "occurrenceStatus",
+'Gavia immer' AS "scientificName",
+'Animalia' AS "kingdom",
+'Chordata' AS "phylum",
+'Aves' AS "class",
+'Gaviiformes' AS "order",
+'Gaviidae' AS "family",
+'Species' AS "taxonRank",
+'Event' AS "type",
+'VCE' AS "ownerInstitutionCode"
+FROM loonWatch_ingest li
+INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
+INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
+WHERE lwIngestSubAdult > 0
+
+UNION
+
+SELECT
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+AS "eventID",
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-Ch'
+AS "occurrenceID",
+'Human Observation' AS "basisOfRecord",
+lwIngestObserverName AS "recordedBy",
+lwIngestChick AS "individualCount",
+'Present' AS "occurrenceStatus",
+'Gavia immer' AS "scientificName",
+'Animalia' AS "kingdom",
+'Chordata' AS "phylum",
+'Aves' AS "class",
+'Gaviiformes' AS "order",
+'Gaviidae' AS "family",
+'Species' AS "taxonRank",
+'Event' AS "type",
+'VCE' AS "ownerInstitutionCode"
+FROM loonWatch_ingest li
+INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
+INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
+WHERE lwIngestChick > 0
+
+UNION
+
+SELECT
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+AS "eventID",
+date_part('year', lwIngestDate) 
+	|| '-' || waterBodyId
+	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-00'
+AS "occurrenceID",
+'Human Observation' AS "basisOfRecord",
+lwIngestObserverName AS "recordedBy",
+0 AS "individualCount",
+'Absent' AS "occurrenceStatus",
+'Gavia immer' AS "scientificName",
+'Animalia' AS "kingdom",
+'Chordata' AS "phylum",
+'Aves' AS "class",
+'Gaviiformes' AS "order",
+'Gaviidae' AS "family",
+'Species' AS "taxonRank",
+'Event' AS "type",
+'VCE' AS "ownerInstitutionCode"
+FROM loonWatch_ingest li
+INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
+INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
+WHERE COALESCE(lwIngestAdult, 0)=0 AND COALESCE(lwIngestSubAdult, 0)=0 AND COALESCE(lwIngestChick, 0)=0
 )
-TO 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_export\loonwatch_sampling_event.csv' delimiter ',' csv header;
-*/
+TO 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_export\loonwatch_sampling_occurrence.csv' delimiter ',' csv header;
