@@ -57,5 +57,5 @@ where waterBodyId is null; --3
 update loonWatch_ingest set lwIngestLocation='Wrightsville' where lwIngestLocation = 'WrightSurveyille';
 
 --delete from loonWatch_ingest where date_part('year', lwingestdate)=2014; --to fix an incorrect ingestion
-select * from loonWatch_ingest where date_part('year', lwingestdate)=2019;
-
+select * from loonWatch_ingest where date_part('year', lwingestdate)=2023;
+update loonWatch_ingest set lwIngestDate='2014-07-18' where lwIngestDate='2023-07-18';
