@@ -52,9 +52,10 @@ date_part('year', lwIngestDate)
 	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
 	|| '-Ad'
 AS "occurrenceID",
-'Human Observation' AS "basisOfRecord",
+'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 lwIngestAdult AS "individualCount",
+'Adult' AS "lifeStage",
 'Present' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
 'Animalia' AS "kingdom",
@@ -82,9 +83,10 @@ date_part('year', lwIngestDate)
 	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
 	|| '-SA'
 AS "occurrenceID",
-'Human Observation' AS "basisOfRecord",
+'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 lwIngestSubAdult AS "individualCount",
+'SubAdult' AS "lifeStage",
 'Present' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
 'Animalia' AS "kingdom",
@@ -112,9 +114,10 @@ date_part('year', lwIngestDate)
 	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
 	|| '-Ch'
 AS "occurrenceID",
-'Human Observation' AS "basisOfRecord",
+'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 lwIngestChick AS "individualCount",
+'Chick' AS "lifeStage",
 'Present' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
 'Animalia' AS "kingdom",
@@ -142,9 +145,10 @@ date_part('year', lwIngestDate)
 	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
 	|| '-00'
 AS "occurrenceID",
-'Human Observation' AS "basisOfRecord",
+'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 0 AS "individualCount",
+NULL AS "lifeStage",
 'Absent' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
 'Animalia' AS "kingdom",
