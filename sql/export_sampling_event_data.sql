@@ -22,15 +22,21 @@ row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLoca
 locationArea AS "sampleSizeValue",
 'Acre' AS "sampleSizeUnit",
 lwIngestDate AS "eventDate",
+date_part('year', lwIngestDate) AS "year",
+date_part('month', lwIngestDate) AS "month",
+date_part('day', lwIngestDate) AS "day",
 lwIngestStart || '/' || lwIngestStop AS "eventTime",
 EXTRACT(DOY FROM lwIngestDate) AS "startDayOfYear",
 'United States of America' AS "country",
 'USA' AS "countryCode",
-locationTown AS "locality",
+'Vermont' AS "stateProvince",
+"countyName" AS "county",
+locationTown AS "municipality",
 waterBodyId AS "locationID",
+waterBodyId AS "waterBody",
 wbCenterLatitude AS "decimalLatitude",
 wbCenterLongitude AS "decimalLongitude",
-'WGS94' AS "geodeticDatum",
+'WGS84' AS "geodeticDatum",
 10 AS "coordinateUncertaintyInMeters",
 'Event' AS "type",
 'VCE' AS "ownerInstitutionCode",
@@ -38,6 +44,8 @@ lwIngestComment AS "eventRemarks"
 FROM loonWatch_ingest li
 INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
 INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
+INNER JOIN vt_town ON locationTownId="townId"
+INNER JOIN vt_county ON "townCountyId"="govCountyId"
 ) 
 TO 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_export\loonwatch_sampling_event.csv' delimiter ',' csv header;
 
