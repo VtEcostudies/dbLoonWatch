@@ -59,3 +59,4 @@ update loonWatch_ingest set lwIngestLocation='Wrightsville' where lwIngestLocati
 --delete from loonWatch_ingest where date_part('year', lwingestdate)=2014; --to fix an incorrect ingestion
 select * from loonWatch_ingest where date_part('year', lwingestdate)=2023;
 update loonWatch_ingest set lwIngestDate='2014-07-18' where lwIngestDate='2023-07-18';
+delete from loonWatch_ingest where lwIngestObservername='test';

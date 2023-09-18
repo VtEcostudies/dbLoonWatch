@@ -1,10 +1,11 @@
 COPY 
+--CREATE TABLE loonwatch_sampling_event AS
 (
 SELECT
 --date_part('year', lwIngestDate) || '-' || lwIngestLocation || '-' || COALESCE(lwIngestStart, '00:00:00') AS "eventID",
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(locationName) --waterBodyId is not Unique to loonLocations, which are. Must use loonLocation to create UNIQUE eventID.
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
 AS "eventID",
 /*
 (
@@ -25,7 +26,7 @@ lwIngestDate AS "eventDate",
 date_part('year', lwIngestDate) AS "year",
 date_part('month', lwIngestDate) AS "month",
 date_part('day', lwIngestDate) AS "day",
---lwIngestStart || '/' || lwIngestStop AS "eventTime", --this formulation fails if either value is NULL
+--lwIngestStart || '/' || lwIngestStop AS "eventTime", --this expression is NULL if either value is NULL
 CASE WHEN lwIngestStart IS NOT NULL THEN
 	CASE WHEN lwIngestStop IS NOT NULL THEN
 			lwIngestStart::TEXT || '/' || lwIngestStop::TEXT

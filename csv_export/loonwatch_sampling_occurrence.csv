@@ -12,6 +12,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2021-CASPIAN-1,2021-CASPIAN-1-Ad,HumanObservation,,9,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-THURMAN W. DIX-1,2016-THURMAN W. DIX-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-PARKER-1,2012-PARKER-1-Ad,HumanObservation,,4,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2013-LITTLE SALEM-1,2013-LITTLE SALEM-1-00,HumanObservation,Eric,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-MAIDSTONE-1,2017-MAIDSTONE-1-Ad,HumanObservation,,9,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-COLES-1,2017-COLES-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-GROTON-1,2016-GROTON-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -71,6 +72,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2020-LONG (SHEFLD)-1,2020-LONG (SHEFLD)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-SHERMAN-1,2021-SHERMAN-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-WALLACE-1,2015-WALLACE-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2011-LITTLE SALEM-1,2011-LITTLE SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-NORTON-1,2012-NORTON-1-Ch,HumanObservation,,4,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-SOUTH AMERICA-1,2016-SOUTH AMERICA-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-NOYES-1,2015-NOYES-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -140,7 +142,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2020-BRANCH-1,2020-BRANCH-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-BOURN-1,2021-BOURN-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-HOWE-1,2016-HOWE-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2013-SALEM-1,2013-SALEM-1-00,HumanObservation,Eric,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2019-HARDWICK-1,2019-HARDWICK-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2019-TICKLENAKED-1,2019-TICKLENAKED-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-SHELBURNE-1,2017-SHELBURNE-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -304,6 +305,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2021-HARVEYS-1,2021-HARVEYS-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-GREEN RIVER-1,2016-GREEN RIVER-1-Ch,HumanObservation,Hanson|Willean,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2011-MAIDSTONE-1,2011-MAIDSTONE-1-Ad,HumanObservation,,5,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2022-LITTLE SALEM-1,2022-LITTLE SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-LONG (SHEFLD)-1,2016-LONG (SHEFLD)-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-ROUND (NEWBRY)-1,2020-ROUND (NEWBRY)-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-EAST LONG-1,2018-EAST LONG-1-Ch,HumanObservation,,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -427,7 +429,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2017-PEACHAM-1,2017-PEACHAM-1-Ad,HumanObservation,,6,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-LONG (WESTMR)-1,2012-LONG (WESTMR)-1-Ch,HumanObservation,,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-LONG (GRNSBO)-1,2020-LONG (GRNSBO)-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2019-SALEM-1,2019-SALEM-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-RICKER-1,2015-RICKER-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2011-WRIGHTSVILLE-1,2011-WRIGHTSVILLE-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-WEST MOUNTAIN-1,2017-WEST MOUNTAIN-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -528,7 +529,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2016-MEMPHREMAGOG-1,2016-MEMPHREMAGOG-1-SA,HumanObservation,,1,SubAdult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-COLLINS-1,2020-COLLINS-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2014-MILLER (STRFRD)-1,2014-MILLER (STRFRD)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2020-SALEM-1,2020-SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-MEMPHREMAGOG-1,2015-MEMPHREMAGOG-1-Ad,HumanObservation,Isobel,9,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-SILVER (LEICTR)-1,2018-SILVER (LEICTR)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-LITTLE HOSMER-1,2017-LITTLE HOSMER-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -1023,7 +1023,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2014-JOES (DANVLL)-1,2014-JOES (DANVLL)-1-Ad,HumanObservation,,4,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-FOREST (AVERLL)-1,2017-FOREST (AVERLL)-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-EDEN-1,2021-EDEN-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2015-SALEM-1,2015-SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2013-KETTLE-1,2013-KETTLE-1-Ch,HumanObservation,Cindy Grimes,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-ST. CATHERINE-1,2020-ST. CATHERINE-1-SA,HumanObservation,,1,SubAdult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-LEVI-1,2012-LEVI-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -1232,6 +1231,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2022-LYFORD-1,2022-LYFORD-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-BERLIN-1,2018-BERLIN-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-BEECHER-1,2016-BEECHER-1-Ad,HumanObservation,Janet Dyer,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2014-LITTLE SALEM-1,2014-LITTLE SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-WANTASTIQUET-1,2021-WANTASTIQUET-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-SOMERSET-1,2021-SOMERSET-1-Ad,HumanObservation,,13,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-KEISER-1,2015-KEISER-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -1651,7 +1651,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2016-ISLAND-1,2016-ISLAND-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-DUCK (CRAFBY)-1,2018-DUCK (CRAFBY)-1-00,HumanObservation,Melinda Patterson,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-SOUTH (EDEN)-1,2016-SOUTH (EDEN)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2021-SALEM-1,2021-SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-CLYDE-1,2018-CLYDE-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2019-OSMORE-1,2019-OSMORE-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-AMHERST-1,2021-AMHERST-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -1666,7 +1665,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2019-NICHOLS-1,2019-NICHOLS-1-Ch,HumanObservation,,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-IROQUOIS-1,2012-IROQUOIS-1-00,HumanObservation,Linda Mcelvany,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-ECHO (HUBDTN)-1,2020-ECHO (HUBDTN)-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2011-SALEM-1,2011-SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2018-LITTLE SALEM-1,2018-LITTLE SALEM-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-OLD MARSH-1,2018-OLD MARSH-1-Ad,HumanObservation,Keith Hanf,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-ECHO (CHARTN)-1,2020-ECHO (CHARTN)-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-MOLLYS FALLS-1,2012-MOLLYS FALLS-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -2151,6 +2150,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2011-MILL (WINDSR)-1,2011-MILL (WINDSR)-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-BEAN (SUTTON)-1,2015-BEAN (SUTTON)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-ADAMANT-1,2020-ADAMANT-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2019-LITTLE SALEM-1,2019-LITTLE SALEM-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-LONG (EDEN)-1,2016-LONG (EDEN)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-ELMORE-1,2012-ELMORE-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2013-COLES-1,2013-COLES-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -2194,6 +2194,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2014-KETTLE-1,2014-KETTLE-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2014-LITTLE HOSMER-1,2014-LITTLE HOSMER-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-BEAN (SUTTON)-1,2012-BEAN (SUTTON)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2015-LITTLE SALEM-1,2015-LITTLE SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2022-WALLINGFORD-1,2022-WALLINGFORD-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2011-MARTINS-1,2011-MARTINS-1-Ch,HumanObservation,,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2012-BOURN-1,2012-BOURN-1-Ad,HumanObservation,Henry,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -2250,6 +2251,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2012-MOLLYS-1,2012-MOLLYS-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2019-PEACHAM-1,2019-PEACHAM-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2011-MOREY-1,2011-MOREY-1-Ad,HumanObservation,,4,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2020-LITTLE SALEM-1,2020-LITTLE SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-PARKER-1,2015-PARKER-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-FOREST (CALAIS)-1,2021-FOREST (CALAIS)-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-MARTINS-1,2017-MARTINS-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -2354,7 +2356,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2022-GREAT AVERILL-1,2022-GREAT AVERILL-1-Ad,HumanObservation,,8,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-BEAN (SUTTON)-1,2020-BEAN (SUTTON)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-DANIELS-1,2018-DANIELS-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2018-SALEM-1,2018-SALEM-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2013-ST. CATHERINE-1,2013-ST. CATHERINE-1-00,HumanObservation,Jean Roberts,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2019-SPRING (SHRWBY)-1,2019-SPRING (SHRWBY)-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2016-NINEVAH-1,2016-NINEVAH-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -2367,6 +2368,7 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2011-BUCK-1,2011-BUCK-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2019-AMHERST-1,2019-AMHERST-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-RITTERBUSH-1,2021-RITTERBUSH-1-Ad,HumanObservation,,1,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
+2021-LITTLE SALEM-1,2021-LITTLE SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2018-GREEN RIVER-1,2018-GREEN RIVER-1-Ch,HumanObservation,,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-JOES (DANVLL)-1,2017-JOES (DANVLL)-1-Ad,HumanObservation,,4,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2015-GREAT HOSMER-1,2015-GREAT HOSMER-1-Ch,HumanObservation,,2,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
@@ -2451,7 +2453,6 @@ eventID,occurrenceID,basisOfRecord,recordedBy,individualCount,lifeStage,occurren
 2014-MOORE-1,2014-MOORE-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2020-COLCHESTER-1,2020-COLCHESTER-1-Ad,HumanObservation,,3,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2017-NINEVAH-1,2017-NINEVAH-1-Ad,HumanObservation,,2,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
-2014-SALEM-1,2014-SALEM-1-00,HumanObservation,,0,,Absent,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2014-KENT-1,2014-KENT-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2011-LITTLE HOSMER-1,2011-LITTLE HOSMER-1-Ad,HumanObservation,,4,Adult,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
 2021-LITTLE AVERILL-1,2021-LITTLE AVERILL-1-Ch,HumanObservation,,1,Chick,Present,Gavia immer,Animalia,Chordata,Aves,Gaviiformes,Gaviidae,Species,Event,VCE
