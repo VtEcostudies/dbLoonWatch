@@ -25,7 +25,14 @@ lwIngestDate AS "eventDate",
 date_part('year', lwIngestDate) AS "year",
 date_part('month', lwIngestDate) AS "month",
 date_part('day', lwIngestDate) AS "day",
-lwIngestStart || '/' || lwIngestStop AS "eventTime",
+--lwIngestStart || '/' || lwIngestStop AS "eventTime", --this formulation fails if either value is NULL
+CASE WHEN lwIngestStart IS NOT NULL THEN
+	CASE WHEN lwIngestStop IS NOT NULL THEN
+			lwIngestStart::TEXT || '/' || lwIngestStop::TEXT
+		ELSE 
+			lwIngestStart::TEXT
+		END
+	END AS "eventTime",
 EXTRACT(DOY FROM lwIngestDate) AS "startDayOfYear",
 'United States of America' AS "country",
 'USA' AS "countryCode",

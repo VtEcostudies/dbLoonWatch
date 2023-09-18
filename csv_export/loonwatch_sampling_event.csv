@@ -5,12 +5,12 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2011-BEAN (SUTTON)-1,Area Survey,Observer Time,30,Acre,2011-07-15,2011,7,15,,196,United States of America,USA,Vermont,Caledonia,Sutton,BEAN (SUTTON),BEAN (SUTTON),44.6983842,-72.0862101,WGS84,10,Event,VCE,Friday pm
 2011-BEAVER (HOLLND)-1,Area Survey,Observer Time,40,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Orleans,Holland,BEAVER (HOLLND),BEAVER (HOLLND),45.0047684,-71.9398184,WGS84,10,Event,VCE,
 2011-BEEBE (HUBDTN)-1,Area Survey,Observer Time,111,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Rutland,Hubbardton,BEEBE (HUBDTN),BEEBE (HUBDTN),43.7342306,-73.1831677,WGS84,10,Event,VCE,
-2011-BEEBE (SUNDLD)-1,Area Survey,Observer Time,13,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Bennington,Sunderland,BEEBE (SUNDLD),BEEBE (SUNDLD),43.0523,-73.0320481,WGS84,10,Event,VCE,henry 3 pm
+2011-BEEBE (SUNDLD)-1,Area Survey,Observer Time,13,Acre,2011-07-16,2011,7,16,15:00:00,197,United States of America,USA,Vermont,Bennington,Sunderland,BEEBE (SUNDLD),BEEBE (SUNDLD),43.0523,-73.0320481,WGS84,10,Event,VCE,henry 3 pm
 2011-BERLIN-1,Area Survey,Observer Time,293,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Washington,Berlin,BERLIN,BERLIN,44.18,-72.58,WGS84,10,Event,VCE,
 2011-BLAKE-1,Area Survey,Observer Time,8,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Caledonia,Sheffield,BLAKE,BLAKE,43.15,-72.72,WGS84,10,Event,VCE,
 2011-BLISS-1,Area Survey,Observer Time,46,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Washington,Calais,BLISS,BLISS,44.3525574,-72.5006635,WGS84,10,Event,VCE,
 2011-BOMOSEEN-1,Area Survey,Observer Time,2360,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Rutland,Castleton,BOMOSEEN,BOMOSEEN,43.6442324,-73.2131665,WGS84,10,Event,VCE,
-2011-BOURN-1,Area Survey,Observer Time,48,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Bennington,Sunderland,BOURN,BOURN,43.1061882,-73.0020474,WGS84,10,Event,VCE,3pm
+2011-BOURN-1,Area Survey,Observer Time,48,Acre,2011-07-16,2011,7,16,15:00:00,197,United States of America,USA,Vermont,Bennington,Sunderland,BOURN,BOURN,43.1061882,-73.0020474,WGS84,10,Event,VCE,3pm
 2011-BRANCH-1,Area Survey,Observer Time,34,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Bennington,Sunderland,BRANCH,BRANCH,43.0809107,-73.0189922,WGS84,10,Event,VCE,
 2011-WINONA-1,Area Survey,Observer Time,248,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Addison,Bristol,WINONA,WINONA,44.1731125,-73.0870642,WGS84,10,Event,VCE,
 2011-BROWNINGTON-1,Area Survey,Observer Time,139,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Orleans,Brownington,BROWNINGTON,BROWNINGTON,44.8786588,-72.1476007,WGS84,10,Event,VCE,
@@ -55,7 +55,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2011-GREEN RIVER-1,Area Survey,Observer Time,554,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Lamoille,Hyde Park,GREEN RIVER,GREEN RIVER,44.629268,-72.515443,WGS84,10,Event,VCE,likely missed 1 chick
 2011-GREENWOOD-1,Area Survey,Observer Time,96,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Washington,Woodbury,GREENWOOD,GREENWOOD,44.4586661,-72.4253853,WGS84,10,Event,VCE,
 2011-GROTON-1,Area Survey,Observer Time,422,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Caledonia,Groton,GROTON,GROTON,44.2667271,-72.2662089,WGS84,10,Event,VCE,
-2011-GROUT-1,Area Survey,Observer Time,84,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Windham,Stratton,GROUT,GROUT,43.0445226,-72.9456567,WGS84,10,Event,VCE,1 ad 5:50 pm henry; 1 ad 7:15 am vycc
+2011-GROUT-1,Area Survey,Observer Time,84,Acre,2011-07-16,2011,7,16,17:50:00,197,United States of America,USA,Vermont,Windham,Stratton,GROUT,GROUT,43.0445226,-72.9456567,WGS84,10,Event,VCE,1 ad 5:50 pm henry; 1 ad 7:15 am vycc
 2011-HALLS-1,Area Survey,Observer Time,85,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Orange,Newbury,HALLS,HALLS,44.085898,-72.1231473,WGS84,10,Event,VCE,
 2011-HARDWICK-1,Area Survey,Observer Time,145,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Caledonia,Hardwick,HARDWICK,HARDWICK,44.52,-72.37,WGS84,10,Event,VCE,
 2011-HARDWOOD-1,Area Survey,Observer Time,44,Acre,2011-07-16,2011,7,16,,197,United States of America,USA,Vermont,Lamoille,Elmore,HARDWOOD,HARDWOOD,44.4678324,-72.4995546,WGS84,10,Event,VCE,
@@ -159,12 +159,12 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2012-BEAN (SUTTON)-1,Area Survey,Observer Time,30,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Caledonia,Sutton,BEAN (SUTTON),BEAN (SUTTON),44.6983842,-72.0862101,WGS84,10,Event,VCE,
 2012-BEAVER (HOLLND)-1,Area Survey,Observer Time,40,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Orleans,Holland,BEAVER (HOLLND),BEAVER (HOLLND),45.0047684,-71.9398184,WGS84,10,Event,VCE,
 2012-BEEBE (HUBDTN)-1,Area Survey,Observer Time,111,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Rutland,Hubbardton,BEEBE (HUBDTN),BEEBE (HUBDTN),43.7342306,-73.1831677,WGS84,10,Event,VCE,
-2012-BEEBE (SUNDLD)-1,Area Survey,Observer Time,13,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Bennington,Sunderland,BEEBE (SUNDLD),BEEBE (SUNDLD),43.0523,-73.0320481,WGS84,10,Event,VCE,henry 3:30 pm
+2012-BEEBE (SUNDLD)-1,Area Survey,Observer Time,13,Acre,2012-07-21,2012,7,21,15:30:00,203,United States of America,USA,Vermont,Bennington,Sunderland,BEEBE (SUNDLD),BEEBE (SUNDLD),43.0523,-73.0320481,WGS84,10,Event,VCE,henry 3:30 pm
 2012-BERLIN-1,Area Survey,Observer Time,293,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Washington,Berlin,BERLIN,BERLIN,44.18,-72.58,WGS84,10,Event,VCE,
 2012-BLISS-1,Area Survey,Observer Time,46,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Washington,Calais,BLISS,BLISS,44.3525574,-72.5006635,WGS84,10,Event,VCE,
 2012-BOMOSEEN-1,Area Survey,Observer Time,2360,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Rutland,Castleton,BOMOSEEN,BOMOSEEN,43.6442324,-73.2131665,WGS84,10,Event,VCE,roy pilcher
-2012-BOURN-1,Area Survey,Observer Time,48,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Bennington,Sunderland,BOURN,BOURN,43.1061882,-73.0020474,WGS84,10,Event,VCE,henry 6:30 pm
-2012-BRANCH-1,Area Survey,Observer Time,34,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Bennington,Sunderland,BRANCH,BRANCH,43.0809107,-73.0189922,WGS84,10,Event,VCE,henry 4:30 pm
+2012-BOURN-1,Area Survey,Observer Time,48,Acre,2012-07-21,2012,7,21,18:30:00,203,United States of America,USA,Vermont,Bennington,Sunderland,BOURN,BOURN,43.1061882,-73.0020474,WGS84,10,Event,VCE,henry 6:30 pm
+2012-BRANCH-1,Area Survey,Observer Time,34,Acre,2012-07-21,2012,7,21,16:30:00,203,United States of America,USA,Vermont,Bennington,Sunderland,BRANCH,BRANCH,43.0809107,-73.0189922,WGS84,10,Event,VCE,henry 4:30 pm
 2012-BROWNINGTON-1,Area Survey,Observer Time,139,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Orleans,Brownington,BROWNINGTON,BROWNINGTON,44.8786588,-72.1476007,WGS84,10,Event,VCE,
 2012-BRUCE-1,Area Survey,Observer Time,27,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Caledonia,Sutton,BRUCE,BRUCE,44.6403295,-72.187046,WGS84,10,Event,VCE,nest; 1 flew over 
 2012-BUCK-1,Area Survey,Observer Time,39,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Washington,Woodbury,BUCK,BUCK,44.462555,-72.3995513,WGS84,10,Event,VCE,1 flew in 9 am
@@ -206,7 +206,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2012-GREEN RIVER-1,Area Survey,Observer Time,554,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Lamoille,Hyde Park,GREEN RIVER,GREEN RIVER,44.629268,-72.515443,WGS84,10,Event,VCE,
 2012-GRIFFITH-1,Area Survey,Observer Time,13,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Bennington,Peru,GRIFFITH,GRIFFITH,43.3028517,-72.9592692,WGS84,10,Event,VCE,Richard Andrews
 2012-GROTON-1,Area Survey,Observer Time,422,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Caledonia,Groton,GROTON,GROTON,44.2667271,-72.2662089,WGS84,10,Event,VCE,
-2012-GROUT-1,Area Survey,Observer Time,84,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Windham,Stratton,GROUT,GROUT,43.0445226,-72.9456567,WGS84,10,Event,VCE,2 pm henry
+2012-GROUT-1,Area Survey,Observer Time,84,Acre,2012-07-21,2012,7,21,14:00:00,203,United States of America,USA,Vermont,Windham,Stratton,GROUT,GROUT,43.0445226,-72.9456567,WGS84,10,Event,VCE,2 pm henry
 2012-HALLS-1,Area Survey,Observer Time,85,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Orange,Newbury,HALLS,HALLS,44.085898,-72.1231473,WGS84,10,Event,VCE,
 2012-HARDWICK-1,Area Survey,Observer Time,145,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Caledonia,Hardwick,HARDWICK,HARDWICK,44.52,-72.37,WGS84,10,Event,VCE,
 2012-HARDWOOD-1,Area Survey,Observer Time,44,Acre,2012-07-21,2012,7,21,,203,United States of America,USA,Vermont,Lamoille,Elmore,HARDWOOD,HARDWOOD,44.4678324,-72.4995546,WGS84,10,Event,VCE,Check for chick
@@ -326,7 +326,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2013-CASPIAN-1,Area Survey,Observer Time,789,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Greensboro,CASPIAN,CASPIAN,44.58,-72.32,WGS84,10,Event,VCE,
 2013-CENTER-1,Area Survey,Observer Time,79,Acre,2013-07-21,2013,7,21,,202,United States of America,USA,Vermont,Caledonia,Newark,CENTER,CENTER,44.7144953,-71.9198175,WGS84,10,Event,VCE,7/21 survey
 2013-CHANDLER (WHLOCK)-1,Area Survey,Observer Time,68,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Caledonia,Wheelock,CHANDLER (WHLOCK),CHANDLER (WHLOCK),44.53,-72.1,WGS84,10,Event,VCE,
-2013-CHARLESTON-1,Area Survey,Observer Time,40,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Charleston,CHARLESTON,CHARLESTON,44.8928256,-72.0531538,WGS84,10,Event,VCE,"sat. 7 pm, Friday pm 3ad terry"
+2013-CHARLESTON-1,Area Survey,Observer Time,40,Acre,2013-07-20,2013,7,20,19:00:00,201,United States of America,USA,Vermont,Orleans,Charleston,CHARLESTON,CHARLESTON,44.8928256,-72.0531538,WGS84,10,Event,VCE,"sat. 7 pm, Friday pm 3ad terry"
 2013-CHITTENDEN-1,Area Survey,Observer Time,702,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Rutland,Chittenden,CHITTENDEN,CHITTENDEN,43.73,-72.92,WGS84,10,Event,VCE,
 2013-TILDYS-1,Area Survey,Observer Time,33,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Glover,TILDYS,TILDYS,44.65,-72.2,WGS84,10,Event,VCE,
 2013-CLYDE-1,Area Survey,Observer Time,186,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Derby,CLYDE,CLYDE,44.9353246,-72.1712124,WGS84,10,Event,VCE,
@@ -335,7 +335,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2013-COLES-1,Area Survey,Observer Time,125,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Caledonia,Walden,COLES,COLES,44.52,-72.22,WGS84,10,Event,VCE,
 2013-COLLINS-1,Area Survey,Observer Time,16,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Lamoille,Hyde Park,COLLINS,COLLINS,44.6214402,-72.5042778,WGS84,10,Event,VCE,
 2013-CRANBERRY MEADOW-1,Area Survey,Observer Time,28,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Washington,Woodbury,CRANBERRY MEADOW,CRANBERRY MEADOW,44.4208892,-72.4573301,WGS84,10,Event,VCE,
-2013-CRYSTAL (BARTON)-1,Area Survey,Observer Time,763,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Barton,CRYSTAL (BARTON),CRYSTAL (BARTON),44.7467161,-72.1762128,WGS84,10,Event,VCE,"ellen 5:30 am, stan did survey- results?"
+2013-CRYSTAL (BARTON)-1,Area Survey,Observer Time,763,Acre,2013-07-20,2013,7,20,05:30:00,201,United States of America,USA,Vermont,Orleans,Barton,CRYSTAL (BARTON),CRYSTAL (BARTON),44.7467161,-72.1762128,WGS84,10,Event,VCE,"ellen 5:30 am, stan did survey- results?"
 2013-CURTIS-1,Area Survey,Observer Time,72,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Washington,Calais,CURTIS,CURTIS,44.38,-72.5,WGS84,10,Event,VCE,
 2013-DANIELS-1,Area Survey,Observer Time,66,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Glover,DANIELS,DANIELS,44.6767173,-72.2626038,WGS84,10,Event,VCE,
 2013-DERBY-1,Area Survey,Observer Time,207,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Derby,DERBY,DERBY,44.9542134,-72.1162109,WGS84,10,Event,VCE,
@@ -372,7 +372,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2013-HOLLAND-1,Area Survey,Observer Time,325,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Holland,HOLLAND,HOLLAND,44.9867132,-71.9281516,WGS84,10,Event,VCE,4 ad chris owen; 6 ad listed by Lauren - not sure source; change back to 6 if locate
 2013-HORTONIA-1,Area Survey,Observer Time,479,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Rutland,Hubbardton,HORTONIA,HORTONIA,43.7500632,-73.2078906,WGS84,10,Event,VCE,
 2013-HOWE-1,Area Survey,Observer Time,52,Acre,2013-07-21,2013,7,21,,202,United States of America,USA,Vermont,Bennington,Readsboro,HOWE,HOWE,42.7842485,-72.9859342,WGS84,10,Event,VCE,Sunday
-2013-IROQUOIS-1,Area Survey,Observer Time,243,Acre,2013-07-21,2013,7,21,,202,United States of America,USA,Vermont,Chittenden,Hinesburg,IROQUOIS,IROQUOIS,44.37,-73.08,WGS84,10,Event,VCE,8 am 7/21 Sunday
+2013-IROQUOIS-1,Area Survey,Observer Time,243,Acre,2013-07-21,2013,7,21,08:00:00,202,United States of America,USA,Vermont,Chittenden,Hinesburg,IROQUOIS,IROQUOIS,44.37,-73.08,WGS84,10,Event,VCE,8 am 7/21 Sunday
 2013-ISLAND-1,Area Survey,Observer Time,626,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Essex,Brighton,ISLAND,ISLAND,44.8050491,-71.8706504,WGS84,10,Event,VCE,marshall
 2013-JOBS-1,Area Survey,Observer Time,39,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Westmore,JOBS,JOBS,44.7628276,-71.9537072,WGS84,10,Event,VCE,
 2013-JOES (DANVLL)-1,Area Survey,Observer Time,396,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Caledonia,Danville,JOES (DANVLL),JOES (DANVLL),44.4083904,-72.1945436,WGS84,10,Event,VCE,
@@ -385,7 +385,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2013-LITTLE (WELLS)-1,Area Survey,Observer Time,177,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Rutland,Wells,LITTLE (WELLS),LITTLE (WELLS),43.4322933,-73.2028855,WGS84,10,Event,VCE,
 2013-LITTLE AVERILL-1,Area Survey,Observer Time,467,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Essex,Averill,LITTLE AVERILL,LITTLE AVERILL,44.9556024,-71.7162039,WGS84,10,Event,VCE,
 2013-LITTLE HOSMER-1,Area Survey,Observer Time,180,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Craftsbury,LITTLE HOSMER,LITTLE HOSMER,44.68,-72.38,WGS84,10,Event,VCE,tom and linda wells surveyed; cannot find data sheet
-2013-SALEM-1,Area Survey,Observer Time,50,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Orleans,Derby,SALEM,SALEM,44.9292138,-72.1037106,WGS84,10,Event,VCE,eric 12 pm
+2013-SALEM-1,Area Survey,Observer Time,50,Acre,2013-07-20,2013,7,20,12:00:00,201,United States of America,USA,Vermont,Orleans,Derby,SALEM,SALEM,44.9292138,-72.1037106,WGS84,10,Event,VCE,eric 12 pm
 2013-LONG (EDEN)-1,Area Survey,Observer Time,97,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Lamoille,Eden,LONG (EDEN),LONG (EDEN),44.77,-72.6,WGS84,10,Event,VCE,1 phyllis
 2013-LONG (SHEFLD)-1,Area Survey,Observer Time,38,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Caledonia,Sheffield,LONG (SHEFLD),LONG (SHEFLD),44.6767178,-72.1437116,WGS84,10,Event,VCE,
 2013-LOWELL-1,Area Survey,Observer Time,57,Acre,2013-07-20,2013,7,20,,201,United States of America,USA,Vermont,Windham,Londonderry,LOWELL,LOWELL,43.22,-72.77,WGS84,10,Event,VCE,
@@ -543,7 +543,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2014-JOES (DANVLL)-1,Area Survey,Observer Time,396,Acre,2014-07-19,2014,7,19,,200,United States of America,USA,Vermont,Caledonia,Danville,JOES (DANVLL),JOES (DANVLL),44.4083904,-72.1945436,WGS84,10,Event,VCE,
 2014-KENT-1,Area Survey,Observer Time,99,Acre,2014-07-19,2014,7,19,,200,United States of America,USA,Vermont,Rutland,Killington,KENT,KENT,43.68,-72.8,WGS84,10,Event,VCE,
 2014-KETTLE-1,Area Survey,Observer Time,109,Acre,2014-07-19,2014,7,19,,200,United States of America,USA,Vermont,Caledonia,Peacham,KETTLE,KETTLE,44.2947817,-72.3181558,WGS84,10,Event,VCE,
-2014-KNAPP BROOK #1-1,Area Survey,Observer Time,25,Acre,2014-07-18,2014,7,18,,199,United States of America,USA,Vermont,Windsor,Cavendish,KNAPP BROOK #1,KNAPP BROOK #1,43.447016,-72.5662041,WGS84,10,Event,VCE,5 pm Friday
+2014-KNAPP BROOK #1-1,Area Survey,Observer Time,25,Acre,2014-07-18,2014,7,18,17:00:00,199,United States of America,USA,Vermont,Windsor,Cavendish,KNAPP BROOK #1,KNAPP BROOK #1,43.447016,-72.5662041,WGS84,10,Event,VCE,5 pm Friday
 2014-KNAPP BROOK #2-1,Area Survey,Observer Time,35,Acre,2014-07-19,2014,7,19,,200,United States of America,USA,Vermont,Windsor,Cavendish,KNAPP BROOK #2,KNAPP BROOK #2,43.45,-72.57,WGS84,10,Event,VCE,
 2014-LEVI-1,Area Survey,Observer Time,22,Acre,2014-07-19,2014,7,19,,200,United States of America,USA,Vermont,Caledonia,Groton,LEVI,LEVI,44.2672827,-72.2262078,WGS84,10,Event,VCE,
 2014-LEWIS-1,Area Survey,Observer Time,68,Acre,2014-07-19,2014,7,19,,200,United States of America,USA,Vermont,Essex,Lewis,LEWIS,LEWIS,44.8833812,-71.7806495,WGS84,10,Event,VCE,
@@ -803,7 +803,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2016-BIG-1,Area Survey,Observer Time,31,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Bennington,Woodford,BIG,BIG,42.88,-73.07,WGS84,10,Event,VCE,
 2016-BOMOSEEN-1,Area Survey,Observer Time,2360,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Rutland,Castleton,BOMOSEEN,BOMOSEEN,43.6442324,-73.2131665,WGS84,10,Event,VCE,
 2016-BOURN-1,Area Survey,Observer Time,48,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Bennington,Sunderland,BOURN,BOURN,43.1061882,-73.0020474,WGS84,10,Event,VCE,
-2016-BRANCH-1,Area Survey,Observer Time,34,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Bennington,Sunderland,BRANCH,BRANCH,43.0809107,-73.0189922,WGS84,10,Event,VCE,William Garrison 0 8:15 a.m
+2016-BRANCH-1,Area Survey,Observer Time,34,Acre,2016-07-16,2016,7,16,08:15:00,198,United States of America,USA,Vermont,Bennington,Sunderland,BRANCH,BRANCH,43.0809107,-73.0189922,WGS84,10,Event,VCE,William Garrison 0 8:15 a.m
 2016-BROWNINGTON-1,Area Survey,Observer Time,139,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Orleans,Brownington,BROWNINGTON,BROWNINGTON,44.8786588,-72.1476007,WGS84,10,Event,VCE,
 2016-BRUCE-1,Area Survey,Observer Time,27,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Caledonia,Sutton,BRUCE,BRUCE,44.6403295,-72.187046,WGS84,10,Event,VCE,
 2016-BUCK-1,Area Survey,Observer Time,39,Acre,2016-07-16,2016,7,16,,198,United States of America,USA,Vermont,Washington,Woodbury,BUCK,BUCK,44.462555,-72.3995513,WGS84,10,Event,VCE,1A flew in 8:20 am; chick gone or hiding
@@ -1143,7 +1143,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2018-DANIELS-1,Area Survey,Observer Time,66,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Orleans,Glover,DANIELS,DANIELS,44.6767173,-72.2626038,WGS84,10,Event,VCE,
 2018-DERBY-1,Area Survey,Observer Time,207,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Orleans,Derby,DERBY,DERBY,44.9542134,-72.1162109,WGS84,10,Event,VCE,
 2018-DEWEYS MILL-1,Area Survey,Observer Time,56,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Windsor,Hartford,DEWEYS MILL,DEWEYS MILL,43.65,-72.4,WGS84,10,Event,VCE,7/18 1A Sarah Carline
-2018-VALLEY-1,Area Survey,Observer Time,88,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Washington,Woodbury,VALLEY,VALLEY,44.447,-72.441,WGS84,10,Event,VCE,7:30 4A+2A flying.  8:15 only 2A obs.
+2018-VALLEY-1,Area Survey,Observer Time,88,Acre,2018-07-21,2018,7,21,07:30:00,202,United States of America,USA,Vermont,Washington,Woodbury,VALLEY,VALLEY,44.447,-72.441,WGS84,10,Event,VCE,7:30 4A+2A flying.  8:15 only 2A obs.
 2018-DUCK (CRAFBY)-1,Area Survey,Observer Time,9,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Orleans,Craftsbury,DUCK (CRAFBY),DUCK (CRAFBY),44.6733838,-72.3651069,WGS84,10,Event,VCE,Often 1A - melinda patterson
 2018-DUNMORE-1,Area Survey,Observer Time,985,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Addison,Salisbury,DUNMORE,DUNMORE,43.9020068,-73.0753915,WGS84,10,Event,VCE,
 2018-EAST LONG-1,Area Survey,Observer Time,188,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Washington,Woodbury,EAST LONG,EAST LONG,44.45,-72.35,WGS84,10,Event,VCE,
@@ -1176,10 +1176,10 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2018-HARTWELL-1,Area Survey,Observer Time,16,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Orleans,Albany,HARTWELL,HARTWELL,44.7044943,-72.293716,WGS84,10,Event,VCE,
 2018-HARVEYS-1,Area Survey,Observer Time,351,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Caledonia,Barnet,HARVEYS,HARVEYS,44.3,-72.13,WGS84,10,Event,VCE,
 2018-HOLLAND-1,Area Survey,Observer Time,325,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Orleans,Holland,HOLLAND,HOLLAND,44.9867132,-71.9281516,WGS84,10,Event,VCE,
-2018-HORTONIA-1,Area Survey,Observer Time,479,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Rutland,Hubbardton,HORTONIA,HORTONIA,43.7500632,-73.2078906,WGS84,10,Event,VCE,mid a.m. 7/21 Karen Bourque
+2018-HORTONIA-1,Area Survey,Observer Time,479,Acre,2018-07-21,2018,7,21,10:00:00,202,United States of America,USA,Vermont,Rutland,Hubbardton,HORTONIA,HORTONIA,43.7500632,-73.2078906,WGS84,10,Event,VCE,mid a.m. 7/21 Karen Bourque
 2018-INMAN-1,Area Survey,Observer Time,85,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Rutland,Fair Haven,INMAN,INMAN,43.65,-73.27,WGS84,10,Event,VCE,
 2018-IROQUOIS-1,Area Survey,Observer Time,243,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Chittenden,Hinesburg,IROQUOIS,IROQUOIS,44.37,-73.08,WGS84,10,Event,VCE,Not assigned but did survey this day
-2018-ISLAND-1,Area Survey,Observer Time,626,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Essex,Brighton,ISLAND,ISLAND,44.8050491,-71.8706504,WGS84,10,Event,VCE,10 a.m.  7/21 Barry Hughes 1A1C 8:07 a.m
+2018-ISLAND-1,Area Survey,Observer Time,626,Acre,2018-07-21,2018,7,21,10:00:00,202,United States of America,USA,Vermont,Essex,Brighton,ISLAND,ISLAND,44.8050491,-71.8706504,WGS84,10,Event,VCE,10 a.m.  7/21 Barry Hughes 1A1C 8:07 a.m
 2018-JOBS-1,Area Survey,Observer Time,39,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Orleans,Westmore,JOBS,JOBS,44.7628276,-71.9537072,WGS84,10,Event,VCE,
 2018-JOES (DANVLL)-1,Area Survey,Observer Time,396,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Caledonia,Danville,JOES (DANVLL),JOES (DANVLL),44.4083904,-72.1945436,WGS84,10,Event,VCE,
 2018-KEISER-1,Area Survey,Observer Time,33,Acre,2018-07-21,2018,7,21,,202,United States of America,USA,Vermont,Caledonia,Danville,KEISER,KEISER,44.3864467,-72.1706537,WGS84,10,Event,VCE,
@@ -1519,7 +1519,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2020-GROTON-1,Area Survey,Observer Time,422,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Groton,GROTON,GROTON,44.2667271,-72.2662089,WGS84,10,Event,VCE,
 2020-HALLS-1,Area Survey,Observer Time,85,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Orange,Newbury,HALLS,HALLS,44.085898,-72.1231473,WGS84,10,Event,VCE,
 2020-HAPPENSTANCE-1,Area Survey,Observer Time,15,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Addison,Goshen,HAPPENSTANCE,HAPPENSTANCE,44.8899,-73.0091,WGS84,10,Event,VCE,
-2020-HARDWICK-1,Area Survey,Observer Time,145,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Hardwick,HARDWICK,HARDWICK,44.52,-72.37,WGS84,10,Event,VCE,1:00 PM
+2020-HARDWICK-1,Area Survey,Observer Time,145,Acre,2020-07-18,2020,7,18,13:00:00,200,United States of America,USA,Vermont,Caledonia,Hardwick,HARDWICK,HARDWICK,44.52,-72.37,WGS84,10,Event,VCE,1:00 PM
 2020-HARDWOOD-1,Area Survey,Observer Time,44,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Lamoille,Elmore,HARDWOOD,HARDWOOD,44.4678324,-72.4995546,WGS84,10,Event,VCE,
 2020-HARRIMAN (WHITHM)-1,Area Survey,Observer Time,2040,Acre,2020-07-17,2020,7,17,,199,United States of America,USA,Vermont,Windham,Whitingham,HARRIMAN (WHITHM),HARRIMAN (WHITHM),42.83,-72.88,WGS84,10,Event,VCE,17-Jul
 2020-HARTWELL-1,Area Survey,Observer Time,16,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Orleans,Albany,HARTWELL,HARTWELL,44.7044943,-72.293716,WGS84,10,Event,VCE,1 Ad flew in 12:30 pm
@@ -1550,7 +1550,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2020-LOWER SYMES-1,Area Survey,Observer Time,77,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Ryegate,LOWER SYMES,LOWER SYMES,44.25,-72.1,WGS84,10,Event,VCE,
 2020-LYFORD-1,Area Survey,Observer Time,33,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Walden,LYFORD,LYFORD,44.4456114,-72.2467681,WGS84,10,Event,VCE,2 chicks stashed
 2020-MAIDSTONE-1,Area Survey,Observer Time,745,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Essex,Maidstone,MAIDSTONE,MAIDSTONE,44.6486637,-71.6470329,WGS84,10,Event,VCE,
-2020-MARTINS-1,Area Survey,Observer Time,82,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Peacham,MARTINS,MARTINS,44.3,-72.22,WGS84,10,Event,VCE,2:00 PM
+2020-MARTINS-1,Area Survey,Observer Time,82,Acre,2020-07-18,2020,7,18,14:00:00,200,United States of America,USA,Vermont,Caledonia,Peacham,MARTINS,MARTINS,44.3,-72.22,WGS84,10,Event,VCE,2:00 PM
 2020-MAY-1,Area Survey,Observer Time,116,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Orleans,Barton,MAY,MAY,44.7417164,-72.1228779,WGS84,10,Event,VCE,
 2020-MCCONNELL-1,Area Survey,Observer Time,87,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Essex,Brighton,MCCONNELL,MCCONNELL,44.8189378,-71.8039827,WGS84,10,Event,VCE,
 2020-MEMPHREMAGOG-1,Area Survey,Observer Time,5966,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Orleans,Derby,MEMPHREMAGOG,MEMPHREMAGOG,44.9853239,-72.2151023,WGS84,10,Event,VCE,
@@ -1563,7 +1563,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2020-MOREY-1,Area Survey,Observer Time,547,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Orange,Fairlee,MOREY,MOREY,43.9247901,-72.1498123,WGS84,10,Event,VCE,
 2020-MUD (HYDEPK)-1,Area Survey,Observer Time,14,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Lamoille,Hyde Park,MUD (HYDEPK),MUD (HYDEPK),44.605885,-72.5034444,WGS84,10,Event,VCE,
 2020-MUD (LEICTR)-1,Area Survey,Observer Time,35,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Addison,Leicester,MUD (LEICTR),MUD (LEICTR),43.88,-73.08,WGS84,10,Event,VCE,
-2020-MUD (PEACHM)-1,Area Survey,Observer Time,34,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Peacham,MUD (PEACHM),MUD (PEACHM),44.3072818,-72.2125974,WGS84,10,Event,VCE,2:00 PM
+2020-MUD (PEACHM)-1,Area Survey,Observer Time,34,Acre,2020-07-18,2020,7,18,14:00:00,200,United States of America,USA,Vermont,Caledonia,Peacham,MUD (PEACHM),MUD (PEACHM),44.3072818,-72.2125974,WGS84,10,Event,VCE,2:00 PM
 2020-FOREST (CALAIS)-1,Area Survey,Observer Time,133,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Washington,Woodbury,FOREST (CALAIS),FOREST (CALAIS),44.4083895,-72.4412182,WGS84,10,Event,VCE,3 flew 8:45
 2020-NEWARK-1,Area Survey,Observer Time,153,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Caledonia,Newark,NEWARK,NEWARK,44.7175509,-71.9823186,WGS84,10,Event,VCE,
 2020-NICHOLS-1,Area Survey,Observer Time,171,Acre,2020-07-18,2020,7,18,,200,United States of America,USA,Vermont,Washington,Woodbury,NICHOLS,NICHOLS,44.45,-72.35,WGS84,10,Event,VCE,
@@ -1909,7 +1909,7 @@ eventID,samplingProtocol,samplingEffort,sampleSizeValue,sampleSizeUnit,eventDate
 2022-NINEVAH-1,Area Survey,Observer Time,171,Acre,2022-07-16,2022,7,16,,197,United States of America,USA,Vermont,Rutland,Mt. Holly,NINEVAH,NINEVAH,43.47,-72.75,WGS84,10,Event,VCE,
 2022-MIRROR-1,Area Survey,Observer Time,85,Acre,2022-07-16,2022,7,16,,197,United States of America,USA,Vermont,Washington,Calais,MIRROR,MIRROR,44.4,-72.45,WGS84,10,Event,VCE,
 2022-NORTON-1,Area Survey,Observer Time,583,Acre,2022-07-16,2022,7,16,,197,United States of America,USA,Vermont,Essex,Norton,NORTON,NORTON,44.93,-71.87,WGS84,10,Event,VCE,
-2022-NOTCH-1,Area Survey,Observer Time,22,Acre,2022-07-16,2022,7,16,,197,United States of America,USA,Vermont,Essex,Ferdinand,NOTCH,NOTCH,44.7406056,-71.7173137,WGS84,10,Event,VCE,2:20 PM
+2022-NOTCH-1,Area Survey,Observer Time,22,Acre,2022-07-16,2022,7,16,14:20:00,197,United States of America,USA,Vermont,Essex,Ferdinand,NOTCH,NOTCH,44.7406056,-71.7173137,WGS84,10,Event,VCE,2:20 PM
 2022-NOYES-1,Area Survey,Observer Time,39,Acre,2022-07-16,2022,7,16,,197,United States of America,USA,Vermont,Caledonia,Groton,NOYES,NOYES,44.23,-72.32,WGS84,10,Event,VCE,
 2022-NULHEGAN-1,Area Survey,Observer Time,37,Acre,2022-07-16,2022,7,16,,197,United States of America,USA,Vermont,Essex,Brighton,NULHEGAN,NULHEGAN,44.791716,-71.8178717,WGS84,10,Event,VCE,who surveyed in 2022?
 2022-OLD MARSH-1,Area Survey,Observer Time,131,Acre,2022-07-15,2022,7,15,,196,United States of America,USA,Vermont,Rutland,Fair Haven,OLD MARSH,OLD MARSH,43.63,-73.27,WGS84,10,Event,VCE,"7/15 survey, new vol for '23"
