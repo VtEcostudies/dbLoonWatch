@@ -19,7 +19,7 @@ To configure Postgresql running on AWS VM to allow user 'ipt' login read-only ac
 	-		sgr-04c329405da046a9f	IPv4		PostgreSQL	TCP			5432		0.0.0.0/0	Postgres 5432 Inbound
 	-		sgr-04c329405da046a9f	IPv4		PostgreSQL	TCP			5432		0.0.0.0/0	Postgres 5432 Outbound
 7) Test the connection in pgAdmin with the following settings:
-	Connection String:		host=dev.vpatlas.org port=5432 dbname=loonweb user=ipt password=xxxxxxx connect_timeout=10
+	Connection String:		host=dev.vpatlas.org port=5432 dbname=loonweb user=ipt password=xxxxxxxxxxxxxx connect_timeout=10
 	Host name/address:		dev.vpatlas.org
 	Port: 					5432
 	Maintenance database:	loonweb
@@ -29,5 +29,5 @@ To configure Postgresql running on AWS VM to allow user 'ipt' login read-only ac
 	Host:					dev.vpatlas.org:5432
 	Database:				loonweb
 	Database user:			ipt
-	Database password:		readonlyaccess
+	Database password:		xxxxxxxxxxxxxx
 	SQL Statement:			select * from loonwatch_sampling_event
