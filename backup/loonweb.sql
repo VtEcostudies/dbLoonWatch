@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.6
--- Dumped by pg_dump version 13.6
+-- Dumped from database version 15.2 (Ubuntu 15.2-1.pgdg22.04+1)
+-- Dumped by pg_dump version 15.3
 
--- Started on 2023-09-17 22:11:31
+-- Started on 2023-09-18 16:34:04
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -18,12 +18,13 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+DROP DATABASE IF EXISTS loonweb;
 --
--- TOC entry 3953 (class 1262 OID 76453)
+-- TOC entry 4293 (class 1262 OID 20880)
 -- Name: loonweb; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE loonweb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'English_United States.1252';
+CREATE DATABASE loonweb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C.UTF-8';
 
 
 ALTER DATABASE loonweb OWNER TO postgres;
@@ -42,7 +43,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 2 (class 3079 OID 90789)
+-- TOC entry 2 (class 3079 OID 20881)
 -- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -50,7 +51,7 @@ CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 
 
 --
--- TOC entry 3954 (class 0 OID 0)
+-- TOC entry 4294 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
 --
@@ -59,7 +60,7 @@ COMMENT ON EXTENSION postgis IS 'PostGIS geometry and geography spatial types an
 
 
 --
--- TOC entry 939 (class 1255 OID 92084)
+-- TOC entry 963 (class 1255 OID 21927)
 -- Name: valid_email(text); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -82,7 +83,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 213 (class 1259 OID 92508)
+-- TOC entry 220 (class 1259 OID 21928)
 -- Name: loonwatch_event; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -104,7 +105,7 @@ CREATE TABLE public.loonwatch_event (
 ALTER TABLE public.loonwatch_event OWNER TO postgres;
 
 --
--- TOC entry 212 (class 1259 OID 92506)
+-- TOC entry 221 (class 1259 OID 21933)
 -- Name: loonwatch_event_lweventid_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -120,8 +121,8 @@ CREATE SEQUENCE public.loonwatch_event_lweventid_seq
 ALTER TABLE public.loonwatch_event_lweventid_seq OWNER TO postgres;
 
 --
--- TOC entry 3955 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 4295 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: loonwatch_event_lweventid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -129,7 +130,7 @@ ALTER SEQUENCE public.loonwatch_event_lweventid_seq OWNED BY public.loonwatch_ev
 
 
 --
--- TOC entry 216 (class 1259 OID 92709)
+-- TOC entry 222 (class 1259 OID 21934)
 -- Name: loonwatch_ingest; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -151,28 +152,7 @@ CREATE TABLE public.loonwatch_ingest (
 ALTER TABLE public.loonwatch_ingest OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 92703)
--- Name: loonwatch_ingest_backup; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.loonwatch_ingest_backup (
-    lwingestlocation text,
-    lwingesttownname text,
-    lwingestdate date,
-    lwingeststart time without time zone,
-    lwingeststop time without time zone,
-    lwingestadult integer,
-    lwingestchick integer,
-    lwingestsubadult integer,
-    lwingestsurvey integer,
-    lwingestcomment text
-);
-
-
-ALTER TABLE public.loonwatch_ingest_backup OWNER TO postgres;
-
---
--- TOC entry 214 (class 1259 OID 92529)
+-- TOC entry 223 (class 1259 OID 21947)
 -- Name: loonwatch_observation; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -196,7 +176,7 @@ CREATE TABLE public.loonwatch_observation (
 ALTER TABLE public.loonwatch_observation OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 90751)
+-- TOC entry 224 (class 1259 OID 21960)
 -- Name: vt_county; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -210,7 +190,7 @@ CREATE TABLE public.vt_county (
 ALTER TABLE public.vt_county OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 90719)
+-- TOC entry 225 (class 1259 OID 21963)
 -- Name: vt_loon_locations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -227,7 +207,7 @@ CREATE TABLE public.vt_loon_locations (
 ALTER TABLE public.vt_loon_locations OWNER TO postgres;
 
 --
--- TOC entry 206 (class 1259 OID 90766)
+-- TOC entry 226 (class 1259 OID 21968)
 -- Name: vt_town; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -242,7 +222,7 @@ CREATE TABLE public.vt_town (
 ALTER TABLE public.vt_town OWNER TO postgres;
 
 --
--- TOC entry 204 (class 1259 OID 90727)
+-- TOC entry 227 (class 1259 OID 21973)
 -- Name: vt_water_body; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -269,7 +249,7 @@ CREATE TABLE public.vt_water_body (
 ALTER TABLE public.vt_water_body OWNER TO postgres;
 
 --
--- TOC entry 3770 (class 2604 OID 92511)
+-- TOC entry 4098 (class 2604 OID 21978)
 -- Name: loonwatch_event lweventid; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -277,8 +257,8 @@ ALTER TABLE ONLY public.loonwatch_event ALTER COLUMN lweventid SET DEFAULT nextv
 
 
 --
--- TOC entry 3944 (class 0 OID 92508)
--- Dependencies: 213
+-- TOC entry 4280 (class 0 OID 21928)
+-- Dependencies: 220
 -- Data for Name: loonwatch_event; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -286,8 +266,8 @@ INSERT INTO public.loonwatch_event VALUES (1, 'ABENAKI', 131, '2023-09-10', '{eh
 
 
 --
--- TOC entry 3947 (class 0 OID 92709)
--- Dependencies: 216
+-- TOC entry 4282 (class 0 OID 21934)
+-- Dependencies: 222
 -- Data for Name: loonwatch_ingest; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1293,6 +1273,8 @@ INSERT INTO public.loonwatch_ingest VALUES ('Great Hosmer', 'Craftsbury', NULL, 
 INSERT INTO public.loonwatch_ingest VALUES ('Abenaki', 'Thetford', NULL, '2018-07-20', NULL, NULL, 0, NULL, NULL, 1, '7/20');
 INSERT INTO public.loonwatch_ingest VALUES ('Amherst (Plymouth)', 'Plymouth', NULL, '2018-07-21', NULL, NULL, 2, NULL, NULL, 1, '3 ad on 7/23 michael foster');
 INSERT INTO public.loonwatch_ingest VALUES ('Arrowhead', 'Milton', NULL, '2018-07-20', NULL, NULL, 0, NULL, NULL, 1, '7/20');
+INSERT INTO public.loonwatch_ingest VALUES ('Beaver', 'Holland', NULL, '2018-07-21', NULL, NULL, 2, NULL, NULL, 1, NULL);
+INSERT INTO public.loonwatch_ingest VALUES ('Beebe (Hub)', 'Hubbardton', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Green River', 'Hyde Park', NULL, '2017-07-15', NULL, NULL, 12, 3, NULL, 1, 'Survey was done by 4 teams departing from the same location and  then surveying in 4 designated areas. Totals compiled avoiding any duplication. North (north of campsites 17-11) - near Loon Island, one adult and one chick; Central Area (south of campsites 17-11 and north of campsites 30-6) one adult; South East (south of campsites 30-6 and east of Big Island and campsite 1) 8 adults; South West (West of campsites 20-12, Big Island, and campsites 30-1, this area  includes Merganser Inlet and the Access Bay) 2 adults and 2 chicks. Detailed map with locations of each sighting sent by mail to Eric Hansen. The 12 adults seen are assumed to be the 4 breeding pairs, two of which produced chicks ,  and 4 visiting adults. Survey done by members of the Friends of Green River Board - Charlotte and Tom Kastner, Sheila Goss, Ronald Kelley, and Sally Laughlin.');
 INSERT INTO public.loonwatch_ingest VALUES ('Greenwood', 'Woodbury', NULL, '2017-07-15', NULL, NULL, 2, NULL, NULL, 1, 'One on nest, one SE lake.');
 INSERT INTO public.loonwatch_ingest VALUES ('Groton', 'Groton', NULL, '2017-07-15', NULL, NULL, 4, 2, NULL, 1, NULL);
@@ -1403,8 +1385,6 @@ INSERT INTO public.loonwatch_ingest VALUES ('Woodward', 'Plymouth', NULL, '2017-
 INSERT INTO public.loonwatch_ingest VALUES ('Wrightsville', 'Worcester', NULL, '2017-07-15', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Zack Woods', 'Hyde Park', NULL, '2017-07-15', NULL, NULL, 2, 2, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Bean (Sutton)', 'Sutton', NULL, '2018-07-21', NULL, NULL, 1, 1, NULL, 1, '3A on ebird at 7pm');
-INSERT INTO public.loonwatch_ingest VALUES ('Beaver', 'Holland', NULL, '2018-07-21', NULL, NULL, 2, NULL, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest VALUES ('Beebe (Hub)', 'Hubbardton', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Beebe (Sund)', 'Sunderland', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Beecher', 'Brighton', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Berlin', 'Berlin', NULL, '2018-07-21', NULL, NULL, 3, 0, NULL, 1, '7/18/2018 1A');
@@ -2262,171 +2242,8 @@ INSERT INTO public.loonwatch_ingest VALUES ('Knapp Br1', 'Cavendish', NULL, '201
 
 
 --
--- TOC entry 3946 (class 0 OID 92703)
--- Dependencies: 215
--- Data for Name: loonwatch_ingest_backup; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Amherst (Plymouth)', 'Plymouth', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Baker (Barton)', 'Barton', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, 'nesting');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bald Hill', 'Westmore', '2011-07-16', NULL, NULL, 2, 0, 0, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bean (Sutton)', 'Sutton', '2011-07-15', NULL, NULL, 2, 2, NULL, 1, 'Friday pm');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Beaver', 'Holland', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Beebe (Hub)', 'Hubbardton', '2011-07-16', NULL, NULL, NULL, NULL, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Beebe (Sund)', 'Sunderland', '2011-07-16', '15:00:00', NULL, 0, 0, NULL, 1, 'henry 3 pm');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Berlin', 'Berlin', '2011-07-16', NULL, NULL, 3, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Blake', 'Sheffield', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bliss', 'Calais', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bomoseen', 'Castleton', '2011-07-16', NULL, NULL, 0, 0, 2, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bourn', 'Sunderland', '2011-07-16', '15:00:00', NULL, 2, 1, 0, 1, '3pm');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Branch', 'Sunderland', '2011-07-16', NULL, NULL, 1, 0, 0, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bristol (Winona)', 'Bristol', '2011-07-16', NULL, NULL, 0, 0, 0, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Brownington', 'Brownington', '2011-07-16', NULL, NULL, 4, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Bruce', 'Sutton', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, '1 ad flew off 8am (to Tildy?); 2 eggs in nest');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Buck', 'Woodbury', '2011-07-16', NULL, NULL, 2, 0, 1, 1, '1 ad flew time??');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Burr', 'Sudbury', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Carmi', 'Franklin', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Caspian', 'Greensboro', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '1 at 11 am Beth');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Center', 'Newark', '2011-07-16', NULL, NULL, 3, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Chandler', 'Wheelock', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Chittenden', 'Chittenden', '2011-07-16', NULL, NULL, 3, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Clarks (Tildys)', 'Glover', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '1 ad 10 am might have flown in from Bruce so not counted.');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Clyde', 'Derby', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Coits', 'Cabot', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Colchester', 'Colchester', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Coles', 'Walden', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Collins', 'Hyde Park', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '1 ad flew in 4 pm');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Crystal', 'Barton', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '0 Connie Barton');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Curtis', 'Calais', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, 'Peg Chaffee???? Contact');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Daniels - West (Rodgers)', 'Glover', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Daniels Pond', 'Glover', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Derby', 'Derby', '2011-07-16', NULL, NULL, 1, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Dog (Valley)', 'Woodbury', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Duck (Craftsbury)', 'Craftsbury', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Dunmore', 'Salisbury', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('East Long', 'Woodbury', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Echo (Charleston)', 'Charleston', '2011-07-16', NULL, NULL, 0, 0, 2, 1, 'lost pair?');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Echo (Plymouth)', 'Plymouth', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Eden', 'Eden', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, '3rd loon flying 9:35, 2 ad obs 8:50');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Elmore', 'Elmore', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Emerald', 'Dorset', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, 'no loons obs by park ranger');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Ewell', 'Peacham', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, 'Jim Wilson obs 3 ad time? Roosa''s retired? Or 2012');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Fairfield', 'Fairfield', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '40748');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Fairlee', 'Fairlee', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, 'heard another one; not there on return trip');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Fern', 'Leicester', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Flagg', 'Wheelock', '2011-07-16', NULL, NULL, 1, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Forest', 'Averill', '2011-07-16', NULL, NULL, 2, 2, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Fosters', 'Peacham', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Gale Meadows', 'Londonderry', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Great Averill', 'Averill', '2011-07-16', NULL, NULL, 5, 0, NULL, 1, 'Possibly 2 double counted (tally as 5 not 7); no chick obs.w/ inlet pair');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Great Hosmer', 'Craftsbury', '2011-07-16', NULL, NULL, 3, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Green River', 'Hyde Park', '2011-07-16', NULL, NULL, 9, 2, NULL, 1, 'likely missed 1 chick');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Greenwood', 'Woodbury', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Groton', 'Groton', '2011-07-16', NULL, NULL, 4, 3, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Grout', 'Stratton', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, '1 ad 5:50 pm henry; 1 ad 7:15 am vycc');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Halls', 'Newbury', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Hardwick', 'Hardwick', '2011-07-16', NULL, NULL, 0, 2, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Hardwood', 'Elmore', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Harriman', 'Whitingham', '2011-07-16', NULL, NULL, 1, 0, 1, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Hartwell', 'Albany', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '2nd hand report');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Harveys', 'Barnet', '2011-07-16', NULL, NULL, 3, 1, NULL, 1, '513 shoreline road');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Holland', 'Holland', '2011-07-16', NULL, NULL, 6, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Hortonia', 'Hubbardton', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Indian Brook', 'Essex', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Inman', 'Fair Haven', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Island', 'Brighton', '2011-07-16', NULL, NULL, 7, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Jobs', 'Westmore', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Joe''s', 'Danville', '2011-07-16', NULL, NULL, 5, 2, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Keiser', 'Danville', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Kent', 'Killington', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Kettle', 'Peacham', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Knapp Br1', 'Cavendish', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '1 ad flyover');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Knapp Br2', 'Cavendish', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Lewis', 'Lewis', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Little Averill', 'Averill', '2011-07-16', NULL, NULL, 3, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Little Elmore', 'Elmore', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Little Hosmer', 'Craftsbury', '2011-07-16', NULL, NULL, 4, 0, NULL, 1, '1 ad flew over at 9:30 am');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Little Salem', 'Derby', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Long (Eden)', 'Eden', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Long (Greensboro)', 'Greensboro', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Long (Sheffield)', 'Sheffield', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, '1 ad flew over');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Long (Westmore)', 'Westmore', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Lowell', 'Londonderry', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Lower (Hinesburg)', 'Hinesburg', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Lower Symes', 'Ryegate', '2011-07-16', NULL, NULL, 5, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Lyford', 'Walden', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Maidstone', 'Maidstone', '2011-07-16', NULL, NULL, 5, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Marl', 'Sutton', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Marshfield Pond (Turtlehead Pond)', 'Marshfield', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Martin''s', 'Peacham', '2011-07-16', NULL, NULL, 2, 2, NULL, 1, '1 flew 8:30 ese');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('May', 'Barton', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('McConnell', 'Brighton', '2011-07-16', NULL, NULL, 3, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Memphremagog', 'Derby', '2011-07-16', NULL, NULL, 6, 0, NULL, 1, 'possibly 4 loons;  2 flew east at 8:45');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Metcalf', 'Fletcher', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, '4 ad s and w of islands');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Miles', 'Concord', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Mill', 'Windsor', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Miller', 'Strafford', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Mollys', 'Cabot', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Mollys Falls', 'Marshfield', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, 'vol documentation');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Moore', 'Waterford', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Morey', 'Fairlee', '2011-07-16', NULL, NULL, 4, 0, 1, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Mud (Hyde Park)', 'Hyde Park', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Mud (Leicester)', 'Leicester', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Mud (Peacham)', 'Peacham', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Neal', 'Lunenberg', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Nichols', 'Woodbury', '2011-07-16', NULL, NULL, 3, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Ninevah', 'Mt. Holly', '2011-07-16', NULL, NULL, 3, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('No. 10 (Mirror)', 'Calais', '2011-07-16', NULL, NULL, 2, 2, NULL, 1, 'chick stashed; killed next day');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('North Montpelier', 'East Montpelier', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Norton', 'Norton', '2011-07-16', NULL, NULL, 6, 0, 0, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Notch', 'Ferdinand', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Noyes', 'Groton', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Osmore', 'Groton', '2011-07-16', NULL, NULL, 2, 2, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Parker', 'Glover', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Peacham', 'Peacham', '2011-07-16', NULL, NULL, 11, 3, NULL, 1, 'also 2 ad joan hudson');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Pensioner', 'Charleston', '2011-07-16', NULL, NULL, 2, 2, NULL, 1, 'possibly 13 ad');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Pigeon', 'Groton', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, 'check with Jean roberts');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Raponda', 'Wilmington', '2011-07-16', NULL, NULL, 0, 0, 1, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Rescue', 'Ludlow', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Ricker', 'Groton', '2011-07-16', NULL, NULL, 3, 2, NULL, 1, '1 ad Friday');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Salem', 'Derby', '2011-07-16', NULL, NULL, 4, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Searsburg', 'Searsburg', '2011-07-16', NULL, NULL, 1, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Seymour', 'Morgan', '2011-07-16', NULL, NULL, 8, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Shadow (Concord)', 'Concord', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, 'Coordinate with Charles Woods ');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Shadow (Glover)', 'Glover', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Silver (barnard)', 'Barnard', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Silver (Leicester)', 'Leicester', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Sodom', 'Calais', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Somerset', 'Somerset', '2011-07-16', NULL, NULL, 7, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('South (Eden)', 'Eden', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('South Bay', 'Newport City', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Spectacle', 'Brighton', '2011-07-16', NULL, NULL, 1, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Spring', 'Shrewsbury', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('St. Catherine', 'Wells', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Sugar Hill Res.', 'Goshen', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Sunset (Marlboro)', 'Marlboro', '2011-07-16', NULL, NULL, 3, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Thurman Dix', 'Orange', '2011-07-16', NULL, NULL, 4, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Ticklenaked', 'Ryegate', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, 'possibly 3 ad only');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Toad', 'Charleston', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Turtle', 'Holland', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Wallace', 'Canaan', '2011-07-16', NULL, NULL, 4, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Wallingford', 'Wallingford', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Wapanacki', 'Hardwick', '2011-07-16', NULL, NULL, 2, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Warden', 'Barnet', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Waterbury - South end', 'Waterbury', '2011-07-16', NULL, NULL, 0, NULL, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('West Mountain', 'Maidstone', '2011-07-16', NULL, NULL, 1, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Wheeler', 'Brunswick', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Willoughby', 'Westmore', '2011-07-16', NULL, NULL, 11, 0, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Wolcott', 'Wolcott', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Woodbury', 'Woodbury', '2011-07-16', NULL, NULL, 2, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Woodward', 'Plymouth', '2011-07-15', NULL, NULL, 2, 1, NULL, 1, 'Friday obs.');
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Zack Woods', 'Hyde Park', '2011-07-16', NULL, NULL, 1, 1, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest_backup VALUES ('Wrightsville', 'Worcester', '2011-07-16', NULL, NULL, 0, 0, NULL, 1, NULL);
-
-
---
--- TOC entry 3945 (class 0 OID 92529)
--- Dependencies: 214
+-- TOC entry 4283 (class 0 OID 21947)
+-- Dependencies: 223
 -- Data for Name: loonwatch_observation; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2436,16 +2253,16 @@ INSERT INTO public.loonwatch_observation VALUES (1, '08:55:00', NULL, 0, NULL, 0
 
 
 --
--- TOC entry 3768 (class 0 OID 91099)
--- Dependencies: 208
+-- TOC entry 4097 (class 0 OID 21194)
+-- Dependencies: 216
 -- Data for Name: spatial_ref_sys; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3941 (class 0 OID 90751)
--- Dependencies: 205
+-- TOC entry 4284 (class 0 OID 21960)
+-- Dependencies: 224
 -- Data for Name: vt_county; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2467,18 +2284,18 @@ INSERT INTO public.vt_county VALUES (14, 1, 'Addison');
 
 
 --
--- TOC entry 3939 (class 0 OID 90719)
--- Dependencies: 203
+-- TOC entry 4285 (class 0 OID 21963)
+-- Dependencies: 225
 -- Data for Name: vt_loon_locations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.vt_loon_locations VALUES ('Forest', 'Averill', 'nek', 62, 'FOREST (AVERLL)', 8);
-INSERT INTO public.vt_loon_locations VALUES ('Little Salem', 'Derby', 'nek', 50, 'SALEM', 230);
 INSERT INTO public.vt_loon_locations VALUES ('Clyde River - Buck Flats', 'Charleston', 'nek', 50, NULL, 24);
 INSERT INTO public.vt_loon_locations VALUES ('Echo (Charleston)', 'Charleston', 'nek', 550, 'ECHO (CHARTN)', 24);
 INSERT INTO public.vt_loon_locations VALUES ('Charleston (Charleston)', 'Charleston', 'nek', 40, 'CHARLESTON', 24);
 INSERT INTO public.vt_loon_locations VALUES ('Memphremagog', 'Derby', 'nek', 5966, 'MEMPHREMAGOG', 230);
 INSERT INTO public.vt_loon_locations VALUES ('Adamant', 'Calais', 'nc', 20, 'ADAMANT', 81);
+INSERT INTO public.vt_loon_locations VALUES ('Little Salem', 'Derby', 'nek', 50, 'LITTLE SALEM', 230);
 INSERT INTO public.vt_loon_locations VALUES ('Crystal', 'Barton', 'nek', 763, 'CRYSTAL (BARTON)', 45);
 INSERT INTO public.vt_loon_locations VALUES ('Duck (Craftsbury)', 'Craftsbury', 'nc', 9, 'DUCK (CRAFBY)', 50);
 INSERT INTO public.vt_loon_locations VALUES ('No. 10 (Mirror)', 'Calais', 'nc', 85, 'MIRROR', 81);
@@ -2709,8 +2526,8 @@ INSERT INTO public.vt_loon_locations VALUES ('Burr', 'Sudbury', 'wc', 85, 'BURR 
 
 
 --
--- TOC entry 3942 (class 0 OID 90766)
--- Dependencies: 206
+-- TOC entry 4286 (class 0 OID 21968)
+-- Dependencies: 226
 -- Data for Name: vt_town; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2973,8 +2790,8 @@ INSERT INTO public.vt_town VALUES (14, 'Averys Gore', 9, 'Avery''s Gore');
 
 
 --
--- TOC entry 3940 (class 0 OID 90727)
--- Dependencies: 204
+-- TOC entry 4287 (class 0 OID 21973)
+-- Dependencies: 227
 -- Data for Name: vt_water_body; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3226,6 +3043,7 @@ INSERT INTO public.vt_water_body VALUES ('GARFIELD', 'Unnamed Pond referred to b
 INSERT INTO public.vt_water_body VALUES ('GATES', 'Gates Pond', 'Whitingham', 'Green Mtn South', 30, 1486, 1617, 7, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Gates Pond Whitingham', 'Lake (Artificial Control)', 42.818693, -72.8073181, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GATES-NE', 'Unnamed Pond referred to by DEC as Gates - NE', 'Marlboro', 'Green Mtn South', NULL, NULL, 1785, NULL, NULL, NULL, 'Gates - NE Pond Marlboro', 'Pond', 42.83, -72.8, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GEORGIA PLAINS', 'Unnamed Pond referred to by DEC as Georgia Plains', 'Georgia', 'Champlain ', 19, 3725, 210, NULL, NULL, NULL, 'Georgia Plains Pond Georgia', 'Pond', 44.72, -73.17, NULL, NULL);
+INSERT INTO public.vt_water_body VALUES ('HIDDEN', 'Hidden Lake', 'Marlboro', 'Green Mtn South', 17, 723, 1470, 6, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Hidden Lake Marlboro', 'Lake (Artificial Control)', 42.88, -72.72, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GILLETT', 'Gillett Pond', 'Richmond', 'Champlain ', 30, 1390, 710, 8, 5, 'NATURAL with ARTIFICIAL CONTROL', 'Gillett Pond Richmond', 'Lake (Artificial Control)', 44.3531098, -72.9642886, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GILMORE', 'Gilmore Pond', 'Bristol', 'Champlain ', 6, 318, 2010, NULL, NULL, NULL, 'Gilmore Pond Bristol', 'Pond', 44.088115, -73.0365059, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GLEN', 'Glen Lake', 'Castleton', 'West Central', 206, 2050, 478, 68, 32, 'NATURAL with ARTIFICIAL CONTROL', 'Glen Lake Castleton', 'Lake (Artificial Control)', 43.67, -73.23, NULL, NULL);
@@ -3275,7 +3093,6 @@ INSERT INTO public.vt_water_body VALUES ('HEART', 'Heart Pond', 'Albany', 'North
 INSERT INTO public.vt_water_body VALUES ('HEARTWELLVILLE', 'Unnamed Pond referred to by DEC as Heartwellville', 'Readsboro', 'Green Mtn South', NULL, NULL, 1760, NULL, NULL, NULL, 'Heartwellville Pond Readsboro', 'Pond', 42.83, -72.98, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HEDGEHOG GULF', 'Unnamed Pond referred to by DEC as Hedgehog Gulf', 'Athens', 'Green Mtn South', NULL, NULL, 935, NULL, NULL, NULL, 'Hedgehog Gulf Pond Athens', 'Pond', 43.08, -72.58, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HICKORY', 'Unnamed Pond referred to by DEC as Hickory', 'Westminster', 'Green Mtn South', 16, 84, 932, NULL, NULL, NULL, 'Hickory Pond Westminster', 'Pond', 43.03, -72.55, NULL, NULL);
-INSERT INTO public.vt_water_body VALUES ('HIDDEN', 'Hidden Lake', 'Marlboro', 'Green Mtn South', 17, 723, 1470, 6, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Hidden Lake Marlboro', 'Lake (Artificial Control)', 42.88, -72.72, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HIGH (HUBDTN)', 'High Pond', 'Hubbardton', 'West Central', 3, 20, 770, NULL, NULL, NULL, 'High Pond Hubbardton', 'Pond', 43.7003422, -73.2117786, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HIGH (SUDBRY)', 'High Pond', 'Sudbury', 'West Central', 20, 173, 1033, 56, 26, 'NATURAL', 'High Pond Sudbury', 'Pond', 43.7528416, -73.1531676, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HINKUM', 'Hinkum Pond', 'Sudbury', 'West Central', 60, 353, 719, 69, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Hinkum Pond Sudbury', 'Lake (Artificial Control)', 43.7647857, -73.1678903, NULL, NULL);
@@ -3523,6 +3340,7 @@ INSERT INTO public.vt_water_body VALUES ('PAUL STREAM', 'Paul Stream Pond', 'Bru
 INSERT INTO public.vt_water_body VALUES ('PEABODY', 'Unnamed Pond referred to by DEC as Peabody', 'Weston', 'West Central', NULL, NULL, 2240, NULL, NULL, NULL, 'Peabody Pond Weston', 'Pond', 43.317018, -72.8439883, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PEACE', 'Unnamed Pond referred to by DEC as Peace', 'Eden', 'North Central', NULL, NULL, 1840, NULL, NULL, NULL, 'Peace Pond Eden', 'Pond', 44.73, -72.62, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PEACHAM', 'Peacham Pond', 'Peacham', 'North Central', 340, 3750, 1401, 61, 20, 'NATURAL with ARTIFICIAL CONTROL', 'Peacham Pond Peacham', 'Lake (Artificial Control)', 44.33, -72.27, NULL, NULL);
+INSERT INTO public.vt_water_body VALUES ('ADAM', 'Adam Pond', 'Jamaica', 'Green Mtn South', 7, 186, 900, NULL, NULL, NULL, 'Adam Pond Jamaica', 'Pond', 43.1089666, -72.7603735, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PECKS', 'Pecks Pond', 'Barre Town', 'North Central', 16, 443, 1010, NULL, NULL, NULL, 'Pecks Pond Barre Town', 'Pond', 44.1681171, -72.5364945, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PENSIONER', 'Pensioner Pond', 'Charleston', 'NE Kingdom', 173, 66882, 1141, 39, 15, 'NATURAL with ARTIFICIAL CONTROL', 'Pensioner Pond Charleston', 'Lake (Artificial Control)', 44.8736591, -72.0573206, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PERCH (BENSON)', 'Perch Pond', 'Benson', 'West Central', 24, 110, 527, 44, 16, 'NATURAL with ARTIFICIAL CONTROL', 'Perch Pond Benson', 'Lake (Artificial Control)', 43.7503403, -73.2798365, NULL, NULL);
@@ -3671,6 +3489,7 @@ INSERT INTO public.vt_water_body VALUES ('STONY', 'Unnamed Pond referred to by D
 INSERT INTO public.vt_water_body VALUES ('STOUGHTON', 'Stoughton Pond', 'Weathersfield', 'East Central', 56, 19257, 502, 20, 9, 'ARTIFICIAL', 'Stoughton Pond Weathersfield', 'Reservoir', 43.3792397, -72.4998126, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STRAFFORD', 'Unnamed Pond referred to by DEC as Strafford', 'Strafford', 'East Central', 18, 209, 1330, NULL, NULL, NULL, 'Strafford Pond Strafford', 'Pond', 43.85, -72.43, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STRATTON', 'Stratton Pond', 'Stratton', 'Green Mtn South', 46, 264, 2555, 18, NULL, 'NATURAL', 'Stratton Pond Stratton', 'Pond', 43.1039661, -72.9698243, NULL, NULL);
+INSERT INTO public.vt_water_body VALUES ('ADAMS (ENOSBG)', 'Adams Pond', 'Enosburgh', 'Champlain ', 11, 1477, 850, NULL, NULL, NULL, 'Adams Pond Enosburg', 'Pond', 44.8808804, -72.7201307, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STRATTON SKI AREA', 'Unnamed Pond referred to by DEC as Stratton Ski Area', 'Winhall', 'Green Mtn South', NULL, NULL, 1705, NULL, NULL, 'ARTIFICIAL', 'Stratton Ski Area Pond Winhall', 'Reservoir', 43.12, -72.9, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STUART', 'Stuart Pond', 'Lyndon', 'NE Kingdom', 4, 115, 830, NULL, NULL, NULL, 'Stuart Pond Lyndon', 'Pond', 44.5061672, -72.0145404, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('SUGAR HILL', 'Sugar Hill Reservoir', 'Goshen', 'West Central', 63, 1667, 1768, 35, 22, 'ARTIFICIAL', 'Sugar Hill Reservoir Goshen', 'Reservoir', 43.92, -73, NULL, NULL);
@@ -3769,8 +3588,6 @@ INSERT INTO public.vt_water_body VALUES ('WINHALL', 'Unnamed Pond referred to by
 INSERT INTO public.vt_water_body VALUES ('WINONA', 'Winona Lake (Bristol Pond)', 'Bristol', 'Champlain ', 248, 2564, 467, 9, 4, 'NATURAL with ARTIFICIAL CONTROL', 'Winona Lake Bristol', 'Lake (Artificial Control)', 44.1731125, -73.0870642, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ABBEY', 'Abbey Pond', 'Ripton', 'West Central', 3, 433, 1710, NULL, NULL, 'NATURAL', 'Abbey Pond Ripton', 'Pond', 44.0336714, -73.0601163, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ABENAKI', 'Lake Abenaki', 'Thetford', 'East Central', 44, 645, 840, 11, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Lake Abenaki Thetford', 'Lake (Artificial Control)', 43.8328472, -72.2345354, NULL, NULL);
-INSERT INTO public.vt_water_body VALUES ('ADAM', 'Adam Pond', 'Jamaica', 'Green Mtn South', 7, 186, 900, NULL, NULL, NULL, 'Adam Pond Jamaica', 'Pond', 43.1089666, -72.7603735, NULL, NULL);
-INSERT INTO public.vt_water_body VALUES ('ADAMS (ENOSBG)', 'Adams Pond', 'Enosburgh', 'Champlain ', 11, 1477, 850, NULL, NULL, NULL, 'Adams Pond Enosburg', 'Pond', 44.8808804, -72.7201307, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ADAMS (WOODFD)', 'Adams Reservoir', 'Woodford', 'Green Mtn South', 21, 821, 2317, 15, 6, 'ARTIFICIAL', 'Adams Reservoir Woodford', 'Reservoir', 42.886908, -73.03933, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('AINSWORTH', 'Unnamed pond referred to by DEC as Ainsworth', 'Williamstown', 'East Central', NULL, NULL, 875, NULL, NULL, NULL, 'Ainsworth Pond Williamstown', 'Pond', 44.08, -72.57, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ALBANY-NE', 'Unnamed pond referred to by DEC as Albany-NE', 'Albany', 'North Central', NULL, NULL, 1635, NULL, NULL, NULL, 'Albany-NE Pond Albany', 'Pond', 44.75, -72.27, NULL, NULL);
@@ -3806,8 +3623,8 @@ INSERT INTO public.vt_water_body VALUES ('ADAMANT', NULL, 'Calais', 'North Centr
 
 
 --
--- TOC entry 3956 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 4296 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: loonwatch_event_lweventid_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -3815,7 +3632,7 @@ SELECT pg_catalog.setval('public.loonwatch_event_lweventid_seq', 1, true);
 
 
 --
--- TOC entry 3778 (class 2606 OID 92562)
+-- TOC entry 4121 (class 2606 OID 21980)
 -- Name: vt_loon_locations loon_location_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3824,7 +3641,7 @@ ALTER TABLE ONLY public.vt_loon_locations
 
 
 --
--- TOC entry 3790 (class 2606 OID 92516)
+-- TOC entry 4109 (class 2606 OID 21982)
 -- Name: loonwatch_event lw_event_primary_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3833,7 +3650,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 3794 (class 2606 OID 92544)
+-- TOC entry 4115 (class 2606 OID 21984)
 -- Name: loonwatch_observation lw_event_unique_time_counts; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3842,7 +3659,7 @@ ALTER TABLE ONLY public.loonwatch_observation
 
 
 --
--- TOC entry 3792 (class 2606 OID 92518)
+-- TOC entry 4111 (class 2606 OID 21986)
 -- Name: loonwatch_event lw_event_unique_wbid_date_time_observer; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3851,7 +3668,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 3796 (class 2606 OID 92719)
+-- TOC entry 4113 (class 2606 OID 21988)
 -- Name: loonwatch_ingest lw_ingest_unique_location_date; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3860,7 +3677,7 @@ ALTER TABLE ONLY public.loonwatch_ingest
 
 
 --
--- TOC entry 3782 (class 2606 OID 90755)
+-- TOC entry 4117 (class 2606 OID 21990)
 -- Name: vt_county vt_county_govCountyId_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3869,7 +3686,7 @@ ALTER TABLE ONLY public.vt_county
 
 
 --
--- TOC entry 3784 (class 2606 OID 90757)
+-- TOC entry 4119 (class 2606 OID 21992)
 -- Name: vt_county vt_county_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3878,7 +3695,7 @@ ALTER TABLE ONLY public.vt_county
 
 
 --
--- TOC entry 3786 (class 2606 OID 90773)
+-- TOC entry 4123 (class 2606 OID 21994)
 -- Name: vt_town vt_town_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3887,7 +3704,7 @@ ALTER TABLE ONLY public.vt_town
 
 
 --
--- TOC entry 3780 (class 2606 OID 90734)
+-- TOC entry 4125 (class 2606 OID 21996)
 -- Name: vt_water_body vt_water_bodies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3896,7 +3713,7 @@ ALTER TABLE ONLY public.vt_water_body
 
 
 --
--- TOC entry 3799 (class 2606 OID 90774)
+-- TOC entry 4132 (class 2606 OID 21997)
 -- Name: vt_town fk_gov_county_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3905,7 +3722,7 @@ ALTER TABLE ONLY public.vt_town
 
 
 --
--- TOC entry 3803 (class 2606 OID 92720)
+-- TOC entry 4128 (class 2606 OID 22002)
 -- Name: loonwatch_ingest fk_location; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3914,7 +3731,7 @@ ALTER TABLE ONLY public.loonwatch_ingest
 
 
 --
--- TOC entry 3798 (class 2606 OID 90784)
+-- TOC entry 4130 (class 2606 OID 22007)
 -- Name: vt_loon_locations fk_loon_location_town_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3923,7 +3740,7 @@ ALTER TABLE ONLY public.vt_loon_locations
 
 
 --
--- TOC entry 3802 (class 2606 OID 92538)
+-- TOC entry 4129 (class 2606 OID 22012)
 -- Name: loonwatch_observation fk_lw_event_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3932,7 +3749,7 @@ ALTER TABLE ONLY public.loonwatch_observation
 
 
 --
--- TOC entry 3801 (class 2606 OID 92524)
+-- TOC entry 4126 (class 2606 OID 22017)
 -- Name: loonwatch_event fk_town_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3941,7 +3758,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 3800 (class 2606 OID 92519)
+-- TOC entry 4127 (class 2606 OID 22022)
 -- Name: loonwatch_event fk_water_body_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3950,7 +3767,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 3797 (class 2606 OID 90736)
+-- TOC entry 4131 (class 2606 OID 22027)
 -- Name: vt_loon_locations fk_waterbody_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3958,7 +3775,7 @@ ALTER TABLE ONLY public.vt_loon_locations
     ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterbodyid) REFERENCES public.vt_water_body(wbtextid);
 
 
--- Completed on 2023-09-17 22:11:31
+-- Completed on 2023-09-18 16:34:17
 
 --
 -- PostgreSQL database dump complete

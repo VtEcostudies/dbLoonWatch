@@ -1,0 +1,33 @@
+To configure Postgresql running on AWS VM to allow user 'ipt' login read-only access to db views:
+1) execute against your target pg db:
+	./sql/create_views_sampling_event_data.sql
+2) execute against your target pg db
+	./sql/create_readonly_role_ipt_grant_views_on_loonweb.sql
+3) on AWS VM, edit /etc/postgresql/{pg_version_number}/main/pg_hba.conf by adding this line:
+	host    all             ipt             0.0.0.0/0               scram-sha-256
+4) on AWS VM, edit /etc/postgresql/{pg_version_number}/main/postgresql.conf by adding this line:
+	listen_addresses = '*'
+5) on AWS cloud admin account (https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2)
+	- go to EC2 instance view
+	- select VM to modify
+	- Button on top above list of VMs: 'Actions' > Security > Change Security Groups
+	- Associated security groups: 
+	- Select our security group named like 'Postgres Port 5432'
+	- Button 'Add security group'
+6) Make sure that security group is defined as follows for both Inbound and Outbound rules:
+	Name	Security group rule ID	IP version	Type		Protocol	Port range	Source		Description
+	-		sgr-04c329405da046a9f	IPv4		PostgreSQL	TCP			5432		0.0.0.0/0	Postgres 5432 Inbound
+	-		sgr-04c329405da046a9f	IPv4		PostgreSQL	TCP			5432		0.0.0.0/0	Postgres 5432 Outbound
+7) Test the connection in pgAdmin with the following settings:
+	Connection String:		host=dev.vpatlas.org port=5432 dbname=loonweb user=ipt password=xxxxxxx connect_timeout=10
+	Host name/address:		dev.vpatlas.org
+	Port: 					5432
+	Maintenance database:	loonweb
+	Username: 				ipt
+8) Set up IPT Database connection:
+	Database System:		PostgreSQL
+	Host:					dev.vpatlas.org:5432
+	Database:				loonweb
+	Database user:			ipt
+	Database password:		readonlyaccess
+	SQL Statement:			select * from loonwatch_sampling_event

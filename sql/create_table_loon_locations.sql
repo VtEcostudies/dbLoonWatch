@@ -173,6 +173,7 @@ update vt_loon_locations set waterBodyId='TOWNSHEND' WHERE locationName='Townshe
 select * from vt_loon_locations where lower(locationName) like '%happenstance%';
 select * from vt_water_body where lower(wbTextId) like '%happenstance%'; --Does not exist
 update vt_loon_locations set waterBodyId='HAPPENSTANCE' WHERE locationName='Happenstance Farm';
+
 --insert new wbTextId='LITTLE SALEM' into vt_water_body, copied from 'SALEM'
 CREATE TEMP TABLE tmp (like vt_water_body);
 INSERT INTO tmp SELECT * FROM vt_water_body WHERE wbTextId = 'ABENAKI';
