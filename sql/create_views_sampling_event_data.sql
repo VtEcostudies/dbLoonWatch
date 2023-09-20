@@ -1,9 +1,12 @@
 CREATE OR REPLACE VIEW loonwatch_sampling_event AS
-
 SELECT
 date_part('year', lwIngestDate) 
-	|| '-' || UPPER(locationName) --waterBodyId is not Unique to loonLocations, which are. Must use loonLocation to create UNIQUE eventID.
-	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+--NOTE: if you change eventID formula here, you MUST copy that to occurrence eventIDs and occurrenceIDs in loonwatch_sampling_occurrences
+--waterBodyId is not Unique to loonLocation. Created exportName in vt_loon_locations to handle that.
+	--|| '-' || waterBodyId
+	--|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), waterBodyId ORDER BY date_part('year', lwIngestDate), waterBodyId)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 AS "eventID",
 'Area Survey' AS "samplingProtocol",
 'Observer Time' AS "samplingEffort",
@@ -42,17 +45,21 @@ INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
 INNER JOIN vt_town ON locationTownId="townId"
 INNER JOIN vt_county ON "townCountyId"="govCountyId"
 ORDER BY "eventID";
+--test for uniqueness
+select "eventID", count("eventID") from loonwatch_sampling_event
+group by "eventID"
+having count("eventID")>1;
 
 CREATE OR REPLACE VIEW loonwatch_sampling_occurrence AS
 SELECT * FROM (
 SELECT
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 AS "eventID",
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 	|| '-Ad'
 AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
@@ -78,12 +85,12 @@ UNION
 
 SELECT
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 AS "eventID",
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 	|| '-SA'
 AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
@@ -109,12 +116,12 @@ UNION
 
 SELECT
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 AS "eventID",
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 	|| '-Ch'
 AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
@@ -140,12 +147,12 @@ UNION
 
 SELECT
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 AS "eventID",
 date_part('year', lwIngestDate) 
-	|| '-' || waterBodyId
-	|| '-' || row_number() OVER (PARTITION BY date_part('year', li.lwIngestDate), lwIngestLocation ORDER BY date_part('year', lwIngestDate), lwIngestLocation)
+	|| '-' || UPPER(exportName)
+	|| '-' || ROW_NUMBER() OVER (PARTITION BY date_part('year', li.lwIngestDate), exportName ORDER BY date_part('year', lwIngestDate), exportName)
 	|| '-00'
 AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
@@ -167,5 +174,14 @@ INNER JOIN vt_loon_locations ll ON locationName=lwIngestLocation
 INNER JOIN vt_water_body wb ON wbTextId=waterBodyId
 WHERE COALESCE(lwIngestAdult, 0)=0 AND COALESCE(lwIngestSubAdult, 0)=0 AND COALESCE(lwIngestChick, 0)=0
 )
-AS obs
+AS occ
 ORDER BY "occurrenceID";
+
+--test for uniqueness
+select "eventID", count("eventID") from loonwatch_sampling_event
+group by "eventID"
+having count("eventID")>1
+UNION
+select "occurrenceID", count("occurrenceID") from loonwatch_sampling_occurrence
+group by "occurrenceID"
+having count("occurrenceID")>1;

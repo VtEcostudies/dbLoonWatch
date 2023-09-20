@@ -7,15 +7,18 @@ create table if not exists vt_loon_locations (
 );
 --psql:
 --\COPY vt_loon_locations FROM 'C:\Users\jtloo\Documents\VCE\LoonWeb\loonWatchData\csv_import\LoonWatch_Sampling_Locations.csv' DELIMITER ',' CSV HEADER
-select * from vt_loon_locations where locationArea > 200;
+--sql: (in Windows Explorer alter csv_import folder >properties >security: add group 'everyone'	with full privs)
+--COPY vt_loon_locations FROM 'C:\Users\jtloo\Documents\VCE\LoonWeb\loonWatchData\csv_import\LoonWatch_Sampling_Locations.csv' DELIMITER ',' CSV HEADER
+select * from vt_loon_locations;
 
+--constrain locationName to be unique
 ALTER TABLE vt_loon_locations ADD CONSTRAINT loon_location_unique UNIQUE(locationName);
 --add foreign key waterBodyId 
-alter table vt_loon_locations add column waterBodyId text;
-alter table vt_loon_locations ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterBodyId) REFERENCES vt_water_body (wbTextId);
+ALTER TABLE vt_loon_locations ADD COLUMN waterBodyId text;
+ALTER TABLE vt_loon_locations ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterBodyId) REFERENCES vt_water_body (wbTextId);
 --add foreign key locationTownId
-alter table vt_loon_locations add column locationTownId integer;
-alter table vt_loon_locations ADD CONSTRAINT fk_loon_location_town_id FOREIGN KEY (locationTownId) REFERENCES vt_town ("townId");
+ALTER TABLE vt_loon_locations ADD COLUMN locationTownId integer;
+ALTER TABLE vt_loon_locations ADD CONSTRAINT fk_loon_location_town_id FOREIGN KEY (locationTownId) REFERENCES vt_town ("townId");
 
 --fix incorrect town names in loon_locations
 update vt_loon_locations set locationTown='Hubbardton' where locationTown='Hubbarton';
@@ -205,3 +208,19 @@ select * from vt_water_body where lower(wbTextId) like '%wrightsville%';
 update vt_loon_locations set locationName='Wrightsville' where locationName='WrightSurveyille';
 update vt_loon_locations set locationTown='East Montpelier' where locationName='Wrightsville';
 update vt_loon_locations set waterBodyId='WRIGHTSVILLE' WHERE locationName='Wrightsville';
+
+--add modified exportName to be used for stable, unique eventID on export to IPT
+/*
+	If future loon locations change, new exportNames can be added and old exportNames remain stable.
+	One imagined change is the addition of territories or other lake sub-divisions. If/when that happens, we can remove the 
+	uniqueness constraint from locationName, add territory, create a new uniqueness constraint on locationName+territory,
+	and generate exportNames from those. Old exportNames without territories would remain the same.
+*/
+ALTER TABLE vt_loon_locations ADD COLUMN exportName text;
+UPDATE vt_loon_locations set exportName=COALESCE(waterBodyId, TRANSLATE(UPPER(locationName),'''.-:,',''));
+UPDATE vt_loon_locations SET exportName=REGEXP_REPLACE(exportName,' +',' ','g');
+SELECT locationName,locationTownId,"townName",waterBodyId,exportName
+--,REGEXP_REPLACE(exportName,' +',' ','g')
+FROM vt_loon_locations 
+JOIN vt_town ON "townId"=locationTownId
+WHERE UPPER(locationName)!=exportName;

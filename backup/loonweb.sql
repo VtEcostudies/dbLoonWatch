@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 15.2 (Ubuntu 15.2-1.pgdg22.04+1)
--- Dumped by pg_dump version 15.3
+-- Dumped from database version 13.6
+-- Dumped by pg_dump version 13.6
 
--- Started on 2023-09-18 16:34:04
+-- Started on 2023-09-20 13:34:12
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,11 +20,11 @@ SET row_security = off;
 
 DROP DATABASE IF EXISTS loonweb;
 --
--- TOC entry 4293 (class 1262 OID 20880)
+-- TOC entry 3957 (class 1262 OID 76453)
 -- Name: loonweb; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE loonweb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C.UTF-8';
+CREATE DATABASE loonweb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'English_United States.1252';
 
 
 ALTER DATABASE loonweb OWNER TO postgres;
@@ -43,7 +43,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 2 (class 3079 OID 20881)
+-- TOC entry 2 (class 3079 OID 90789)
 -- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -51,7 +51,7 @@ CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 
 
 --
--- TOC entry 4294 (class 0 OID 0)
+-- TOC entry 3960 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
 --
@@ -60,7 +60,7 @@ COMMENT ON EXTENSION postgis IS 'PostGIS geometry and geography spatial types an
 
 
 --
--- TOC entry 963 (class 1255 OID 21927)
+-- TOC entry 940 (class 1255 OID 92084)
 -- Name: valid_email(text); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -83,7 +83,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 220 (class 1259 OID 21928)
+-- TOC entry 213 (class 1259 OID 92508)
 -- Name: loonwatch_event; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -105,7 +105,7 @@ CREATE TABLE public.loonwatch_event (
 ALTER TABLE public.loonwatch_event OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 21933)
+-- TOC entry 212 (class 1259 OID 92506)
 -- Name: loonwatch_event_lweventid_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -121,8 +121,8 @@ CREATE SEQUENCE public.loonwatch_event_lweventid_seq
 ALTER TABLE public.loonwatch_event_lweventid_seq OWNER TO postgres;
 
 --
--- TOC entry 4295 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3961 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: loonwatch_event_lweventid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -130,7 +130,7 @@ ALTER SEQUENCE public.loonwatch_event_lweventid_seq OWNED BY public.loonwatch_ev
 
 
 --
--- TOC entry 222 (class 1259 OID 21934)
+-- TOC entry 215 (class 1259 OID 92709)
 -- Name: loonwatch_ingest; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -152,7 +152,7 @@ CREATE TABLE public.loonwatch_ingest (
 ALTER TABLE public.loonwatch_ingest OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 21947)
+-- TOC entry 214 (class 1259 OID 92529)
 -- Name: loonwatch_observation; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -176,7 +176,7 @@ CREATE TABLE public.loonwatch_observation (
 ALTER TABLE public.loonwatch_observation OWNER TO postgres;
 
 --
--- TOC entry 224 (class 1259 OID 21960)
+-- TOC entry 205 (class 1259 OID 90751)
 -- Name: vt_county; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -190,7 +190,7 @@ CREATE TABLE public.vt_county (
 ALTER TABLE public.vt_county OWNER TO postgres;
 
 --
--- TOC entry 225 (class 1259 OID 21963)
+-- TOC entry 203 (class 1259 OID 90719)
 -- Name: vt_loon_locations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -200,14 +200,15 @@ CREATE TABLE public.vt_loon_locations (
     locationregion text,
     locationarea integer,
     waterbodyid text,
-    locationtownid integer
+    locationtownid integer,
+    exportname text
 );
 
 
 ALTER TABLE public.vt_loon_locations OWNER TO postgres;
 
 --
--- TOC entry 226 (class 1259 OID 21968)
+-- TOC entry 206 (class 1259 OID 90766)
 -- Name: vt_town; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -222,7 +223,7 @@ CREATE TABLE public.vt_town (
 ALTER TABLE public.vt_town OWNER TO postgres;
 
 --
--- TOC entry 227 (class 1259 OID 21973)
+-- TOC entry 204 (class 1259 OID 90727)
 -- Name: vt_water_body; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -249,7 +250,165 @@ CREATE TABLE public.vt_water_body (
 ALTER TABLE public.vt_water_body OWNER TO postgres;
 
 --
--- TOC entry 4098 (class 2604 OID 21978)
+-- TOC entry 216 (class 1259 OID 92765)
+-- Name: loonwatch_sampling_event; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.loonwatch_sampling_event AS
+ SELECT ((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) AS "eventID",
+    'Area Survey'::text AS "samplingProtocol",
+    'Observer Time'::text AS "samplingEffort",
+    ll.locationarea AS "sampleSizeValue",
+    'Acre'::text AS "sampleSizeUnit",
+    li.lwingestdate AS "eventDate",
+    date_part('year'::text, li.lwingestdate) AS year,
+    date_part('month'::text, li.lwingestdate) AS month,
+    date_part('day'::text, li.lwingestdate) AS day,
+        CASE
+            WHEN (li.lwingeststart IS NOT NULL) THEN
+            CASE
+                WHEN (li.lwingeststop IS NOT NULL) THEN (((li.lwingeststart)::text || '/'::text) || (li.lwingeststop)::text)
+                ELSE (li.lwingeststart)::text
+            END
+            ELSE NULL::text
+        END AS "eventTime",
+    date_part('doy'::text, li.lwingestdate) AS "startDayOfYear",
+    'United States of America'::text AS country,
+    'USA'::text AS "countryCode",
+    'Vermont'::text AS "stateProvince",
+    vt_county."countyName" AS county,
+    ll.locationtown AS municipality,
+    ll.waterbodyid AS "locationID",
+    ll.waterbodyid AS "waterBody",
+    wb.wbcenterlatitude AS "decimalLatitude",
+    wb.wbcenterlongitude AS "decimalLongitude",
+    'WGS84'::text AS "geodeticDatum",
+    10 AS "coordinateUncertaintyInMeters",
+    'Event'::text AS type,
+    'VCE'::text AS "ownerInstitutionCode",
+    li.lwingestcomment AS "eventRemarks"
+   FROM ((((public.loonwatch_ingest li
+     JOIN public.vt_loon_locations ll ON ((ll.locationname = li.lwingestlocation)))
+     JOIN public.vt_water_body wb ON ((wb.wbtextid = ll.waterbodyid)))
+     JOIN public.vt_town ON ((ll.locationtownid = vt_town."townId")))
+     JOIN public.vt_county ON ((vt_town."townCountyId" = vt_county."govCountyId")))
+  ORDER BY ((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname));
+
+
+ALTER TABLE public.loonwatch_sampling_event OWNER TO postgres;
+
+--
+-- TOC entry 217 (class 1259 OID 92794)
+-- Name: loonwatch_sampling_occurrence; Type: VIEW; Schema: public; Owner: postgres
+--
+
+CREATE VIEW public.loonwatch_sampling_occurrence AS
+ SELECT occ."eventID",
+    occ."occurrenceID",
+    occ."basisOfRecord",
+    occ."recordedBy",
+    occ."individualCount",
+    occ."lifeStage",
+    occ."occurrenceStatus",
+    occ."scientificName",
+    occ.kingdom,
+    occ.phylum,
+    occ.class,
+    occ."order",
+    occ.family,
+    occ."taxonRank",
+    occ.type,
+    occ."ownerInstitutionCode"
+   FROM ( SELECT ((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) AS "eventID",
+            (((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) || '-Ad'::text) AS "occurrenceID",
+            'HumanObservation'::text AS "basisOfRecord",
+            li.lwingestobservername AS "recordedBy",
+            li.lwingestadult AS "individualCount",
+            'Adult'::text AS "lifeStage",
+            'Present'::text AS "occurrenceStatus",
+            'Gavia immer'::text AS "scientificName",
+            'Animalia'::text AS kingdom,
+            'Chordata'::text AS phylum,
+            'Aves'::text AS class,
+            'Gaviiformes'::text AS "order",
+            'Gaviidae'::text AS family,
+            'Species'::text AS "taxonRank",
+            'Event'::text AS type,
+            'VCE'::text AS "ownerInstitutionCode"
+           FROM ((public.loonwatch_ingest li
+             JOIN public.vt_loon_locations ll ON ((ll.locationname = li.lwingestlocation)))
+             JOIN public.vt_water_body wb ON ((wb.wbtextid = ll.waterbodyid)))
+          WHERE (li.lwingestadult > 0)
+        UNION
+         SELECT ((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) AS "eventID",
+            (((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) || '-SA'::text) AS "occurrenceID",
+            'HumanObservation'::text AS "basisOfRecord",
+            li.lwingestobservername AS "recordedBy",
+            li.lwingestsubadult AS "individualCount",
+            'SubAdult'::text AS "lifeStage",
+            'Present'::text AS "occurrenceStatus",
+            'Gavia immer'::text AS "scientificName",
+            'Animalia'::text AS kingdom,
+            'Chordata'::text AS phylum,
+            'Aves'::text AS class,
+            'Gaviiformes'::text AS "order",
+            'Gaviidae'::text AS family,
+            'Species'::text AS "taxonRank",
+            'Event'::text AS type,
+            'VCE'::text AS "ownerInstitutionCode"
+           FROM ((public.loonwatch_ingest li
+             JOIN public.vt_loon_locations ll ON ((ll.locationname = li.lwingestlocation)))
+             JOIN public.vt_water_body wb ON ((wb.wbtextid = ll.waterbodyid)))
+          WHERE (li.lwingestsubadult > 0)
+        UNION
+         SELECT ((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) AS "eventID",
+            (((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) || '-Ch'::text) AS "occurrenceID",
+            'HumanObservation'::text AS "basisOfRecord",
+            li.lwingestobservername AS "recordedBy",
+            li.lwingestchick AS "individualCount",
+            'Chick'::text AS "lifeStage",
+            'Present'::text AS "occurrenceStatus",
+            'Gavia immer'::text AS "scientificName",
+            'Animalia'::text AS kingdom,
+            'Chordata'::text AS phylum,
+            'Aves'::text AS class,
+            'Gaviiformes'::text AS "order",
+            'Gaviidae'::text AS family,
+            'Species'::text AS "taxonRank",
+            'Event'::text AS type,
+            'VCE'::text AS "ownerInstitutionCode"
+           FROM ((public.loonwatch_ingest li
+             JOIN public.vt_loon_locations ll ON ((ll.locationname = li.lwingestlocation)))
+             JOIN public.vt_water_body wb ON ((wb.wbtextid = ll.waterbodyid)))
+          WHERE (li.lwingestchick > 0)
+        UNION
+         SELECT ((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) AS "eventID",
+            (((((date_part('year'::text, li.lwingestdate) || '-'::text) || upper(ll.exportname)) || '-'::text) || row_number() OVER (PARTITION BY (date_part('year'::text, li.lwingestdate)), ll.exportname ORDER BY (date_part('year'::text, li.lwingestdate)), ll.exportname)) || '-00'::text) AS "occurrenceID",
+            'HumanObservation'::text AS "basisOfRecord",
+            li.lwingestobservername AS "recordedBy",
+            0 AS "individualCount",
+            NULL::text AS "lifeStage",
+            'Absent'::text AS "occurrenceStatus",
+            'Gavia immer'::text AS "scientificName",
+            'Animalia'::text AS kingdom,
+            'Chordata'::text AS phylum,
+            'Aves'::text AS class,
+            'Gaviiformes'::text AS "order",
+            'Gaviidae'::text AS family,
+            'Species'::text AS "taxonRank",
+            'Event'::text AS type,
+            'VCE'::text AS "ownerInstitutionCode"
+           FROM ((public.loonwatch_ingest li
+             JOIN public.vt_loon_locations ll ON ((ll.locationname = li.lwingestlocation)))
+             JOIN public.vt_water_body wb ON ((wb.wbtextid = ll.waterbodyid)))
+          WHERE ((COALESCE(li.lwingestadult, 0) = 0) AND (COALESCE(li.lwingestsubadult, 0) = 0) AND (COALESCE(li.lwingestchick, 0) = 0))) occ
+  ORDER BY occ."occurrenceID";
+
+
+ALTER TABLE public.loonwatch_sampling_occurrence OWNER TO postgres;
+
+--
+-- TOC entry 3773 (class 2604 OID 92511)
 -- Name: loonwatch_event lweventid; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -257,8 +416,8 @@ ALTER TABLE ONLY public.loonwatch_event ALTER COLUMN lweventid SET DEFAULT nextv
 
 
 --
--- TOC entry 4280 (class 0 OID 21928)
--- Dependencies: 220
+-- TOC entry 3949 (class 0 OID 92508)
+-- Dependencies: 213
 -- Data for Name: loonwatch_event; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -266,8 +425,8 @@ INSERT INTO public.loonwatch_event VALUES (1, 'ABENAKI', 131, '2023-09-10', '{eh
 
 
 --
--- TOC entry 4282 (class 0 OID 21934)
--- Dependencies: 222
+-- TOC entry 3951 (class 0 OID 92709)
+-- Dependencies: 215
 -- Data for Name: loonwatch_ingest; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1273,8 +1432,6 @@ INSERT INTO public.loonwatch_ingest VALUES ('Great Hosmer', 'Craftsbury', NULL, 
 INSERT INTO public.loonwatch_ingest VALUES ('Abenaki', 'Thetford', NULL, '2018-07-20', NULL, NULL, 0, NULL, NULL, 1, '7/20');
 INSERT INTO public.loonwatch_ingest VALUES ('Amherst (Plymouth)', 'Plymouth', NULL, '2018-07-21', NULL, NULL, 2, NULL, NULL, 1, '3 ad on 7/23 michael foster');
 INSERT INTO public.loonwatch_ingest VALUES ('Arrowhead', 'Milton', NULL, '2018-07-20', NULL, NULL, 0, NULL, NULL, 1, '7/20');
-INSERT INTO public.loonwatch_ingest VALUES ('Beaver', 'Holland', NULL, '2018-07-21', NULL, NULL, 2, NULL, NULL, 1, NULL);
-INSERT INTO public.loonwatch_ingest VALUES ('Beebe (Hub)', 'Hubbardton', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Green River', 'Hyde Park', NULL, '2017-07-15', NULL, NULL, 12, 3, NULL, 1, 'Survey was done by 4 teams departing from the same location and  then surveying in 4 designated areas. Totals compiled avoiding any duplication. North (north of campsites 17-11) - near Loon Island, one adult and one chick; Central Area (south of campsites 17-11 and north of campsites 30-6) one adult; South East (south of campsites 30-6 and east of Big Island and campsite 1) 8 adults; South West (West of campsites 20-12, Big Island, and campsites 30-1, this area  includes Merganser Inlet and the Access Bay) 2 adults and 2 chicks. Detailed map with locations of each sighting sent by mail to Eric Hansen. The 12 adults seen are assumed to be the 4 breeding pairs, two of which produced chicks ,  and 4 visiting adults. Survey done by members of the Friends of Green River Board - Charlotte and Tom Kastner, Sheila Goss, Ronald Kelley, and Sally Laughlin.');
 INSERT INTO public.loonwatch_ingest VALUES ('Greenwood', 'Woodbury', NULL, '2017-07-15', NULL, NULL, 2, NULL, NULL, 1, 'One on nest, one SE lake.');
 INSERT INTO public.loonwatch_ingest VALUES ('Groton', 'Groton', NULL, '2017-07-15', NULL, NULL, 4, 2, NULL, 1, NULL);
@@ -1385,6 +1542,8 @@ INSERT INTO public.loonwatch_ingest VALUES ('Woodward', 'Plymouth', NULL, '2017-
 INSERT INTO public.loonwatch_ingest VALUES ('Wrightsville', 'Worcester', NULL, '2017-07-15', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Zack Woods', 'Hyde Park', NULL, '2017-07-15', NULL, NULL, 2, 2, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Bean (Sutton)', 'Sutton', NULL, '2018-07-21', NULL, NULL, 1, 1, NULL, 1, '3A on ebird at 7pm');
+INSERT INTO public.loonwatch_ingest VALUES ('Beaver', 'Holland', NULL, '2018-07-21', NULL, NULL, 2, NULL, NULL, 1, NULL);
+INSERT INTO public.loonwatch_ingest VALUES ('Beebe (Hub)', 'Hubbardton', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Beebe (Sund)', 'Sunderland', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Beecher', 'Brighton', NULL, '2018-07-21', NULL, NULL, 0, NULL, NULL, 1, NULL);
 INSERT INTO public.loonwatch_ingest VALUES ('Berlin', 'Berlin', NULL, '2018-07-21', NULL, NULL, 3, 0, NULL, 1, '7/18/2018 1A');
@@ -2242,8 +2401,8 @@ INSERT INTO public.loonwatch_ingest VALUES ('Knapp Br1', 'Cavendish', NULL, '201
 
 
 --
--- TOC entry 4283 (class 0 OID 21947)
--- Dependencies: 223
+-- TOC entry 3950 (class 0 OID 92529)
+-- Dependencies: 214
 -- Data for Name: loonwatch_observation; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2253,16 +2412,16 @@ INSERT INTO public.loonwatch_observation VALUES (1, '08:55:00', NULL, 0, NULL, 0
 
 
 --
--- TOC entry 4097 (class 0 OID 21194)
--- Dependencies: 216
+-- TOC entry 3771 (class 0 OID 91099)
+-- Dependencies: 208
 -- Data for Name: spatial_ref_sys; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4284 (class 0 OID 21960)
--- Dependencies: 224
+-- TOC entry 3946 (class 0 OID 90751)
+-- Dependencies: 205
 -- Data for Name: vt_county; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2284,250 +2443,250 @@ INSERT INTO public.vt_county VALUES (14, 1, 'Addison');
 
 
 --
--- TOC entry 4285 (class 0 OID 21963)
--- Dependencies: 225
+-- TOC entry 3944 (class 0 OID 90719)
+-- Dependencies: 203
 -- Data for Name: vt_loon_locations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.vt_loon_locations VALUES ('Forest', 'Averill', 'nek', 62, 'FOREST (AVERLL)', 8);
-INSERT INTO public.vt_loon_locations VALUES ('Clyde River - Buck Flats', 'Charleston', 'nek', 50, NULL, 24);
-INSERT INTO public.vt_loon_locations VALUES ('Echo (Charleston)', 'Charleston', 'nek', 550, 'ECHO (CHARTN)', 24);
-INSERT INTO public.vt_loon_locations VALUES ('Charleston (Charleston)', 'Charleston', 'nek', 40, 'CHARLESTON', 24);
-INSERT INTO public.vt_loon_locations VALUES ('Memphremagog', 'Derby', 'nek', 5966, 'MEMPHREMAGOG', 230);
-INSERT INTO public.vt_loon_locations VALUES ('Adamant', 'Calais', 'nc', 20, 'ADAMANT', 81);
-INSERT INTO public.vt_loon_locations VALUES ('Little Salem', 'Derby', 'nek', 50, 'LITTLE SALEM', 230);
-INSERT INTO public.vt_loon_locations VALUES ('Crystal', 'Barton', 'nek', 763, 'CRYSTAL (BARTON)', 45);
-INSERT INTO public.vt_loon_locations VALUES ('Duck (Craftsbury)', 'Craftsbury', 'nc', 9, 'DUCK (CRAFBY)', 50);
-INSERT INTO public.vt_loon_locations VALUES ('No. 10 (Mirror)', 'Calais', 'nc', 85, 'MIRROR', 81);
-INSERT INTO public.vt_loon_locations VALUES ('Amherst (Plymouth)', 'Plymouth', 'wc', 81, 'AMHERST', 146);
-INSERT INTO public.vt_loon_locations VALUES ('Baker (Brookfield)', 'Brookfield', 'ec', 35, 'BAKER (BRKFLD)', 218);
-INSERT INTO public.vt_loon_locations VALUES ('Lily', 'Poultney', 'wc', 22, 'LILY (POULTY)', 220);
-INSERT INTO public.vt_loon_locations VALUES ('Mud (Leicester)', 'Leicester', 'wc', 35, 'MUD (LEICTR)', 242);
-INSERT INTO public.vt_loon_locations VALUES ('Lewis', 'Lewis', 'nek', 68, 'LEWIS', 19);
-INSERT INTO public.vt_loon_locations VALUES ('McConnell', 'Brighton', 'nek', 87, 'MCCONNELL', 29);
-INSERT INTO public.vt_loon_locations VALUES ('Page', 'Albany', 'nc', 16, 'PAGE', 39);
-INSERT INTO public.vt_loon_locations VALUES ('Hartwell', 'Albany', 'nc', 16, 'HARTWELL', 39);
-INSERT INTO public.vt_loon_locations VALUES ('May', 'Barton', 'nek', 116, 'MAY', 45);
-INSERT INTO public.vt_loon_locations VALUES ('Miles', 'Concord', 'nek', 215, 'MILES', 76);
-INSERT INTO public.vt_loon_locations VALUES ('Harveys', 'Barnet', 'nc', 351, 'HARVEYS', 83);
-INSERT INTO public.vt_loon_locations VALUES ('Kent', 'Killington', 'wc', 99, 'KENT', 141);
-INSERT INTO public.vt_loon_locations VALUES ('Lowell', 'Londonderry', 'gm-s', 57, 'LOWELL', 162);
-INSERT INTO public.vt_loon_locations VALUES ('Gale Meadows', 'Londonderry', 'gm-s', 195, 'GALE MEADOWS', 162);
-INSERT INTO public.vt_loon_locations VALUES ('Howe', 'Readsboro', 'gm-s', 52, 'HOWE', 189);
-INSERT INTO public.vt_loon_locations VALUES ('Maidstone', 'Maidstone', 'nek', 745, 'MAIDSTONE', 198);
-INSERT INTO public.vt_loon_locations VALUES ('Mollys', 'Cabot', 'nc', 38, 'MOLLYS', 202);
-INSERT INTO public.vt_loon_locations VALUES ('Minards', 'Rockingham', 'ec', 46, 'MINARDS', 235);
-INSERT INTO public.vt_loon_locations VALUES ('Fern', 'Leicester', 'wc', 69, 'FERN', 242);
-INSERT INTO public.vt_loon_locations VALUES ('Hinkum', 'Sudbury', 'wc', 60, 'HINKUM', 244);
-INSERT INTO public.vt_loon_locations VALUES ('Rescue', 'Ludlow', 'wc', 180, 'RESCUE', 255);
-INSERT INTO public.vt_loon_locations VALUES ('Townshend Res.', 'Townshend', 'gm-s', 108, 'TOWNSHEND', 169);
-INSERT INTO public.vt_loon_locations VALUES ('Indian Brook', 'Essex', 'cha-n', 50, 'INDIAN BROOK (ESSEX)', 212);
-INSERT INTO public.vt_loon_locations VALUES ('Brownington', 'Brownington', 'nek', 139, 'BROWNINGTON', 26);
-INSERT INTO public.vt_loon_locations VALUES ('Fairfield', 'Fairfield', 'cha-n', 446, 'FAIRFIELD', 27);
-INSERT INTO public.vt_loon_locations VALUES ('Beecher', 'Brighton', 'nek', 15, 'BEECHER', 29);
-INSERT INTO public.vt_loon_locations VALUES ('Baker (Barton)', 'Barton', 'nc', 51, 'BAKER (BARTON)', 45);
-INSERT INTO public.vt_loon_locations VALUES ('Elmore', 'Elmore', 'nc', 219, 'ELMORE', 70);
-INSERT INTO public.vt_loon_locations VALUES ('Bliss', 'Calais', 'nc', 46, 'BLISS', 81);
-INSERT INTO public.vt_loon_locations VALUES ('Curtis', 'Calais', 'nc', 72, 'CURTIS', 81);
-INSERT INTO public.vt_loon_locations VALUES ('Berlin', 'Berlin', 'nc', 293, 'BERLIN', 99);
-INSERT INTO public.vt_loon_locations VALUES ('Morey', 'Fairlee', 'ec', 547, 'MOREY', 123);
-INSERT INTO public.vt_loon_locations VALUES ('Deweys Mill', 'Hartford', 'ec', 56, 'DEWEYS MILL', 140);
-INSERT INTO public.vt_loon_locations VALUES ('Inman', 'Fair Haven', 'wc', 85, 'INMAN', 144);
-INSERT INTO public.vt_loon_locations VALUES ('Danby', 'Danby', 'wc', 56, 'DANBY', 153);
-INSERT INTO public.vt_loon_locations VALUES ('Emerald', 'Dorset', 'wc', 28, 'EMERALD', 159);
-INSERT INTO public.vt_loon_locations VALUES ('Eden', 'Eden', 'nc', 194, 'EDEN', 197);
-INSERT INTO public.vt_loon_locations VALUES ('Colchester', 'Colchester', 'cha-n', 186, 'COLCHESTER', 199);
-INSERT INTO public.vt_loon_locations VALUES ('Coits', 'Cabot', 'nc', 40, 'COITS', 202);
-INSERT INTO public.vt_loon_locations VALUES ('Clyde', 'Derby', 'nek', 186, 'CLYDE', 230);
-INSERT INTO public.vt_loon_locations VALUES ('Derby', 'Derby', 'nek', 207, 'DERBY', 230);
-INSERT INTO public.vt_loon_locations VALUES ('Chittenden', 'Chittenden', 'wc', 702, 'CHITTENDEN', 243);
-INSERT INTO public.vt_loon_locations VALUES ('Bomoseen', 'Castleton', 'wc', 2360, 'BOMOSEEN', 246);
-INSERT INTO public.vt_loon_locations VALUES ('Little (Franklin)', 'Franklin', 'cha-n', 95, 'LITTLE (FRANLN)', 2);
-INSERT INTO public.vt_loon_locations VALUES ('Carmi', 'Franklin', 'cha-n', 1401, 'CARMI', 2);
-INSERT INTO public.vt_loon_locations VALUES ('Happenstance Farm', 'Goshen', 'wc', 15, 'HAPPENSTANCE', 240);
-INSERT INTO public.vt_loon_locations VALUES ('Little Averill', 'Averill', 'nek', 467, 'LITTLE AVERILL', 8);
-INSERT INTO public.vt_loon_locations VALUES ('Great Averill', 'Averill', 'nek', 828, 'GREAT AVERILL', 8);
-INSERT INTO public.vt_loon_locations VALUES ('Round (Holland)', 'Holland', 'nek', 14, 'MUD (HOLLND)', 9);
-INSERT INTO public.vt_loon_locations VALUES ('Beaver', 'Holland', 'nek', 40, 'BEAVER (HOLLND)', 9);
-INSERT INTO public.vt_loon_locations VALUES ('Wheeler', 'Brunswick', 'nek', 66, 'WHEELER (BRUNWK)', 36);
-INSERT INTO public.vt_loon_locations VALUES ('Daniels Pond', 'Glover', 'nc', 66, 'DANIELS', 47);
-INSERT INTO public.vt_loon_locations VALUES ('Daniels - West (Rodgers)', 'Glover', 'nc', 20, 'DANIELS-W', 47);
-INSERT INTO public.vt_loon_locations VALUES ('Long (Greensboro)', 'Greensboro', 'nc', 100, 'LONG (GRNSBO)', 55);
-INSERT INTO public.vt_loon_locations VALUES ('Mud (Hyde Park)', 'Hyde Park', 'nc', 14, 'MUD (HYDEPK)', 64);
-INSERT INTO public.vt_loon_locations VALUES ('Holland', 'Holland', 'nek', 325, 'HOLLAND', 9);
-INSERT INTO public.vt_loon_locations VALUES ('Island', 'Brighton', 'nek', 626, 'ISLAND', 29);
-INSERT INTO public.vt_loon_locations VALUES ('Metcalf', 'Fletcher', 'cha-n', 81, 'METCALF', 44);
-INSERT INTO public.vt_loon_locations VALUES ('Little Hosmer', 'Craftsbury', 'nc', 180, 'LITTLE HOSMER', 50);
-INSERT INTO public.vt_loon_locations VALUES ('Lamoille', 'Hyde Park', 'nc', 148, 'LAMOILLE', 64);
-INSERT INTO public.vt_loon_locations VALUES ('Great Hosmer', 'Craftsbury', 'nc', 140, 'GREAT HOSMER', 50);
-INSERT INTO public.vt_loon_locations VALUES ('Caspian', 'Greensboro', 'nc', 789, 'CASPIAN', 55);
-INSERT INTO public.vt_loon_locations VALUES ('Elligo', 'Greensboro', 'nc', 174, 'ELLIGO', 55);
-INSERT INTO public.vt_loon_locations VALUES ('Collins', 'Hyde Park', 'nc', 16, 'COLLINS', 64);
-INSERT INTO public.vt_loon_locations VALUES ('Green River', 'Hyde Park', 'nc', 554, 'GREEN RIVER', 64);
-INSERT INTO public.vt_loon_locations VALUES ('Hardwick', 'Hardwick', 'nc', 145, 'HARDWICK', 66);
-INSERT INTO public.vt_loon_locations VALUES ('Hardwood', 'Elmore', 'nc', 44, 'HARDWOOD', 70);
-INSERT INTO public.vt_loon_locations VALUES ('Little Elmore', 'Elmore', 'nc', 24, 'LITTLE ELMORE', 70);
-INSERT INTO public.vt_loon_locations VALUES ('Sodom', 'Calais', 'nc', 21, 'SODOM', 81);
-INSERT INTO public.vt_loon_locations VALUES ('Neal', 'Lunenburg', 'nek', 186, 'NEAL', 73);
-INSERT INTO public.vt_loon_locations VALUES ('Groton', 'Groton', 'nc', 422, 'GROTON', 95);
-INSERT INTO public.vt_loon_locations VALUES ('Osmore', 'Groton', 'nc', 48, 'OSMORE', 95);
-INSERT INTO public.vt_loon_locations VALUES ('Bristol (Winona)', 'Bristol', 'cha-n', 248, 'WINONA', 105);
-INSERT INTO public.vt_loon_locations VALUES ('Fairlee', 'Fairlee', 'ec', 457, 'FAIRLEE', 123);
-INSERT INTO public.vt_loon_locations VALUES ('Glen', 'Fair Haven', 'wc', 206, 'GLEN', 144);
-INSERT INTO public.vt_loon_locations VALUES ('Levi', 'Groton', 'nc', 22, 'LEVI', 95);
-INSERT INTO public.vt_loon_locations VALUES ('Ball Mountain', 'Jamaica', 'gm-s', 85, 'BALL MOUNTAIN', 168);
-INSERT INTO public.vt_loon_locations VALUES ('Cole', 'Jamaica', 'gm-s', 41, 'COLE', 168);
-INSERT INTO public.vt_loon_locations VALUES ('South (Eden)', 'Eden', 'nc', 103, 'SOUTH (EDEN)', 197);
-INSERT INTO public.vt_loon_locations VALUES ('Long (Eden)', 'Eden', 'nc', 97, 'LONG (EDEN)', 197);
-INSERT INTO public.vt_loon_locations VALUES ('Keiser', 'Danville', 'nc', 33, 'KEISER', 200);
-INSERT INTO public.vt_loon_locations VALUES ('Iroquois', 'Hinesburg', 'cha-n', 243, 'IROQUOIS', 205);
-INSERT INTO public.vt_loon_locations VALUES ('Hortonia', 'Hubbardton', 'wc', 479, 'HORTONIA', 245);
-INSERT INTO public.vt_loon_locations VALUES ('Hartland dam', 'Hartland', 'ec', 215, 'NORTH HARTLAND', 145);
-INSERT INTO public.vt_loon_locations VALUES ('Joe''s', 'Danville', 'nc', 396, 'JOES (DANVLL)', 200);
-INSERT INTO public.vt_loon_locations VALUES ('Lower (Hinesburg)', 'Hinesburg', 'cha-n', 57, 'LOWER', 205);
-INSERT INTO public.vt_loon_locations VALUES ('Knapp Br2', 'Cavendish', 'wc', 35, 'KNAPP BROOK #2', 226);
-INSERT INTO public.vt_loon_locations VALUES ('Knapp Br1', 'Cavendish', 'wc', 25, 'KNAPP BROOK #1', 226);
-INSERT INTO public.vt_loon_locations VALUES ('Echo (Hub)', 'Hubbardton', 'wc', 54, 'ECHO (HUBDTN)', 245);
-INSERT INTO public.vt_loon_locations VALUES ('Beebe (Hub)', 'Hubbardton', 'wc', 111, 'BEEBE (HUBDTN)', 245);
-INSERT INTO public.vt_loon_locations VALUES ('Black', 'Hubbardton', 'wc', 20, 'BLACK (HUBDTN)', 245);
-INSERT INTO public.vt_loon_locations VALUES ('Ninevah', 'Mt. Holly', 'wc', 171, 'NINEVAH', 151);
-INSERT INTO public.vt_loon_locations VALUES ('Wallace', 'Canaan', 'nek', 532, 'WALLACE', 1);
-INSERT INTO public.vt_loon_locations VALUES ('Turtle', 'Holland', 'nek', 27, 'TURTLE', 9);
-INSERT INTO public.vt_loon_locations VALUES ('Seymour', 'Morgan', 'nek', 1769, 'SEYMOUR', 18);
-INSERT INTO public.vt_loon_locations VALUES ('Pensioner', 'Charleston', 'nek', 173, 'PENSIONER', 24);
-INSERT INTO public.vt_loon_locations VALUES ('Spectacle', 'Brighton', 'nek', 103, 'SPECTACLE', 29);
-INSERT INTO public.vt_loon_locations VALUES ('South America', 'Ferdinand', 'nek', 29, 'SOUTH AMERICA', 35);
-INSERT INTO public.vt_loon_locations VALUES ('Newark', 'Newark', 'nek', 153, 'NEWARK', 43);
-INSERT INTO public.vt_loon_locations VALUES ('Center', 'Newark', 'nek', 79, 'CENTER', 43);
-INSERT INTO public.vt_loon_locations VALUES ('Shadow (Glover)', 'Glover', 'nc', 210, 'SHADOW (GLOVER)', 47);
-INSERT INTO public.vt_loon_locations VALUES ('Warden', 'Barnet', 'nc', 46, 'WARDEN', 83);
-INSERT INTO public.vt_loon_locations VALUES ('Fosters', 'Peacham', 'nc', 61, 'FOSTERS', 85);
-INSERT INTO public.vt_loon_locations VALUES ('Ewell', 'Peacham', 'nc', 51, 'EWELL', 85);
-INSERT INTO public.vt_loon_locations VALUES ('Ricker', 'Groton', 'nc', 95, 'RICKER', 95);
-INSERT INTO public.vt_loon_locations VALUES ('Pigeon', 'Groton', 'nc', 69, 'PIGEON', 95);
-INSERT INTO public.vt_loon_locations VALUES ('Pleiad', 'Hancock', 'wc', 6, 'PLEIAD', 124);
-INSERT INTO public.vt_loon_locations VALUES ('Perch (Benson)', 'Benson', 'wc', 24, 'PERCH (BENSON)', 139);
-INSERT INTO public.vt_loon_locations VALUES ('Sunset (Benson)', 'Benson', 'wc', 202, 'SUNSET (BENSON)', 139);
-INSERT INTO public.vt_loon_locations VALUES ('Pinneo', 'Hartford', 'ec', 50, 'PINNEO', 140);
-INSERT INTO public.vt_loon_locations VALUES ('Colby', 'Plymouth', 'wc', 20, 'COLBY', 146);
-INSERT INTO public.vt_loon_locations VALUES ('Mud (Morgan)', 'Morgan', 'nek', 35, 'MUD (MORGAN)-N', 18);
-INSERT INTO public.vt_loon_locations VALUES ('Toad', 'Charleston', 'nek', 22, 'TOAD (CHARTN)', 24);
-INSERT INTO public.vt_loon_locations VALUES ('Griffith', 'Peru', 'gm-s', 13, 'GRIFFITH', 160);
-INSERT INTO public.vt_loon_locations VALUES ('Ritterbush', 'Eden', 'nc', 14, 'RITTERBUSH', 197);
-INSERT INTO public.vt_loon_locations VALUES ('Halls', 'Newbury', 'ec', 85, 'HALLS', 214);
-INSERT INTO public.vt_loon_locations VALUES ('Twin', 'Brookfield', 'ec', 16, 'TWIN', 218);
-INSERT INTO public.vt_loon_locations VALUES ('Salem', 'Derby', 'nek', 764, 'SALEM', 230);
-INSERT INTO public.vt_loon_locations VALUES ('South Bay', 'Newport City', 'nek', 470, 'SOUTH BAY', 232);
-INSERT INTO public.vt_loon_locations VALUES ('Star', 'Mount Holly', 'wc', 63, 'STAR', 151);
-INSERT INTO public.vt_loon_locations VALUES ('Silver (Georgia/Fairfax)', 'Fairfax', 'cha-n', 27, 'SOUTH ST. ALBANS', 42);
-INSERT INTO public.vt_loon_locations VALUES ('Clarks (Tildys)', 'Glover', 'nc', 33, 'TILDYS', 47);
-INSERT INTO public.vt_loon_locations VALUES ('Arrowhead', 'Milton', 'cha-n', 760, 'ARROWHEAD MOUNTAIN', 48);
-INSERT INTO public.vt_loon_locations VALUES ('Wapanacki', 'Hardwick', 'nc', 21, 'TUTTLE (HARDWK)', 66);
-INSERT INTO public.vt_loon_locations VALUES ('Shadow (Concord)', 'Concord', 'nek', 128, 'SHADOW (CONCRD)', 76);
-INSERT INTO public.vt_loon_locations VALUES ('Kettle', 'Peacham', 'nc', 109, 'KETTLE', 85);
-INSERT INTO public.vt_loon_locations VALUES ('Mud (Peacham)', 'Peacham', 'nc', 34, 'MUD (PEACHM)', 85);
-INSERT INTO public.vt_loon_locations VALUES ('Martin''s', 'Peacham', 'nc', 82, 'MARTINS', 85);
-INSERT INTO public.vt_loon_locations VALUES ('Marshfield Pond (Turtlehead Pond)', 'Marshfield', 'nc', 69, 'TURTLEHEAD', 90);
-INSERT INTO public.vt_loon_locations VALUES ('Mollys Falls', 'Marshfield', 'nc', 397, 'MOLLYS FALLS', 90);
-INSERT INTO public.vt_loon_locations VALUES ('Monkton (Cedar)', 'Monkton', 'cha-n', 123, 'CEDAR', 97);
-INSERT INTO public.vt_loon_locations VALUES ('Thurman Dix', 'Orange', 'nc', 123, 'THURMAN W. DIX', 103);
-INSERT INTO public.vt_loon_locations VALUES ('Silver (barnard)', 'Barnard', 'wc', 84, 'SILVER (BARNRD)', 138);
-INSERT INTO public.vt_loon_locations VALUES ('Sunrise (Benson)', 'Benson', 'wc', 57, 'SUNRISE', 139);
-INSERT INTO public.vt_loon_locations VALUES ('Echo (Plymouth)', 'Plymouth', 'wc', 104, 'ECHO (PLYMTH)', 146);
-INSERT INTO public.vt_loon_locations VALUES ('Tiny', 'Plymouth', 'wc', 29, 'TINY', 146);
-INSERT INTO public.vt_loon_locations VALUES ('South (Marlboro)', 'Marlboro', 'gm-s', 68, 'SOUTH (MARLBR)', 187);
-INSERT INTO public.vt_loon_locations VALUES ('Sunset (Marlboro)', 'Marlboro', 'gm-s', 96, 'SUNSET (MARLBR)', 187);
-INSERT INTO public.vt_loon_locations VALUES ('Round (Newbury)', 'Newbury', 'nc', 30, 'ROUND (NEWBRY)', 214);
-INSERT INTO public.vt_loon_locations VALUES ('Sugar Hill Res.', 'Goshen', 'wc', 63, 'SUGAR HILL', 240);
-INSERT INTO public.vt_loon_locations VALUES ('Silver (Leicester)', 'Leicester', 'wc', 101, 'SILVER (LEICTR)', 242);
-INSERT INTO public.vt_loon_locations VALUES ('Unknown', 'Avery''s Gore', 'nek', 19, 'UNKNOWN (AVYGOR)', 14);
-INSERT INTO public.vt_loon_locations VALUES ('Blake', 'Sheffield', 'nek', 8, 'BLAKE', 52);
-INSERT INTO public.vt_loon_locations VALUES ('Long (Sheffield)', 'Sheffield', 'nc', 38, 'LONG (SHEFLD)', 52);
-INSERT INTO public.vt_loon_locations VALUES ('Round (Sheffield)', 'Sheffield', 'nc', 13, 'ROUND (SHEFLD)', 52);
-INSERT INTO public.vt_loon_locations VALUES ('Miller', 'Strafford', 'ec', 64, 'MILLER (STRFRD)', 129);
-INSERT INTO public.vt_loon_locations VALUES ('Spring', 'Shrewsbury', 'wc', 66, 'SPRING (SHRWBY)', 147);
-INSERT INTO public.vt_loon_locations VALUES ('Johnson Pond', 'Shrewsbury', 'wc', 12, 'COOKS (SHRWBY)', 147);
-INSERT INTO public.vt_loon_locations VALUES ('Norton', 'Norton', 'nek', 583, 'NORTON', 7);
-INSERT INTO public.vt_loon_locations VALUES ('Nulhegan', 'Brighton', 'nek', 37, 'NULHEGAN', 29);
-INSERT INTO public.vt_loon_locations VALUES ('Notch', 'Ferdinand', 'nek', 22, 'NOTCH', 35);
-INSERT INTO public.vt_loon_locations VALUES ('Parker', 'Glover', 'nc', 250, 'PARKER', 47);
-INSERT INTO public.vt_loon_locations VALUES ('Zack Woods', 'Hyde Park', 'nc', 23, 'ZACK WOODS', 64);
-INSERT INTO public.vt_loon_locations VALUES ('Stannard', 'Stannard', 'nc', 25, 'STANNARD', 67);
-INSERT INTO public.vt_loon_locations VALUES ('Mansfield', 'Stowe', 'nc', 38, 'MANSFIELD', 69);
-INSERT INTO public.vt_loon_locations VALUES ('Peacham', 'Peacham', 'nc', 340, 'PEACHAM', 85);
-INSERT INTO public.vt_loon_locations VALUES ('North Montpelier', 'East Montpelier', 'nc', 72, 'NORTH MONTPELIER', 91);
-INSERT INTO public.vt_loon_locations VALUES ('Noyes', 'Groton', 'nc', 39, 'NOYES', 95);
-INSERT INTO public.vt_loon_locations VALUES ('Dunmore', 'Salisbury', 'wc', 985, 'DUNMORE', 126);
-INSERT INTO public.vt_loon_locations VALUES ('Crescent', 'Sharon', 'ec', 20, 'CRESCENT', 135);
-INSERT INTO public.vt_loon_locations VALUES ('Mitchell', 'Sharon', 'ec', 28, 'MITCHELL', 135);
-INSERT INTO public.vt_loon_locations VALUES ('Old Marsh', 'Fair Haven', 'wc', 131, 'OLD MARSH', 144);
-INSERT INTO public.vt_loon_locations VALUES ('Woodward', 'Plymouth', 'wc', 106, 'WOODWARD', 146);
-INSERT INTO public.vt_loon_locations VALUES ('North Springfield', 'Springfield', 'ec', 290, 'NORTH SPRINGFIELD', 157);
-INSERT INTO public.vt_loon_locations VALUES ('Stratton', 'Stratton', 'gm-s', 46, 'STRATTON', 173);
-INSERT INTO public.vt_loon_locations VALUES ('Grout', 'Stratton', 'gm-s', 84, 'GROUT', 173);
-INSERT INTO public.vt_loon_locations VALUES ('Somerset', 'Somerset', 'gm-s', 1568, 'SOMERSET', 178);
-INSERT INTO public.vt_loon_locations VALUES ('Paran', 'Bennington', 'gm-s', 40, 'PARAN', 183);
-INSERT INTO public.vt_loon_locations VALUES ('Searsburg', 'Searsburg', 'gm-s', 25, 'SEARSBURG', 185);
-INSERT INTO public.vt_loon_locations VALUES ('West Mountain', 'Maidstone', 'nek', 60, 'WEST MOUNTAIN', 198);
-INSERT INTO public.vt_loon_locations VALUES ('West Hill', 'Cabot', 'nc', 46, 'WEST HILL', 202);
-INSERT INTO public.vt_loon_locations VALUES ('Shelburne', 'Shelburne', 'cha-n', 452, 'SHELBURNE', 203);
-INSERT INTO public.vt_loon_locations VALUES ('Ticklenaked', 'Ryegate', 'nc', 54, 'TICKLENAKED', 213);
-INSERT INTO public.vt_loon_locations VALUES ('Lower Symes', 'Ryegate', 'nc', 77, 'LOWER SYMES', 213);
-INSERT INTO public.vt_loon_locations VALUES ('Upper Symes', 'Ryegate', 'nc', 15, 'UPPER SYMES', 213);
-INSERT INTO public.vt_loon_locations VALUES ('Bald Hill', 'Westmore', 'nek', 108, 'BALD HILL', 34);
-INSERT INTO public.vt_loon_locations VALUES ('Jobs', 'Westmore', 'nek', 39, 'JOBS', 34);
-INSERT INTO public.vt_loon_locations VALUES ('Willoughby', 'Westmore', 'nek', 1653, 'WILLOUGHBY', 34);
-INSERT INTO public.vt_loon_locations VALUES ('Bean (Sutton)', 'Sutton', 'nek', 30, 'BEAN (SUTTON)', 46);
-INSERT INTO public.vt_loon_locations VALUES ('Marl', 'Sutton', 'nek', 10, 'MARL', 46);
-INSERT INTO public.vt_loon_locations VALUES ('Wolcott', 'Wolcott', 'nc', 74, 'WOLCOTT', 59);
-INSERT INTO public.vt_loon_locations VALUES ('Flagg', 'Wheelock', 'nc', 111, 'FLAGG', 61);
-INSERT INTO public.vt_loon_locations VALUES ('Coles', 'Walden', 'nc', 125, 'COLES', 72);
-INSERT INTO public.vt_loon_locations VALUES ('Lyford', 'Walden', 'nc', 33, 'LYFORD', 72);
-INSERT INTO public.vt_loon_locations VALUES ('Woodbury', 'Woodbury', 'nc', 142, 'WOODBURY', 77);
-INSERT INTO public.vt_loon_locations VALUES ('East Long', 'Woodbury', 'nc', 188, 'EAST LONG', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Cranberry Meadow', 'Woodbury', 'nc', 28, 'CRANBERRY MEADOW', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Buck', 'Woodbury', 'nc', 39, 'BUCK', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Greenwood', 'Woodbury', 'nc', 96, 'GREENWOOD', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Nichols', 'Woodbury', 'nc', 171, 'NICHOLS', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Moore', 'Waterford', 'nek', 1235, 'MOORE', 80);
-INSERT INTO public.vt_loon_locations VALUES ('Stiles', 'Waterford', 'nek', 135, 'STILES', 80);
-INSERT INTO public.vt_loon_locations VALUES ('Norford', 'Thetford', 'ec', 21, 'NORFORD', 131);
-INSERT INTO public.vt_loon_locations VALUES ('Abenaki', 'Thetford', 'ec', 44, 'ABENAKI', 131);
-INSERT INTO public.vt_loon_locations VALUES ('Runnemede', 'Windsor', 'ec', 62, 'RUNNEMEDE', 149);
-INSERT INTO public.vt_loon_locations VALUES ('Little Rock', 'Wallingford', 'wc', 18, 'LITTLE ROCK', 150);
-INSERT INTO public.vt_loon_locations VALUES ('Wallingford', 'Wallingford', 'wc', 87, 'WALLINGFORD', 150);
-INSERT INTO public.vt_loon_locations VALUES ('Wantastiquet', 'Weston', 'gm-s', 44, 'WANTASTIQUET', 155);
-INSERT INTO public.vt_loon_locations VALUES ('Moses', 'Weston', 'gm-s', 12, 'MOSES', 155);
-INSERT INTO public.vt_loon_locations VALUES ('Branch', 'Sunderland', 'gm-s', 34, 'BRANCH', 172);
-INSERT INTO public.vt_loon_locations VALUES ('Bourn', 'Sunderland', 'gm-s', 48, 'BOURN', 172);
-INSERT INTO public.vt_loon_locations VALUES ('Raponda', 'Wilmington', 'gm-s', 121, 'RAPONDA', 186);
-INSERT INTO public.vt_loon_locations VALUES ('Sadawga', 'Whitingham', 'gm-s', 194, 'SADAWGA', 192);
-INSERT INTO public.vt_loon_locations VALUES ('Cutter', 'Williamstown', 'ec', 16, 'CUTTER', 217);
-INSERT INTO public.vt_loon_locations VALUES ('Rood', 'Williamstown', 'ec', 23, 'ROOD', 217);
-INSERT INTO public.vt_loon_locations VALUES ('Little (Wells)', 'Wells', 'wc', 177, 'LITTLE (WELLS)', 222);
-INSERT INTO public.vt_loon_locations VALUES ('St. Catherine', 'Wells', 'wc', 883, 'ST. CATHERINE', 222);
-INSERT INTO public.vt_loon_locations VALUES ('Stoughton', 'Weathersfield', 'ec', 56, 'STOUGHTON', 228);
-INSERT INTO public.vt_loon_locations VALUES ('Nelson', 'Woodbury', 'nc', 133, 'FOREST (CALAIS)', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Wrightsville', 'East Montpelier', 'nc', 190, 'WRIGHTSVILLE', 78);
-INSERT INTO public.vt_loon_locations VALUES ('Long (Westmore)', 'Westmore', 'nek', 90, 'LONG (WESTMR)', 34);
-INSERT INTO public.vt_loon_locations VALUES ('Bruce', 'Sutton', 'nc', 27, 'BRUCE', 46);
-INSERT INTO public.vt_loon_locations VALUES ('Chandler', 'Wheelock', 'nc', 68, 'CHANDLER (WHLOCK)', 61);
-INSERT INTO public.vt_loon_locations VALUES ('Dog (Valley)', 'Woodbury', 'nc', 88, 'VALLEY', 77);
-INSERT INTO public.vt_loon_locations VALUES ('Comerford', 'Waterford', 'nek', 777, 'COMERFORD', 80);
-INSERT INTO public.vt_loon_locations VALUES ('Waterbury - South end', 'Waterbury', 'nc', 839, 'WATERBURY', 89);
-INSERT INTO public.vt_loon_locations VALUES ('Mill', 'Windsor', 'ec', 77, 'MILL (WINDSR)', 149);
-INSERT INTO public.vt_loon_locations VALUES ('Beebe (Sund)', 'Sunderland', 'gm-s', 13, 'BEEBE (SUNDLD)', 172);
-INSERT INTO public.vt_loon_locations VALUES ('Adams Res.', 'Woodford', 'gm-s', 21, 'ADAMS (WOODFD)', 184);
-INSERT INTO public.vt_loon_locations VALUES ('Big (Woodford Lake)', 'Woodford', 'gm-s', 31, 'BIG', 184);
-INSERT INTO public.vt_loon_locations VALUES ('Harriman', 'Whitingham', 'gm-s', 2040, 'HARRIMAN (WHITHM)', 192);
-INSERT INTO public.vt_loon_locations VALUES ('Sherman Reservoir', 'Whitingham', 'gm-s', 160, 'SHERMAN', 192);
-INSERT INTO public.vt_loon_locations VALUES ('Chipman (Tinmouth)', 'Tinmouth', 'wc', 79, 'CHIPMAN', 221);
-INSERT INTO public.vt_loon_locations VALUES ('Burr', 'Sudbury', 'wc', 85, 'BURR (SUDBRY)', 244);
+INSERT INTO public.vt_loon_locations VALUES ('Forest', 'Averill', 'nek', 62, 'FOREST (AVERLL)', 8, 'FOREST (AVERLL)');
+INSERT INTO public.vt_loon_locations VALUES ('Clyde River - Buck Flats', 'Charleston', 'nek', 50, NULL, 24, 'CLYDE RIVER BUCK FLATS');
+INSERT INTO public.vt_loon_locations VALUES ('Echo (Charleston)', 'Charleston', 'nek', 550, 'ECHO (CHARTN)', 24, 'ECHO (CHARTN)');
+INSERT INTO public.vt_loon_locations VALUES ('Charleston (Charleston)', 'Charleston', 'nek', 40, 'CHARLESTON', 24, 'CHARLESTON');
+INSERT INTO public.vt_loon_locations VALUES ('Memphremagog', 'Derby', 'nek', 5966, 'MEMPHREMAGOG', 230, 'MEMPHREMAGOG');
+INSERT INTO public.vt_loon_locations VALUES ('Adamant', 'Calais', 'nc', 20, 'ADAMANT', 81, 'ADAMANT');
+INSERT INTO public.vt_loon_locations VALUES ('Little Salem', 'Derby', 'nek', 50, 'LITTLE SALEM', 230, 'LITTLE SALEM');
+INSERT INTO public.vt_loon_locations VALUES ('Crystal', 'Barton', 'nek', 763, 'CRYSTAL (BARTON)', 45, 'CRYSTAL (BARTON)');
+INSERT INTO public.vt_loon_locations VALUES ('Duck (Craftsbury)', 'Craftsbury', 'nc', 9, 'DUCK (CRAFBY)', 50, 'DUCK (CRAFBY)');
+INSERT INTO public.vt_loon_locations VALUES ('No. 10 (Mirror)', 'Calais', 'nc', 85, 'MIRROR', 81, 'MIRROR');
+INSERT INTO public.vt_loon_locations VALUES ('Amherst (Plymouth)', 'Plymouth', 'wc', 81, 'AMHERST', 146, 'AMHERST');
+INSERT INTO public.vt_loon_locations VALUES ('Baker (Brookfield)', 'Brookfield', 'ec', 35, 'BAKER (BRKFLD)', 218, 'BAKER (BRKFLD)');
+INSERT INTO public.vt_loon_locations VALUES ('Lily', 'Poultney', 'wc', 22, 'LILY (POULTY)', 220, 'LILY (POULTY)');
+INSERT INTO public.vt_loon_locations VALUES ('Mud (Leicester)', 'Leicester', 'wc', 35, 'MUD (LEICTR)', 242, 'MUD (LEICTR)');
+INSERT INTO public.vt_loon_locations VALUES ('Lewis', 'Lewis', 'nek', 68, 'LEWIS', 19, 'LEWIS');
+INSERT INTO public.vt_loon_locations VALUES ('McConnell', 'Brighton', 'nek', 87, 'MCCONNELL', 29, 'MCCONNELL');
+INSERT INTO public.vt_loon_locations VALUES ('Page', 'Albany', 'nc', 16, 'PAGE', 39, 'PAGE');
+INSERT INTO public.vt_loon_locations VALUES ('Hartwell', 'Albany', 'nc', 16, 'HARTWELL', 39, 'HARTWELL');
+INSERT INTO public.vt_loon_locations VALUES ('May', 'Barton', 'nek', 116, 'MAY', 45, 'MAY');
+INSERT INTO public.vt_loon_locations VALUES ('Miles', 'Concord', 'nek', 215, 'MILES', 76, 'MILES');
+INSERT INTO public.vt_loon_locations VALUES ('Harveys', 'Barnet', 'nc', 351, 'HARVEYS', 83, 'HARVEYS');
+INSERT INTO public.vt_loon_locations VALUES ('Kent', 'Killington', 'wc', 99, 'KENT', 141, 'KENT');
+INSERT INTO public.vt_loon_locations VALUES ('Lowell', 'Londonderry', 'gm-s', 57, 'LOWELL', 162, 'LOWELL');
+INSERT INTO public.vt_loon_locations VALUES ('Gale Meadows', 'Londonderry', 'gm-s', 195, 'GALE MEADOWS', 162, 'GALE MEADOWS');
+INSERT INTO public.vt_loon_locations VALUES ('Howe', 'Readsboro', 'gm-s', 52, 'HOWE', 189, 'HOWE');
+INSERT INTO public.vt_loon_locations VALUES ('Maidstone', 'Maidstone', 'nek', 745, 'MAIDSTONE', 198, 'MAIDSTONE');
+INSERT INTO public.vt_loon_locations VALUES ('Mollys', 'Cabot', 'nc', 38, 'MOLLYS', 202, 'MOLLYS');
+INSERT INTO public.vt_loon_locations VALUES ('Minards', 'Rockingham', 'ec', 46, 'MINARDS', 235, 'MINARDS');
+INSERT INTO public.vt_loon_locations VALUES ('Fern', 'Leicester', 'wc', 69, 'FERN', 242, 'FERN');
+INSERT INTO public.vt_loon_locations VALUES ('Hinkum', 'Sudbury', 'wc', 60, 'HINKUM', 244, 'HINKUM');
+INSERT INTO public.vt_loon_locations VALUES ('Beebe (Hub)', 'Hubbardton', 'wc', 111, 'BEEBE (HUBDTN)', 245, 'BEEBE (HUBDTN)');
+INSERT INTO public.vt_loon_locations VALUES ('Black', 'Hubbardton', 'wc', 20, 'BLACK (HUBDTN)', 245, 'BLACK (HUBDTN)');
+INSERT INTO public.vt_loon_locations VALUES ('Ninevah', 'Mt. Holly', 'wc', 171, 'NINEVAH', 151, 'NINEVAH');
+INSERT INTO public.vt_loon_locations VALUES ('Tiny', 'Plymouth', 'wc', 29, 'TINY', 146, 'TINY');
+INSERT INTO public.vt_loon_locations VALUES ('South (Marlboro)', 'Marlboro', 'gm-s', 68, 'SOUTH (MARLBR)', 187, 'SOUTH (MARLBR)');
+INSERT INTO public.vt_loon_locations VALUES ('Sunset (Marlboro)', 'Marlboro', 'gm-s', 96, 'SUNSET (MARLBR)', 187, 'SUNSET (MARLBR)');
+INSERT INTO public.vt_loon_locations VALUES ('Twin', 'Brookfield', 'ec', 16, 'TWIN', 218, 'TWIN');
+INSERT INTO public.vt_loon_locations VALUES ('South Bay', 'Newport City', 'nek', 470, 'SOUTH BAY', 232, 'SOUTH BAY');
+INSERT INTO public.vt_loon_locations VALUES ('Star', 'Mount Holly', 'wc', 63, 'STAR', 151, 'STAR');
+INSERT INTO public.vt_loon_locations VALUES ('Upper Symes', 'Ryegate', 'nc', 15, 'UPPER SYMES', 213, 'UPPER SYMES');
+INSERT INTO public.vt_loon_locations VALUES ('Happenstance Farm', 'Goshen', 'wc', 15, 'HAPPENSTANCE', 240, 'HAPPENSTANCE');
+INSERT INTO public.vt_loon_locations VALUES ('Little Averill', 'Averill', 'nek', 467, 'LITTLE AVERILL', 8, 'LITTLE AVERILL');
+INSERT INTO public.vt_loon_locations VALUES ('Pensioner', 'Charleston', 'nek', 173, 'PENSIONER', 24, 'PENSIONER');
+INSERT INTO public.vt_loon_locations VALUES ('South America', 'Ferdinand', 'nek', 29, 'SOUTH AMERICA', 35, 'SOUTH AMERICA');
+INSERT INTO public.vt_loon_locations VALUES ('Newark', 'Newark', 'nek', 153, 'NEWARK', 43, 'NEWARK');
+INSERT INTO public.vt_loon_locations VALUES ('Center', 'Newark', 'nek', 79, 'CENTER', 43, 'CENTER');
+INSERT INTO public.vt_loon_locations VALUES ('Salem', 'Derby', 'nek', 764, 'SALEM', 230, 'SALEM');
+INSERT INTO public.vt_loon_locations VALUES ('Shadow (Glover)', 'Glover', 'nc', 210, 'SHADOW (GLOVER)', 47, 'SHADOW (GLOVER)');
+INSERT INTO public.vt_loon_locations VALUES ('Warden', 'Barnet', 'nc', 46, 'WARDEN', 83, 'WARDEN');
+INSERT INTO public.vt_loon_locations VALUES ('Fosters', 'Peacham', 'nc', 61, 'FOSTERS', 85, 'FOSTERS');
+INSERT INTO public.vt_loon_locations VALUES ('Ewell', 'Peacham', 'nc', 51, 'EWELL', 85, 'EWELL');
+INSERT INTO public.vt_loon_locations VALUES ('Ricker', 'Groton', 'nc', 95, 'RICKER', 95, 'RICKER');
+INSERT INTO public.vt_loon_locations VALUES ('Sunset (Benson)', 'Benson', 'wc', 202, 'SUNSET (BENSON)', 139, 'SUNSET (BENSON)');
+INSERT INTO public.vt_loon_locations VALUES ('Pinneo', 'Hartford', 'ec', 50, 'PINNEO', 140, 'PINNEO');
+INSERT INTO public.vt_loon_locations VALUES ('Colby', 'Plymouth', 'wc', 20, 'COLBY', 146, 'COLBY');
+INSERT INTO public.vt_loon_locations VALUES ('Mud (Morgan)', 'Morgan', 'nek', 35, 'MUD (MORGAN)-N', 18, 'MUD (MORGAN)-N');
+INSERT INTO public.vt_loon_locations VALUES ('Toad', 'Charleston', 'nek', 22, 'TOAD (CHARTN)', 24, 'TOAD (CHARTN)');
+INSERT INTO public.vt_loon_locations VALUES ('Round (Newbury)', 'Newbury', 'nc', 30, 'ROUND (NEWBRY)', 214, 'ROUND (NEWBRY)');
+INSERT INTO public.vt_loon_locations VALUES ('Sugar Hill Res.', 'Goshen', 'wc', 63, 'SUGAR HILL', 240, 'SUGAR HILL');
+INSERT INTO public.vt_loon_locations VALUES ('Silver (Leicester)', 'Leicester', 'wc', 101, 'SILVER (LEICTR)', 242, 'SILVER (LEICTR)');
+INSERT INTO public.vt_loon_locations VALUES ('Unknown', 'Avery''s Gore', 'nek', 19, 'UNKNOWN (AVYGOR)', 14, 'UNKNOWN (AVYGOR)');
+INSERT INTO public.vt_loon_locations VALUES ('Adams Res.', 'Woodford', 'gm-s', 21, 'ADAMS (WOODFD)', 184, 'ADAMS (WOODFD)');
+INSERT INTO public.vt_loon_locations VALUES ('Big (Woodford Lake)', 'Woodford', 'gm-s', 31, 'BIG', 184, 'BIG');
+INSERT INTO public.vt_loon_locations VALUES ('Harriman', 'Whitingham', 'gm-s', 2040, 'HARRIMAN (WHITHM)', 192, 'HARRIMAN (WHITHM)');
+INSERT INTO public.vt_loon_locations VALUES ('Sherman Reservoir', 'Whitingham', 'gm-s', 160, 'SHERMAN', 192, 'SHERMAN');
+INSERT INTO public.vt_loon_locations VALUES ('Chipman (Tinmouth)', 'Tinmouth', 'wc', 79, 'CHIPMAN', 221, 'CHIPMAN');
+INSERT INTO public.vt_loon_locations VALUES ('Burr', 'Sudbury', 'wc', 85, 'BURR (SUDBRY)', 244, 'BURR (SUDBRY)');
+INSERT INTO public.vt_loon_locations VALUES ('Townshend Res.', 'Townshend', 'gm-s', 108, 'TOWNSHEND', 169, 'TOWNSHEND');
+INSERT INTO public.vt_loon_locations VALUES ('Indian Brook', 'Essex', 'cha-n', 50, 'INDIAN BROOK (ESSEX)', 212, 'INDIAN BROOK (ESSEX)');
+INSERT INTO public.vt_loon_locations VALUES ('Brownington', 'Brownington', 'nek', 139, 'BROWNINGTON', 26, 'BROWNINGTON');
+INSERT INTO public.vt_loon_locations VALUES ('Fairfield', 'Fairfield', 'cha-n', 446, 'FAIRFIELD', 27, 'FAIRFIELD');
+INSERT INTO public.vt_loon_locations VALUES ('Beecher', 'Brighton', 'nek', 15, 'BEECHER', 29, 'BEECHER');
+INSERT INTO public.vt_loon_locations VALUES ('Baker (Barton)', 'Barton', 'nc', 51, 'BAKER (BARTON)', 45, 'BAKER (BARTON)');
+INSERT INTO public.vt_loon_locations VALUES ('Elmore', 'Elmore', 'nc', 219, 'ELMORE', 70, 'ELMORE');
+INSERT INTO public.vt_loon_locations VALUES ('Bliss', 'Calais', 'nc', 46, 'BLISS', 81, 'BLISS');
+INSERT INTO public.vt_loon_locations VALUES ('Curtis', 'Calais', 'nc', 72, 'CURTIS', 81, 'CURTIS');
+INSERT INTO public.vt_loon_locations VALUES ('Berlin', 'Berlin', 'nc', 293, 'BERLIN', 99, 'BERLIN');
+INSERT INTO public.vt_loon_locations VALUES ('Morey', 'Fairlee', 'ec', 547, 'MOREY', 123, 'MOREY');
+INSERT INTO public.vt_loon_locations VALUES ('Deweys Mill', 'Hartford', 'ec', 56, 'DEWEYS MILL', 140, 'DEWEYS MILL');
+INSERT INTO public.vt_loon_locations VALUES ('Inman', 'Fair Haven', 'wc', 85, 'INMAN', 144, 'INMAN');
+INSERT INTO public.vt_loon_locations VALUES ('Danby', 'Danby', 'wc', 56, 'DANBY', 153, 'DANBY');
+INSERT INTO public.vt_loon_locations VALUES ('Emerald', 'Dorset', 'wc', 28, 'EMERALD', 159, 'EMERALD');
+INSERT INTO public.vt_loon_locations VALUES ('Eden', 'Eden', 'nc', 194, 'EDEN', 197, 'EDEN');
+INSERT INTO public.vt_loon_locations VALUES ('Colchester', 'Colchester', 'cha-n', 186, 'COLCHESTER', 199, 'COLCHESTER');
+INSERT INTO public.vt_loon_locations VALUES ('Coits', 'Cabot', 'nc', 40, 'COITS', 202, 'COITS');
+INSERT INTO public.vt_loon_locations VALUES ('Clyde', 'Derby', 'nek', 186, 'CLYDE', 230, 'CLYDE');
+INSERT INTO public.vt_loon_locations VALUES ('Derby', 'Derby', 'nek', 207, 'DERBY', 230, 'DERBY');
+INSERT INTO public.vt_loon_locations VALUES ('Chittenden', 'Chittenden', 'wc', 702, 'CHITTENDEN', 243, 'CHITTENDEN');
+INSERT INTO public.vt_loon_locations VALUES ('Bomoseen', 'Castleton', 'wc', 2360, 'BOMOSEEN', 246, 'BOMOSEEN');
+INSERT INTO public.vt_loon_locations VALUES ('Hartland dam', 'Hartland', 'ec', 215, 'NORTH HARTLAND', 145, 'NORTH HARTLAND');
+INSERT INTO public.vt_loon_locations VALUES ('Joe''s', 'Danville', 'nc', 396, 'JOES (DANVLL)', 200, 'JOES (DANVLL)');
+INSERT INTO public.vt_loon_locations VALUES ('Thurman Dix', 'Orange', 'nc', 123, 'THURMAN W. DIX', 103, 'THURMAN W. DIX');
+INSERT INTO public.vt_loon_locations VALUES ('Sunrise (Benson)', 'Benson', 'wc', 57, 'SUNRISE', 139, 'SUNRISE');
+INSERT INTO public.vt_loon_locations VALUES ('Pigeon', 'Groton', 'nc', 69, 'PIGEON', 95, 'PIGEON');
+INSERT INTO public.vt_loon_locations VALUES ('Pleiad', 'Hancock', 'wc', 6, 'PLEIAD', 124, 'PLEIAD');
+INSERT INTO public.vt_loon_locations VALUES ('Perch (Benson)', 'Benson', 'wc', 24, 'PERCH (BENSON)', 139, 'PERCH (BENSON)');
+INSERT INTO public.vt_loon_locations VALUES ('Silver (barnard)', 'Barnard', 'wc', 84, 'SILVER (BARNRD)', 138, 'SILVER (BARNRD)');
+INSERT INTO public.vt_loon_locations VALUES ('Echo (Plymouth)', 'Plymouth', 'wc', 104, 'ECHO (PLYMTH)', 146, 'ECHO (PLYMTH)');
+INSERT INTO public.vt_loon_locations VALUES ('Little (Franklin)', 'Franklin', 'cha-n', 95, 'LITTLE (FRANLN)', 2, 'LITTLE (FRANLN)');
+INSERT INTO public.vt_loon_locations VALUES ('Griffith', 'Peru', 'gm-s', 13, 'GRIFFITH', 160, 'GRIFFITH');
+INSERT INTO public.vt_loon_locations VALUES ('Great Averill', 'Averill', 'nek', 828, 'GREAT AVERILL', 8, 'GREAT AVERILL');
+INSERT INTO public.vt_loon_locations VALUES ('Round (Holland)', 'Holland', 'nek', 14, 'MUD (HOLLND)', 9, 'MUD (HOLLND)');
+INSERT INTO public.vt_loon_locations VALUES ('Beaver', 'Holland', 'nek', 40, 'BEAVER (HOLLND)', 9, 'BEAVER (HOLLND)');
+INSERT INTO public.vt_loon_locations VALUES ('Wheeler', 'Brunswick', 'nek', 66, 'WHEELER (BRUNWK)', 36, 'WHEELER (BRUNWK)');
+INSERT INTO public.vt_loon_locations VALUES ('Daniels Pond', 'Glover', 'nc', 66, 'DANIELS', 47, 'DANIELS');
+INSERT INTO public.vt_loon_locations VALUES ('Daniels - West (Rodgers)', 'Glover', 'nc', 20, 'DANIELS-W', 47, 'DANIELS-W');
+INSERT INTO public.vt_loon_locations VALUES ('Long (Greensboro)', 'Greensboro', 'nc', 100, 'LONG (GRNSBO)', 55, 'LONG (GRNSBO)');
+INSERT INTO public.vt_loon_locations VALUES ('Mud (Hyde Park)', 'Hyde Park', 'nc', 14, 'MUD (HYDEPK)', 64, 'MUD (HYDEPK)');
+INSERT INTO public.vt_loon_locations VALUES ('Holland', 'Holland', 'nek', 325, 'HOLLAND', 9, 'HOLLAND');
+INSERT INTO public.vt_loon_locations VALUES ('Island', 'Brighton', 'nek', 626, 'ISLAND', 29, 'ISLAND');
+INSERT INTO public.vt_loon_locations VALUES ('Metcalf', 'Fletcher', 'cha-n', 81, 'METCALF', 44, 'METCALF');
+INSERT INTO public.vt_loon_locations VALUES ('Little Hosmer', 'Craftsbury', 'nc', 180, 'LITTLE HOSMER', 50, 'LITTLE HOSMER');
+INSERT INTO public.vt_loon_locations VALUES ('Lamoille', 'Hyde Park', 'nc', 148, 'LAMOILLE', 64, 'LAMOILLE');
+INSERT INTO public.vt_loon_locations VALUES ('Great Hosmer', 'Craftsbury', 'nc', 140, 'GREAT HOSMER', 50, 'GREAT HOSMER');
+INSERT INTO public.vt_loon_locations VALUES ('Caspian', 'Greensboro', 'nc', 789, 'CASPIAN', 55, 'CASPIAN');
+INSERT INTO public.vt_loon_locations VALUES ('Elligo', 'Greensboro', 'nc', 174, 'ELLIGO', 55, 'ELLIGO');
+INSERT INTO public.vt_loon_locations VALUES ('Collins', 'Hyde Park', 'nc', 16, 'COLLINS', 64, 'COLLINS');
+INSERT INTO public.vt_loon_locations VALUES ('Green River', 'Hyde Park', 'nc', 554, 'GREEN RIVER', 64, 'GREEN RIVER');
+INSERT INTO public.vt_loon_locations VALUES ('Hardwick', 'Hardwick', 'nc', 145, 'HARDWICK', 66, 'HARDWICK');
+INSERT INTO public.vt_loon_locations VALUES ('Hardwood', 'Elmore', 'nc', 44, 'HARDWOOD', 70, 'HARDWOOD');
+INSERT INTO public.vt_loon_locations VALUES ('Little Elmore', 'Elmore', 'nc', 24, 'LITTLE ELMORE', 70, 'LITTLE ELMORE');
+INSERT INTO public.vt_loon_locations VALUES ('Sodom', 'Calais', 'nc', 21, 'SODOM', 81, 'SODOM');
+INSERT INTO public.vt_loon_locations VALUES ('Neal', 'Lunenburg', 'nek', 186, 'NEAL', 73, 'NEAL');
+INSERT INTO public.vt_loon_locations VALUES ('Groton', 'Groton', 'nc', 422, 'GROTON', 95, 'GROTON');
+INSERT INTO public.vt_loon_locations VALUES ('Osmore', 'Groton', 'nc', 48, 'OSMORE', 95, 'OSMORE');
+INSERT INTO public.vt_loon_locations VALUES ('Bristol (Winona)', 'Bristol', 'cha-n', 248, 'WINONA', 105, 'WINONA');
+INSERT INTO public.vt_loon_locations VALUES ('Fairlee', 'Fairlee', 'ec', 457, 'FAIRLEE', 123, 'FAIRLEE');
+INSERT INTO public.vt_loon_locations VALUES ('Glen', 'Fair Haven', 'wc', 206, 'GLEN', 144, 'GLEN');
+INSERT INTO public.vt_loon_locations VALUES ('Levi', 'Groton', 'nc', 22, 'LEVI', 95, 'LEVI');
+INSERT INTO public.vt_loon_locations VALUES ('Ball Mountain', 'Jamaica', 'gm-s', 85, 'BALL MOUNTAIN', 168, 'BALL MOUNTAIN');
+INSERT INTO public.vt_loon_locations VALUES ('Cole', 'Jamaica', 'gm-s', 41, 'COLE', 168, 'COLE');
+INSERT INTO public.vt_loon_locations VALUES ('South (Eden)', 'Eden', 'nc', 103, 'SOUTH (EDEN)', 197, 'SOUTH (EDEN)');
+INSERT INTO public.vt_loon_locations VALUES ('Long (Eden)', 'Eden', 'nc', 97, 'LONG (EDEN)', 197, 'LONG (EDEN)');
+INSERT INTO public.vt_loon_locations VALUES ('Ritterbush', 'Eden', 'nc', 14, 'RITTERBUSH', 197, 'RITTERBUSH');
+INSERT INTO public.vt_loon_locations VALUES ('Halls', 'Newbury', 'ec', 85, 'HALLS', 214, 'HALLS');
+INSERT INTO public.vt_loon_locations VALUES ('Lower (Hinesburg)', 'Hinesburg', 'cha-n', 57, 'LOWER', 205, 'LOWER');
+INSERT INTO public.vt_loon_locations VALUES ('Knapp Br2', 'Cavendish', 'wc', 35, 'KNAPP BROOK #2', 226, 'KNAPP BROOK #2');
+INSERT INTO public.vt_loon_locations VALUES ('Knapp Br1', 'Cavendish', 'wc', 25, 'KNAPP BROOK #1', 226, 'KNAPP BROOK #1');
+INSERT INTO public.vt_loon_locations VALUES ('Spectacle', 'Brighton', 'nek', 103, 'SPECTACLE', 29, 'SPECTACLE');
+INSERT INTO public.vt_loon_locations VALUES ('Carmi', 'Franklin', 'cha-n', 1401, 'CARMI', 2, 'CARMI');
+INSERT INTO public.vt_loon_locations VALUES ('Blake', 'Sheffield', 'nek', 8, 'BLAKE', 52, 'BLAKE');
+INSERT INTO public.vt_loon_locations VALUES ('Long (Sheffield)', 'Sheffield', 'nc', 38, 'LONG (SHEFLD)', 52, 'LONG (SHEFLD)');
+INSERT INTO public.vt_loon_locations VALUES ('Round (Sheffield)', 'Sheffield', 'nc', 13, 'ROUND (SHEFLD)', 52, 'ROUND (SHEFLD)');
+INSERT INTO public.vt_loon_locations VALUES ('Miller', 'Strafford', 'ec', 64, 'MILLER (STRFRD)', 129, 'MILLER (STRFRD)');
+INSERT INTO public.vt_loon_locations VALUES ('Spring', 'Shrewsbury', 'wc', 66, 'SPRING (SHRWBY)', 147, 'SPRING (SHRWBY)');
+INSERT INTO public.vt_loon_locations VALUES ('Johnson Pond', 'Shrewsbury', 'wc', 12, 'COOKS (SHRWBY)', 147, 'COOKS (SHRWBY)');
+INSERT INTO public.vt_loon_locations VALUES ('Norton', 'Norton', 'nek', 583, 'NORTON', 7, 'NORTON');
+INSERT INTO public.vt_loon_locations VALUES ('Nulhegan', 'Brighton', 'nek', 37, 'NULHEGAN', 29, 'NULHEGAN');
+INSERT INTO public.vt_loon_locations VALUES ('Notch', 'Ferdinand', 'nek', 22, 'NOTCH', 35, 'NOTCH');
+INSERT INTO public.vt_loon_locations VALUES ('Parker', 'Glover', 'nc', 250, 'PARKER', 47, 'PARKER');
+INSERT INTO public.vt_loon_locations VALUES ('Zack Woods', 'Hyde Park', 'nc', 23, 'ZACK WOODS', 64, 'ZACK WOODS');
+INSERT INTO public.vt_loon_locations VALUES ('Stannard', 'Stannard', 'nc', 25, 'STANNARD', 67, 'STANNARD');
+INSERT INTO public.vt_loon_locations VALUES ('Mansfield', 'Stowe', 'nc', 38, 'MANSFIELD', 69, 'MANSFIELD');
+INSERT INTO public.vt_loon_locations VALUES ('Peacham', 'Peacham', 'nc', 340, 'PEACHAM', 85, 'PEACHAM');
+INSERT INTO public.vt_loon_locations VALUES ('North Montpelier', 'East Montpelier', 'nc', 72, 'NORTH MONTPELIER', 91, 'NORTH MONTPELIER');
+INSERT INTO public.vt_loon_locations VALUES ('Noyes', 'Groton', 'nc', 39, 'NOYES', 95, 'NOYES');
+INSERT INTO public.vt_loon_locations VALUES ('Dunmore', 'Salisbury', 'wc', 985, 'DUNMORE', 126, 'DUNMORE');
+INSERT INTO public.vt_loon_locations VALUES ('Crescent', 'Sharon', 'ec', 20, 'CRESCENT', 135, 'CRESCENT');
+INSERT INTO public.vt_loon_locations VALUES ('Mitchell', 'Sharon', 'ec', 28, 'MITCHELL', 135, 'MITCHELL');
+INSERT INTO public.vt_loon_locations VALUES ('Old Marsh', 'Fair Haven', 'wc', 131, 'OLD MARSH', 144, 'OLD MARSH');
+INSERT INTO public.vt_loon_locations VALUES ('Woodward', 'Plymouth', 'wc', 106, 'WOODWARD', 146, 'WOODWARD');
+INSERT INTO public.vt_loon_locations VALUES ('North Springfield', 'Springfield', 'ec', 290, 'NORTH SPRINGFIELD', 157, 'NORTH SPRINGFIELD');
+INSERT INTO public.vt_loon_locations VALUES ('Stratton', 'Stratton', 'gm-s', 46, 'STRATTON', 173, 'STRATTON');
+INSERT INTO public.vt_loon_locations VALUES ('Grout', 'Stratton', 'gm-s', 84, 'GROUT', 173, 'GROUT');
+INSERT INTO public.vt_loon_locations VALUES ('Somerset', 'Somerset', 'gm-s', 1568, 'SOMERSET', 178, 'SOMERSET');
+INSERT INTO public.vt_loon_locations VALUES ('Paran', 'Bennington', 'gm-s', 40, 'PARAN', 183, 'PARAN');
+INSERT INTO public.vt_loon_locations VALUES ('Searsburg', 'Searsburg', 'gm-s', 25, 'SEARSBURG', 185, 'SEARSBURG');
+INSERT INTO public.vt_loon_locations VALUES ('West Mountain', 'Maidstone', 'nek', 60, 'WEST MOUNTAIN', 198, 'WEST MOUNTAIN');
+INSERT INTO public.vt_loon_locations VALUES ('West Hill', 'Cabot', 'nc', 46, 'WEST HILL', 202, 'WEST HILL');
+INSERT INTO public.vt_loon_locations VALUES ('Shelburne', 'Shelburne', 'cha-n', 452, 'SHELBURNE', 203, 'SHELBURNE');
+INSERT INTO public.vt_loon_locations VALUES ('Ticklenaked', 'Ryegate', 'nc', 54, 'TICKLENAKED', 213, 'TICKLENAKED');
+INSERT INTO public.vt_loon_locations VALUES ('Lower Symes', 'Ryegate', 'nc', 77, 'LOWER SYMES', 213, 'LOWER SYMES');
+INSERT INTO public.vt_loon_locations VALUES ('Echo (Hub)', 'Hubbardton', 'wc', 54, 'ECHO (HUBDTN)', 245, 'ECHO (HUBDTN)');
+INSERT INTO public.vt_loon_locations VALUES ('Keiser', 'Danville', 'nc', 33, 'KEISER', 200, 'KEISER');
+INSERT INTO public.vt_loon_locations VALUES ('Iroquois', 'Hinesburg', 'cha-n', 243, 'IROQUOIS', 205, 'IROQUOIS');
+INSERT INTO public.vt_loon_locations VALUES ('Hortonia', 'Hubbardton', 'wc', 479, 'HORTONIA', 245, 'HORTONIA');
+INSERT INTO public.vt_loon_locations VALUES ('Wallace', 'Canaan', 'nek', 532, 'WALLACE', 1, 'WALLACE');
+INSERT INTO public.vt_loon_locations VALUES ('Turtle', 'Holland', 'nek', 27, 'TURTLE', 9, 'TURTLE');
+INSERT INTO public.vt_loon_locations VALUES ('Seymour', 'Morgan', 'nek', 1769, 'SEYMOUR', 18, 'SEYMOUR');
+INSERT INTO public.vt_loon_locations VALUES ('Rescue', 'Ludlow', 'wc', 180, 'RESCUE', 255, 'RESCUE');
+INSERT INTO public.vt_loon_locations VALUES ('Silver (Georgia/Fairfax)', 'Fairfax', 'cha-n', 27, 'SOUTH ST. ALBANS', 42, 'SOUTH ST. ALBANS');
+INSERT INTO public.vt_loon_locations VALUES ('Clarks (Tildys)', 'Glover', 'nc', 33, 'TILDYS', 47, 'TILDYS');
+INSERT INTO public.vt_loon_locations VALUES ('Arrowhead', 'Milton', 'cha-n', 760, 'ARROWHEAD MOUNTAIN', 48, 'ARROWHEAD MOUNTAIN');
+INSERT INTO public.vt_loon_locations VALUES ('Wapanacki', 'Hardwick', 'nc', 21, 'TUTTLE (HARDWK)', 66, 'TUTTLE (HARDWK)');
+INSERT INTO public.vt_loon_locations VALUES ('Shadow (Concord)', 'Concord', 'nek', 128, 'SHADOW (CONCRD)', 76, 'SHADOW (CONCRD)');
+INSERT INTO public.vt_loon_locations VALUES ('Kettle', 'Peacham', 'nc', 109, 'KETTLE', 85, 'KETTLE');
+INSERT INTO public.vt_loon_locations VALUES ('Mud (Peacham)', 'Peacham', 'nc', 34, 'MUD (PEACHM)', 85, 'MUD (PEACHM)');
+INSERT INTO public.vt_loon_locations VALUES ('Martin''s', 'Peacham', 'nc', 82, 'MARTINS', 85, 'MARTINS');
+INSERT INTO public.vt_loon_locations VALUES ('Marshfield Pond (Turtlehead Pond)', 'Marshfield', 'nc', 69, 'TURTLEHEAD', 90, 'TURTLEHEAD');
+INSERT INTO public.vt_loon_locations VALUES ('Mollys Falls', 'Marshfield', 'nc', 397, 'MOLLYS FALLS', 90, 'MOLLYS FALLS');
+INSERT INTO public.vt_loon_locations VALUES ('Monkton (Cedar)', 'Monkton', 'cha-n', 123, 'CEDAR', 97, 'CEDAR');
+INSERT INTO public.vt_loon_locations VALUES ('Bald Hill', 'Westmore', 'nek', 108, 'BALD HILL', 34, 'BALD HILL');
+INSERT INTO public.vt_loon_locations VALUES ('Jobs', 'Westmore', 'nek', 39, 'JOBS', 34, 'JOBS');
+INSERT INTO public.vt_loon_locations VALUES ('Willoughby', 'Westmore', 'nek', 1653, 'WILLOUGHBY', 34, 'WILLOUGHBY');
+INSERT INTO public.vt_loon_locations VALUES ('Bean (Sutton)', 'Sutton', 'nek', 30, 'BEAN (SUTTON)', 46, 'BEAN (SUTTON)');
+INSERT INTO public.vt_loon_locations VALUES ('Marl', 'Sutton', 'nek', 10, 'MARL', 46, 'MARL');
+INSERT INTO public.vt_loon_locations VALUES ('Wolcott', 'Wolcott', 'nc', 74, 'WOLCOTT', 59, 'WOLCOTT');
+INSERT INTO public.vt_loon_locations VALUES ('Flagg', 'Wheelock', 'nc', 111, 'FLAGG', 61, 'FLAGG');
+INSERT INTO public.vt_loon_locations VALUES ('Coles', 'Walden', 'nc', 125, 'COLES', 72, 'COLES');
+INSERT INTO public.vt_loon_locations VALUES ('Lyford', 'Walden', 'nc', 33, 'LYFORD', 72, 'LYFORD');
+INSERT INTO public.vt_loon_locations VALUES ('Woodbury', 'Woodbury', 'nc', 142, 'WOODBURY', 77, 'WOODBURY');
+INSERT INTO public.vt_loon_locations VALUES ('East Long', 'Woodbury', 'nc', 188, 'EAST LONG', 77, 'EAST LONG');
+INSERT INTO public.vt_loon_locations VALUES ('Cranberry Meadow', 'Woodbury', 'nc', 28, 'CRANBERRY MEADOW', 77, 'CRANBERRY MEADOW');
+INSERT INTO public.vt_loon_locations VALUES ('Buck', 'Woodbury', 'nc', 39, 'BUCK', 77, 'BUCK');
+INSERT INTO public.vt_loon_locations VALUES ('Greenwood', 'Woodbury', 'nc', 96, 'GREENWOOD', 77, 'GREENWOOD');
+INSERT INTO public.vt_loon_locations VALUES ('Nichols', 'Woodbury', 'nc', 171, 'NICHOLS', 77, 'NICHOLS');
+INSERT INTO public.vt_loon_locations VALUES ('Moore', 'Waterford', 'nek', 1235, 'MOORE', 80, 'MOORE');
+INSERT INTO public.vt_loon_locations VALUES ('Stiles', 'Waterford', 'nek', 135, 'STILES', 80, 'STILES');
+INSERT INTO public.vt_loon_locations VALUES ('Norford', 'Thetford', 'ec', 21, 'NORFORD', 131, 'NORFORD');
+INSERT INTO public.vt_loon_locations VALUES ('Abenaki', 'Thetford', 'ec', 44, 'ABENAKI', 131, 'ABENAKI');
+INSERT INTO public.vt_loon_locations VALUES ('Runnemede', 'Windsor', 'ec', 62, 'RUNNEMEDE', 149, 'RUNNEMEDE');
+INSERT INTO public.vt_loon_locations VALUES ('Little Rock', 'Wallingford', 'wc', 18, 'LITTLE ROCK', 150, 'LITTLE ROCK');
+INSERT INTO public.vt_loon_locations VALUES ('Wallingford', 'Wallingford', 'wc', 87, 'WALLINGFORD', 150, 'WALLINGFORD');
+INSERT INTO public.vt_loon_locations VALUES ('Wantastiquet', 'Weston', 'gm-s', 44, 'WANTASTIQUET', 155, 'WANTASTIQUET');
+INSERT INTO public.vt_loon_locations VALUES ('Moses', 'Weston', 'gm-s', 12, 'MOSES', 155, 'MOSES');
+INSERT INTO public.vt_loon_locations VALUES ('Branch', 'Sunderland', 'gm-s', 34, 'BRANCH', 172, 'BRANCH');
+INSERT INTO public.vt_loon_locations VALUES ('Bourn', 'Sunderland', 'gm-s', 48, 'BOURN', 172, 'BOURN');
+INSERT INTO public.vt_loon_locations VALUES ('Raponda', 'Wilmington', 'gm-s', 121, 'RAPONDA', 186, 'RAPONDA');
+INSERT INTO public.vt_loon_locations VALUES ('Sadawga', 'Whitingham', 'gm-s', 194, 'SADAWGA', 192, 'SADAWGA');
+INSERT INTO public.vt_loon_locations VALUES ('Cutter', 'Williamstown', 'ec', 16, 'CUTTER', 217, 'CUTTER');
+INSERT INTO public.vt_loon_locations VALUES ('Rood', 'Williamstown', 'ec', 23, 'ROOD', 217, 'ROOD');
+INSERT INTO public.vt_loon_locations VALUES ('Little (Wells)', 'Wells', 'wc', 177, 'LITTLE (WELLS)', 222, 'LITTLE (WELLS)');
+INSERT INTO public.vt_loon_locations VALUES ('St. Catherine', 'Wells', 'wc', 883, 'ST. CATHERINE', 222, 'ST. CATHERINE');
+INSERT INTO public.vt_loon_locations VALUES ('Stoughton', 'Weathersfield', 'ec', 56, 'STOUGHTON', 228, 'STOUGHTON');
+INSERT INTO public.vt_loon_locations VALUES ('Nelson', 'Woodbury', 'nc', 133, 'FOREST (CALAIS)', 77, 'FOREST (CALAIS)');
+INSERT INTO public.vt_loon_locations VALUES ('Wrightsville', 'East Montpelier', 'nc', 190, 'WRIGHTSVILLE', 78, 'WRIGHTSVILLE');
+INSERT INTO public.vt_loon_locations VALUES ('Long (Westmore)', 'Westmore', 'nek', 90, 'LONG (WESTMR)', 34, 'LONG (WESTMR)');
+INSERT INTO public.vt_loon_locations VALUES ('Bruce', 'Sutton', 'nc', 27, 'BRUCE', 46, 'BRUCE');
+INSERT INTO public.vt_loon_locations VALUES ('Chandler', 'Wheelock', 'nc', 68, 'CHANDLER (WHLOCK)', 61, 'CHANDLER (WHLOCK)');
+INSERT INTO public.vt_loon_locations VALUES ('Dog (Valley)', 'Woodbury', 'nc', 88, 'VALLEY', 77, 'VALLEY');
+INSERT INTO public.vt_loon_locations VALUES ('Comerford', 'Waterford', 'nek', 777, 'COMERFORD', 80, 'COMERFORD');
+INSERT INTO public.vt_loon_locations VALUES ('Waterbury - South end', 'Waterbury', 'nc', 839, 'WATERBURY', 89, 'WATERBURY');
+INSERT INTO public.vt_loon_locations VALUES ('Mill', 'Windsor', 'ec', 77, 'MILL (WINDSR)', 149, 'MILL (WINDSR)');
+INSERT INTO public.vt_loon_locations VALUES ('Beebe (Sund)', 'Sunderland', 'gm-s', 13, 'BEEBE (SUNDLD)', 172, 'BEEBE (SUNDLD)');
 
 
 --
--- TOC entry 4286 (class 0 OID 21968)
--- Dependencies: 226
+-- TOC entry 3947 (class 0 OID 90766)
+-- Dependencies: 206
 -- Data for Name: vt_town; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2790,8 +2949,8 @@ INSERT INTO public.vt_town VALUES (14, 'Averys Gore', 9, 'Avery''s Gore');
 
 
 --
--- TOC entry 4287 (class 0 OID 21973)
--- Dependencies: 227
+-- TOC entry 3945 (class 0 OID 90727)
+-- Dependencies: 204
 -- Data for Name: vt_water_body; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3043,7 +3202,6 @@ INSERT INTO public.vt_water_body VALUES ('GARFIELD', 'Unnamed Pond referred to b
 INSERT INTO public.vt_water_body VALUES ('GATES', 'Gates Pond', 'Whitingham', 'Green Mtn South', 30, 1486, 1617, 7, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Gates Pond Whitingham', 'Lake (Artificial Control)', 42.818693, -72.8073181, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GATES-NE', 'Unnamed Pond referred to by DEC as Gates - NE', 'Marlboro', 'Green Mtn South', NULL, NULL, 1785, NULL, NULL, NULL, 'Gates - NE Pond Marlboro', 'Pond', 42.83, -72.8, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GEORGIA PLAINS', 'Unnamed Pond referred to by DEC as Georgia Plains', 'Georgia', 'Champlain ', 19, 3725, 210, NULL, NULL, NULL, 'Georgia Plains Pond Georgia', 'Pond', 44.72, -73.17, NULL, NULL);
-INSERT INTO public.vt_water_body VALUES ('HIDDEN', 'Hidden Lake', 'Marlboro', 'Green Mtn South', 17, 723, 1470, 6, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Hidden Lake Marlboro', 'Lake (Artificial Control)', 42.88, -72.72, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GILLETT', 'Gillett Pond', 'Richmond', 'Champlain ', 30, 1390, 710, 8, 5, 'NATURAL with ARTIFICIAL CONTROL', 'Gillett Pond Richmond', 'Lake (Artificial Control)', 44.3531098, -72.9642886, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GILMORE', 'Gilmore Pond', 'Bristol', 'Champlain ', 6, 318, 2010, NULL, NULL, NULL, 'Gilmore Pond Bristol', 'Pond', 44.088115, -73.0365059, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('GLEN', 'Glen Lake', 'Castleton', 'West Central', 206, 2050, 478, 68, 32, 'NATURAL with ARTIFICIAL CONTROL', 'Glen Lake Castleton', 'Lake (Artificial Control)', 43.67, -73.23, NULL, NULL);
@@ -3093,6 +3251,7 @@ INSERT INTO public.vt_water_body VALUES ('HEART', 'Heart Pond', 'Albany', 'North
 INSERT INTO public.vt_water_body VALUES ('HEARTWELLVILLE', 'Unnamed Pond referred to by DEC as Heartwellville', 'Readsboro', 'Green Mtn South', NULL, NULL, 1760, NULL, NULL, NULL, 'Heartwellville Pond Readsboro', 'Pond', 42.83, -72.98, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HEDGEHOG GULF', 'Unnamed Pond referred to by DEC as Hedgehog Gulf', 'Athens', 'Green Mtn South', NULL, NULL, 935, NULL, NULL, NULL, 'Hedgehog Gulf Pond Athens', 'Pond', 43.08, -72.58, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HICKORY', 'Unnamed Pond referred to by DEC as Hickory', 'Westminster', 'Green Mtn South', 16, 84, 932, NULL, NULL, NULL, 'Hickory Pond Westminster', 'Pond', 43.03, -72.55, NULL, NULL);
+INSERT INTO public.vt_water_body VALUES ('HIDDEN', 'Hidden Lake', 'Marlboro', 'Green Mtn South', 17, 723, 1470, 6, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Hidden Lake Marlboro', 'Lake (Artificial Control)', 42.88, -72.72, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HIGH (HUBDTN)', 'High Pond', 'Hubbardton', 'West Central', 3, 20, 770, NULL, NULL, NULL, 'High Pond Hubbardton', 'Pond', 43.7003422, -73.2117786, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HIGH (SUDBRY)', 'High Pond', 'Sudbury', 'West Central', 20, 173, 1033, 56, 26, 'NATURAL', 'High Pond Sudbury', 'Pond', 43.7528416, -73.1531676, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('HINKUM', 'Hinkum Pond', 'Sudbury', 'West Central', 60, 353, 719, 69, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Hinkum Pond Sudbury', 'Lake (Artificial Control)', 43.7647857, -73.1678903, NULL, NULL);
@@ -3340,7 +3499,6 @@ INSERT INTO public.vt_water_body VALUES ('PAUL STREAM', 'Paul Stream Pond', 'Bru
 INSERT INTO public.vt_water_body VALUES ('PEABODY', 'Unnamed Pond referred to by DEC as Peabody', 'Weston', 'West Central', NULL, NULL, 2240, NULL, NULL, NULL, 'Peabody Pond Weston', 'Pond', 43.317018, -72.8439883, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PEACE', 'Unnamed Pond referred to by DEC as Peace', 'Eden', 'North Central', NULL, NULL, 1840, NULL, NULL, NULL, 'Peace Pond Eden', 'Pond', 44.73, -72.62, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PEACHAM', 'Peacham Pond', 'Peacham', 'North Central', 340, 3750, 1401, 61, 20, 'NATURAL with ARTIFICIAL CONTROL', 'Peacham Pond Peacham', 'Lake (Artificial Control)', 44.33, -72.27, NULL, NULL);
-INSERT INTO public.vt_water_body VALUES ('ADAM', 'Adam Pond', 'Jamaica', 'Green Mtn South', 7, 186, 900, NULL, NULL, NULL, 'Adam Pond Jamaica', 'Pond', 43.1089666, -72.7603735, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PECKS', 'Pecks Pond', 'Barre Town', 'North Central', 16, 443, 1010, NULL, NULL, NULL, 'Pecks Pond Barre Town', 'Pond', 44.1681171, -72.5364945, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PENSIONER', 'Pensioner Pond', 'Charleston', 'NE Kingdom', 173, 66882, 1141, 39, 15, 'NATURAL with ARTIFICIAL CONTROL', 'Pensioner Pond Charleston', 'Lake (Artificial Control)', 44.8736591, -72.0573206, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('PERCH (BENSON)', 'Perch Pond', 'Benson', 'West Central', 24, 110, 527, 44, 16, 'NATURAL with ARTIFICIAL CONTROL', 'Perch Pond Benson', 'Lake (Artificial Control)', 43.7503403, -73.2798365, NULL, NULL);
@@ -3489,7 +3647,6 @@ INSERT INTO public.vt_water_body VALUES ('STONY', 'Unnamed Pond referred to by D
 INSERT INTO public.vt_water_body VALUES ('STOUGHTON', 'Stoughton Pond', 'Weathersfield', 'East Central', 56, 19257, 502, 20, 9, 'ARTIFICIAL', 'Stoughton Pond Weathersfield', 'Reservoir', 43.3792397, -72.4998126, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STRAFFORD', 'Unnamed Pond referred to by DEC as Strafford', 'Strafford', 'East Central', 18, 209, 1330, NULL, NULL, NULL, 'Strafford Pond Strafford', 'Pond', 43.85, -72.43, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STRATTON', 'Stratton Pond', 'Stratton', 'Green Mtn South', 46, 264, 2555, 18, NULL, 'NATURAL', 'Stratton Pond Stratton', 'Pond', 43.1039661, -72.9698243, NULL, NULL);
-INSERT INTO public.vt_water_body VALUES ('ADAMS (ENOSBG)', 'Adams Pond', 'Enosburgh', 'Champlain ', 11, 1477, 850, NULL, NULL, NULL, 'Adams Pond Enosburg', 'Pond', 44.8808804, -72.7201307, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STRATTON SKI AREA', 'Unnamed Pond referred to by DEC as Stratton Ski Area', 'Winhall', 'Green Mtn South', NULL, NULL, 1705, NULL, NULL, 'ARTIFICIAL', 'Stratton Ski Area Pond Winhall', 'Reservoir', 43.12, -72.9, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('STUART', 'Stuart Pond', 'Lyndon', 'NE Kingdom', 4, 115, 830, NULL, NULL, NULL, 'Stuart Pond Lyndon', 'Pond', 44.5061672, -72.0145404, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('SUGAR HILL', 'Sugar Hill Reservoir', 'Goshen', 'West Central', 63, 1667, 1768, 35, 22, 'ARTIFICIAL', 'Sugar Hill Reservoir Goshen', 'Reservoir', 43.92, -73, NULL, NULL);
@@ -3588,6 +3745,8 @@ INSERT INTO public.vt_water_body VALUES ('WINHALL', 'Unnamed Pond referred to by
 INSERT INTO public.vt_water_body VALUES ('WINONA', 'Winona Lake (Bristol Pond)', 'Bristol', 'Champlain ', 248, 2564, 467, 9, 4, 'NATURAL with ARTIFICIAL CONTROL', 'Winona Lake Bristol', 'Lake (Artificial Control)', 44.1731125, -73.0870642, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ABBEY', 'Abbey Pond', 'Ripton', 'West Central', 3, 433, 1710, NULL, NULL, 'NATURAL', 'Abbey Pond Ripton', 'Pond', 44.0336714, -73.0601163, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ABENAKI', 'Lake Abenaki', 'Thetford', 'East Central', 44, 645, 840, 11, NULL, 'NATURAL with ARTIFICIAL CONTROL', 'Lake Abenaki Thetford', 'Lake (Artificial Control)', 43.8328472, -72.2345354, NULL, NULL);
+INSERT INTO public.vt_water_body VALUES ('ADAM', 'Adam Pond', 'Jamaica', 'Green Mtn South', 7, 186, 900, NULL, NULL, NULL, 'Adam Pond Jamaica', 'Pond', 43.1089666, -72.7603735, NULL, NULL);
+INSERT INTO public.vt_water_body VALUES ('ADAMS (ENOSBG)', 'Adams Pond', 'Enosburgh', 'Champlain ', 11, 1477, 850, NULL, NULL, NULL, 'Adams Pond Enosburg', 'Pond', 44.8808804, -72.7201307, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ADAMS (WOODFD)', 'Adams Reservoir', 'Woodford', 'Green Mtn South', 21, 821, 2317, 15, 6, 'ARTIFICIAL', 'Adams Reservoir Woodford', 'Reservoir', 42.886908, -73.03933, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('AINSWORTH', 'Unnamed pond referred to by DEC as Ainsworth', 'Williamstown', 'East Central', NULL, NULL, 875, NULL, NULL, NULL, 'Ainsworth Pond Williamstown', 'Pond', 44.08, -72.57, NULL, NULL);
 INSERT INTO public.vt_water_body VALUES ('ALBANY-NE', 'Unnamed pond referred to by DEC as Albany-NE', 'Albany', 'North Central', NULL, NULL, 1635, NULL, NULL, NULL, 'Albany-NE Pond Albany', 'Pond', 44.75, -72.27, NULL, NULL);
@@ -3623,8 +3782,8 @@ INSERT INTO public.vt_water_body VALUES ('ADAMANT', NULL, 'Calais', 'North Centr
 
 
 --
--- TOC entry 4296 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 3964 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: loonwatch_event_lweventid_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -3632,7 +3791,7 @@ SELECT pg_catalog.setval('public.loonwatch_event_lweventid_seq', 1, true);
 
 
 --
--- TOC entry 4121 (class 2606 OID 21980)
+-- TOC entry 3781 (class 2606 OID 92562)
 -- Name: vt_loon_locations loon_location_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3641,7 +3800,7 @@ ALTER TABLE ONLY public.vt_loon_locations
 
 
 --
--- TOC entry 4109 (class 2606 OID 21982)
+-- TOC entry 3793 (class 2606 OID 92516)
 -- Name: loonwatch_event lw_event_primary_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3650,7 +3809,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 4115 (class 2606 OID 21984)
+-- TOC entry 3797 (class 2606 OID 92544)
 -- Name: loonwatch_observation lw_event_unique_time_counts; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3659,7 +3818,7 @@ ALTER TABLE ONLY public.loonwatch_observation
 
 
 --
--- TOC entry 4111 (class 2606 OID 21986)
+-- TOC entry 3795 (class 2606 OID 92518)
 -- Name: loonwatch_event lw_event_unique_wbid_date_time_observer; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3668,7 +3827,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 4113 (class 2606 OID 21988)
+-- TOC entry 3799 (class 2606 OID 92719)
 -- Name: loonwatch_ingest lw_ingest_unique_location_date; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3677,7 +3836,7 @@ ALTER TABLE ONLY public.loonwatch_ingest
 
 
 --
--- TOC entry 4117 (class 2606 OID 21990)
+-- TOC entry 3785 (class 2606 OID 90755)
 -- Name: vt_county vt_county_govCountyId_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3686,7 +3845,7 @@ ALTER TABLE ONLY public.vt_county
 
 
 --
--- TOC entry 4119 (class 2606 OID 21992)
+-- TOC entry 3787 (class 2606 OID 90757)
 -- Name: vt_county vt_county_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3695,7 +3854,7 @@ ALTER TABLE ONLY public.vt_county
 
 
 --
--- TOC entry 4123 (class 2606 OID 21994)
+-- TOC entry 3789 (class 2606 OID 90773)
 -- Name: vt_town vt_town_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3704,7 +3863,7 @@ ALTER TABLE ONLY public.vt_town
 
 
 --
--- TOC entry 4125 (class 2606 OID 21996)
+-- TOC entry 3783 (class 2606 OID 90734)
 -- Name: vt_water_body vt_water_bodies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3713,7 +3872,7 @@ ALTER TABLE ONLY public.vt_water_body
 
 
 --
--- TOC entry 4132 (class 2606 OID 21997)
+-- TOC entry 3802 (class 2606 OID 90774)
 -- Name: vt_town fk_gov_county_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3722,7 +3881,7 @@ ALTER TABLE ONLY public.vt_town
 
 
 --
--- TOC entry 4128 (class 2606 OID 22002)
+-- TOC entry 3806 (class 2606 OID 92720)
 -- Name: loonwatch_ingest fk_location; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3731,7 +3890,7 @@ ALTER TABLE ONLY public.loonwatch_ingest
 
 
 --
--- TOC entry 4130 (class 2606 OID 22007)
+-- TOC entry 3801 (class 2606 OID 90784)
 -- Name: vt_loon_locations fk_loon_location_town_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3740,7 +3899,7 @@ ALTER TABLE ONLY public.vt_loon_locations
 
 
 --
--- TOC entry 4129 (class 2606 OID 22012)
+-- TOC entry 3805 (class 2606 OID 92538)
 -- Name: loonwatch_observation fk_lw_event_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3749,7 +3908,7 @@ ALTER TABLE ONLY public.loonwatch_observation
 
 
 --
--- TOC entry 4126 (class 2606 OID 22017)
+-- TOC entry 3804 (class 2606 OID 92524)
 -- Name: loonwatch_event fk_town_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3758,7 +3917,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 4127 (class 2606 OID 22022)
+-- TOC entry 3803 (class 2606 OID 92519)
 -- Name: loonwatch_event fk_water_body_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3767,7 +3926,7 @@ ALTER TABLE ONLY public.loonwatch_event
 
 
 --
--- TOC entry 4131 (class 2606 OID 22027)
+-- TOC entry 3800 (class 2606 OID 90736)
 -- Name: vt_loon_locations fk_waterbody_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3775,7 +3934,43 @@ ALTER TABLE ONLY public.vt_loon_locations
     ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterbodyid) REFERENCES public.vt_water_body(wbtextid);
 
 
--- Completed on 2023-09-18 16:34:17
+--
+-- TOC entry 3958 (class 0 OID 0)
+-- Dependencies: 3957
+-- Name: DATABASE loonweb; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT CONNECT ON DATABASE loonweb TO ipt;
+
+
+--
+-- TOC entry 3959 (class 0 OID 0)
+-- Dependencies: 4
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT USAGE ON SCHEMA public TO ipt;
+
+
+--
+-- TOC entry 3962 (class 0 OID 0)
+-- Dependencies: 216
+-- Name: TABLE loonwatch_sampling_event; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT SELECT ON TABLE public.loonwatch_sampling_event TO ipt;
+
+
+--
+-- TOC entry 3963 (class 0 OID 0)
+-- Dependencies: 217
+-- Name: TABLE loonwatch_sampling_occurrence; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT SELECT ON TABLE public.loonwatch_sampling_occurrence TO ipt;
+
+
+-- Completed on 2023-09-20 13:34:13
 
 --
 -- PostgreSQL database dump complete
