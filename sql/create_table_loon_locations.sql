@@ -165,6 +165,11 @@ select * from vt_loon_locations where lower(locationName) like '%memphremagog%';
 select * from vt_water_body where wbTextId like '%MEMPHREMAGOG%';
 update vt_loon_locations set waterBodyId='MEMPHREMAGOG' WHERE locationName='Memphremagog';
 
+--Lake Lamoille didn't match because vt_loon_locations had it in Hyde Park but vt_water_bodies has it in Morristown
+update vt_loon_locations set locationTown='Morristown' WHERE locationName='Lamoille';
+update vt_loon_locations set locationTownId=(select "townId" from vt_town where "townName"='Morristown') 
+	where locationName='Lamoille';
+
 --Townsend Res. is misspelled
 --vt_water_bodies has a Townshend Reservoir
 select * from vt_loon_locations where lower(locationName) like '%townsend%';

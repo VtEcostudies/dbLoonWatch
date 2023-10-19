@@ -50,6 +50,7 @@ select "eventID", count("eventID") from loonwatch_sampling_event
 group by "eventID"
 having count("eventID")>1;
 
+DROP VIEW IF EXISTS loonwatch_sampling_occurrence;
 CREATE OR REPLACE VIEW loonwatch_sampling_occurrence AS
 SELECT * FROM (
 SELECT
@@ -65,6 +66,8 @@ AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 lwIngestAdult AS "individualCount",
+lwIngestAdult AS "organismQuantity",
+'Count of Adults' AS "organismQuantityType",
 'Adult' AS "lifeStage",
 'Present' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
@@ -96,6 +99,8 @@ AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 lwIngestSubAdult AS "individualCount",
+lwIngestSubAdult AS "organismQuantity",
+'Count of SubAdults' AS "organismQuantityType",
 'SubAdult' AS "lifeStage",
 'Present' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
@@ -127,6 +132,8 @@ AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 lwIngestChick AS "individualCount",
+lwIngestChick AS "organismQuantity",
+'Count of Chicks' AS "organismQuantityType",
 'Chick' AS "lifeStage",
 'Present' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
@@ -158,6 +165,8 @@ AS "occurrenceID",
 'HumanObservation' AS "basisOfRecord",
 lwIngestObserverName AS "recordedBy",
 0 AS "individualCount",
+0 AS "organismQuantity",
+'Count of Individuals' AS "organismQuantityType",
 NULL AS "lifeStage",
 'Absent' AS "occurrenceStatus",
 'Gavia immer' AS "scientificName",
