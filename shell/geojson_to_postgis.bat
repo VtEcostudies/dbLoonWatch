@@ -1,0 +1,2 @@
+C:\Program Files\QGIS 3.34.1>
+OSGeo4W.bat ogr2ogr -f PostgreSQL PG:"dbname=loonweb user=postgres password=EatArugula" "C:\Users\jtloo\Documents\VCE\LoonWeb\uiLoonWatchSurvey\geojson\Polygon_VT_Lakes_Inventory.geojson" -nln vt_geo_water_body

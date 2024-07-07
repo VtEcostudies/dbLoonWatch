@@ -23,13 +23,23 @@ create table if not exists loonWatch_ingest (
 
 --ALTER TABLE loonWatch_ingest ADD CONSTRAINT lw_ingest_primary_key 
 --	PRIMARY KEY (lwIngestId);
-ALTER TABLE loonWatch_ingest ADD CONSTRAINT lw_ingest_unique_location_date
-	UNIQUE (lwIngestLocation,lwIngestDate);
+--ALTER TABLE loonWatch_ingest ADD CONSTRAINT lw_ingest_unique_location_date
+--	UNIQUE (lwIngestLocation,lwIngestDate);
+--ALTER TABLE loonWatch_ingest DROP CONSTRAINT lw_ingest_unique_location_date;
+ALTER TABLE loonWatch_ingest ADD CONSTRAINT lw_ingest_unique_location_town_date
+	UNIQUE (lwIngestLocation,lwIngestTownName,lwIngestDate);
 ALTER TABLE loonWatch_ingest ADD CONSTRAINT fk_location 
 	FOREIGN KEY (lwIngestLocation) REFERENCES vt_loon_locations (locationName);
 --ALTER TABLE loonWatch_ingest ADD CONSTRAINT fk_town_id 
 --	FOREIGN KEY (lwIngestTownId) REFERENCES vt_town ("townId");
+--For now we leave lwIngestLocation unconstrained, but we use it to link data to vt_loon_locations and vt_water_bodies
 ALTER TABLE loonWatch_ingest DROP CONSTRAINT fk_location;
+ALTER TABLE loonWatch_ingest ADD COLUMN "updatedAt" TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW();
+CREATE TRIGGER trigger_updated_at
+    BEFORE UPDATE 
+    ON loonWatch_ingest
+    FOR EACH ROW
+    EXECUTE FUNCTION public.set_updated_at();
 --Import data using psql:
 --\COPY loonWatch_ingest FROM 'C:\Users\jtloo\Documents\VCE\LoonWeb\dbLoonWatch\csv_import\LoonWatch_Raw_Counts_2011.csv' DELIMITER ',' CSV HEADER
 

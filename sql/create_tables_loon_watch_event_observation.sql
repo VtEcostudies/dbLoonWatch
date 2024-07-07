@@ -3,22 +3,28 @@ drop table if exists loonWatch_event;
 
 create table if not exists loonWatch_event (
 	lwEventId SERIAL,
+	lwEventUuid UUID,
+	lwEventTimestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL,
 	lwEventWaterBodyId TEXT NOT NULL,
 	lwEventTownId INTEGER,
 	lwEventDate DATE NOT NULL,
-	lwEventObserverEmail TEXT[], --NOT NULL, --Initial import has no observer info
-	lwEventObserverName TEXT[], --NOT NULL, --Initial import has no observer info
+	lwEventObserverEmail TEXT[] NOT NULL, --Initial import has no observer info
+	lwEventObserverName TEXT[],
 	lwEventObserverCount INTEGER,
-	lwEventStart TIME WITHOUT TIME ZONE,
-	lwEventStop TIME WITHOUT TIME ZONE,
-	lwEventComment TEXT,
-	lwEventSketchUrl TEXT
+	lwEventStart TIME WITHOUT TIME ZONE NOT NULL,
+	lwEventStop TIME WITHOUT TIME ZONE NOT NULL,
+	lwEventSketchUrl TEXT,
+	lwEventEagle TEXT,
+	lwEventOsprey TEXT,
+	lwEventOther TEXT
 );
 
 ALTER TABLE loonWatch_event ADD CONSTRAINT lw_event_primary_key 
 	PRIMARY KEY (lwEventId);
 ALTER TABLE loonWatch_event ADD CONSTRAINT lw_event_unique_wbId_date_time_observer 
 	UNIQUE (lwEventWaterBodyId,lwEventDate,lwEventStart,lwEventObserverEmail);
+ALTER TABLE loonWatch_event ADD CONSTRAINT lw_event_unique_uuid
+	UNIQUE (lwEventUuid);
 ALTER TABLE loonWatch_event ADD CONSTRAINT fk_water_body_id 
 	FOREIGN KEY (lwEventWaterBodyId) REFERENCES vt_water_body (wbTextId);
 ALTER TABLE loonWatch_event ADD CONSTRAINT fk_town_id 
@@ -27,17 +33,14 @@ ALTER TABLE loonWatch_event ADD CONSTRAINT fk_town_id
 create table if not exists loonWatch_observation (
 	lwObsEventId INTEGER NOT NULL,
 	lwObsTime TIME WITHOUT TIME ZONE,
+	lwObsLatitude DECIMAL,
+	lwObsLongitude DECIMAL,
 	lwObsGeoLocation geometry(Geometry, 4326),
 	lwObsAdult INTEGER DEFAULT 0,
-	lwObsAdultPhotoUrl TEXT[],
 	lwObsSubAdult INTEGER DEFAULT 0,
-	lwObsSubAdultPhotoUrl TEXT[],
 	lwObsChick INTEGER DEFAULT 0,
-	lwObsChickPhotoUrl TEXT[],
-	lwObsLoonLocationDirection TEXT,
-	lwObsEagle TEXT,
-	lwObsOsprey TEXT,
-	lwObsOther TEXT
+	lwObsPhotoUrl TEXT[],
+	lwObsNotes TEXT
 );
 
 ALTER TABLE loonWatch_observation ADD CONSTRAINT fk_lw_event_id 
@@ -45,13 +48,19 @@ ALTER TABLE loonWatch_observation ADD CONSTRAINT fk_lw_event_id
 ALTER TABLE loonWatch_observation ADD CONSTRAINT lw_event_unique_time_counts
 	UNIQUE (lwObsEventId,lwObsTime,lwObsAdult,lwObsSubAdult,lwObsChick);
 	
-INSERT INTO loonWatch_event (lwEventWaterBodyId,lwEventTownId,lwEventDate,lwEventObserverEmail,lwEventStart,lwEventStop) 
-	VALUES('ABENAKI', 
-		   (SELECT "townId" FROM vt_town WHERE "townName"='Thetford'), 
-		   (SELECT DATE(NOW())),
-		   '{ehanson@vtecostudies.org,jloomis@vtecostudies.org}',
-		   '8:00',
-		   '9:00'
+INSERT INTO loonWatch_event (lwEventUuid,lwEventTimestamp,lwEventWaterBodyId,lwEventTownId,lwEventDate,lwEventObserverEmail,lwEventStart,lwEventStop,lwEventEagle,lwEventOsprey,lwEventOther) 
+	VALUES(
+			gen_random_uuid(),
+			(SELECT NOW()),
+			'ABENAKI', 
+			(SELECT "townId" FROM vt_town WHERE "townName"='Thetford'), 
+			(SELECT DATE(NOW())),
+			'{ehanson@vtecostudies.org,jloomis@vtecostudies.org}',
+			'8:00',
+			'9:00',
+			'Eagle nest on dead tree in NW swamp.',
+			'NE region: Osprey attacked chick. Unsuccessful.',
+			'Recent fish drop by F&W.'
 		  );
 	
 SELECT * FROM loonWatch_event;
@@ -60,8 +69,8 @@ INSERT INTO loonWatch_observation(lwObsEventId,lwObsTime,lwObsAdult,lwObsSubAdul
 	VALUES(1,'8:36',2,0,1);
 INSERT INTO loonWatch_observation(lwObsEventId,lwObsTime,lwObsAdult,lwObsSubAdult,lwObsChick)
 	VALUES(1,'8:41',0,1,0);
-INSERT INTO loonWatch_observation(lwObsEventId,lwObsTime,lwObsAdult,lwObsSubAdult,lwObsChick,lwObsEagle,lwObsOsprey)
-	VALUES(1,'8:55',0,0,1,'','NE region: Osprey attacked chick. Unsuccessful.');
+INSERT INTO loonWatch_observation(lwObsEventId,lwObsTime,lwObsAdult,lwObsSubAdult,lwObsChick)
+	VALUES(1,'8:55',0,0,1);
 
 SELECT * FROM loonWatch_observation;
 

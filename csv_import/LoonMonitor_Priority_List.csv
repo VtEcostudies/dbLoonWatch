@@ -1,0 +1,158 @@
+lake,territory,town,method,lookFor,priority
+Abenaki,,Thetford,shore,loon activity,3
+Adamant,,Calais,shore,loon activity,3
+Adams Res.,,Woodford,state park,loon activity,3
+Amherst (Plymouth) ,,Plymouth,shore/boat,loon activity,2
+Arrowhead,,Milton,boat,loon activity,3
+Bean (Sutton),,Sutton,shore/boat,territory status,1
+Beaver,,Holland,hike,territory status,1
+Beebe (Hub),,Hubbarton,shore,loon activity,2
+Berlin,North,Berlin,boat/shore,territory status,1
+Berlin,South,Berlin,boat/shore,extra loon activity,2
+Big (Woodford Lake),,Woodford,shore,loon activity,3
+Bomoseen,,Castleton,boat,loon activity,2
+Bourn,,Sunderland,hike,territory status,1
+Branch,,Sunderland,hike/boat,territory status,1
+Brownington,,Brownington,boat/shore,territory status,1
+Buck,,Woodbury,shore/boat,territory status,1
+Burr,,Sudbury,shore,loon activity,2
+Carmi,,Franklin,shore,pair activity,2
+Caspian,,Greensboro,boat,extra loon activity,1
+Center,,Newark,boat/shore,pair activity,1
+Charleston (Charleston),,Charleston,shore,loon activity,3
+Chittenden,East,Chittenden,boat,territory status,1
+Chittenden,Northeast,Chittenden,boat,territory status,1
+Chittenden,West,Chittenden,boat,pair activity,2
+Clarks (Tildys),,Glover,shore,loon activity,2
+Clyde,,Derby,shore/boat,territory status,1
+Clyde River - Buck Flats,,Charleston,boat,territory status,1
+Coits,,Cabot,shore,pair activity,1
+Colby,,Plymouth,shore,loon activity,2
+Colchester,,Colchester,boat/shore,pair activity,1
+Comerford,,Waterford,boat,pair activity,2
+Crystal,,Barton,boat/shore,pair activity,2
+Curtis,,Calais,boat,territory status,1
+Daniels,,Glover,shore/boat,territory status,1
+Daniels - West (Rodgers),,Glover,shore,territory status,1
+Derby,,Derby,boat,territory status,1
+Dog (Valley),,Woodbury,boat,territory status,1
+Echo (Charleston),,Charleston,boat,territory status,1
+Echo (Hubbardton),,Hubbarton,shore,loon activity,3
+Echo (Plymouth),,Plymouth,shore/boat,loon activity,2
+Eden,,Eden,boat/shore,territory status,1
+Elligo,,Greensboro,boat/shore,territory status,1
+Elmore,,Elmore,boat/shore,territory status,1
+Emerald,,Dorset,shore,loon activity,3
+Ewell,,Peacham,boat/shore,territory status,1
+Fairfield ,,Fairfield,boat,territory status,1
+Fairlee,South,Fairlee,boat,extra loon activity,2
+Fern,,Leicester,boat/shore,pair activity,2
+Flagg,,Wheelock,boat,territory status,1
+Gale Meadows,,Londonderry,boat,pair activity,2
+Glen,,Fair Haven,boat,territory status,1
+Great Averill,,Averill,boat,territory status,1
+Great Hosmer,,Craftsbury,boat,territory status,1
+Green River,,Hyde Park,boat,territory status,1
+Grout,,Stratton,hike/boat,pair activity,2
+Halls,,Newbury,boat,territory status,1
+Hardwick,,Hardwick,boat,territory status,1
+Harriman,,Whitingham,boat,pair activity,1
+Hartland dam,,Hartland,boat,loon activity,3
+Harveys,,Barnet,boat,territory status,1
+Holland,,Holland,boat,territory status,1
+Hortonia,,Hubbarton,boat,pair activity,1
+Howe,,Readsboro,bushwhack,loon activity,2
+Indian Brook,,Essex,boat,loon activity,2
+Inman,,Fair Haven,hike,pair activity,1
+Island,,Brighton,boat,territory status,1
+Jobs,,Westmore,shore/boat,territory status,1
+Joe's - 1st pond,,Danville,boat/shore,territory status,1
+Keiser ,,Danville,shore/boat,territory status,1
+Kent,,Killington,boat/shore,territory status,1
+Kettle,,Peacham,hike/boat,territory status,1
+Knapp Br1,,Cavendish,boat/shore,territory status,1
+Knapp Br2,,Cavendish,boat/shore,loon activity,2
+Levi,,Groton,hike,loon activity,3
+Lewis,,Lewis,shore/boat,territory status,1
+Little (Wells),,Wells,boat/shore,loon activity,2
+Little Averill,,Averill,boat,territory status,1
+Little Hosmer,,Craftsbury,boat,territory status,1
+Little Salem,,Derby,shore/boat,loon activity,1
+Long (Greensboro),,Greensboro,hike,territory status,1
+Long (Sheffield),,Sheffield,hike,pair activity,1
+Lower Symes,,Ryegate,boat,territory status,1
+Lyford,,Walden,boat - carry in,territory status,1
+Maidstone,,Maidstone,boat,territory status,1
+Marshfield Pond (Turtlehead Pond),,Marshfield,boat - from outlet,pair activity,2
+May,,Barton,boat,territory status,1
+Memphremagog ,,Newport,boat,pair activity,2
+Mill,,Windsor,shore,loon activity,3
+Miller,,Strafford,boat,territory status,1
+Minards,,Rockingham,shore,loon activity,1
+Mollys,,Cabot,shore,territory status,1
+Mollys Falls,,Marshfield,boat,territory status,1
+Monkton (Cedar),,Monkton,boat/shore,loon activity,1
+Moore,,Waterford,boat,pair activity,2
+Morey,,Fairlee,boat/shore,pair activity,1
+Neal,,Lunenberg,boat,territory status,1
+Nelson,,Woodbury,shore/boat,pair activity,2
+North Springfield,,Springfield,shore,loon activity,3
+Notch,,Ferdinand,hike,loon activity,3
+Noyes,,Groton,shore,pair activity,2
+Nulhegan,,Brighton,boat,loon activity,3
+Old Marsh,,Fair Haven,shore/boat,territory status,1
+Osmore,,Groton,shore/boat,territory status,1
+Parker,,Glover,boat/shore,territory status,1
+Peacham,East,Peacham,boat,territory status,1
+Peacham,North,Peacham,boat,territory status,1
+Peacham,Southwest,Peacham,boat,territory status,1
+Pensioner,,Charleston,boat,territory status,1
+Perch (Benson),,Benson,shore,loon activity,3
+Rescue,,Ludlow,boat,pair activity,1
+Ricker,,Groton,boat,territory status,1
+Rood,,Williamstown,shore,loon activity,2
+Round (Holland),,Holland,hike,loon activity,3
+Round (Sheffield),,Sheffield,hike,loon activity,3
+Runnemede,,Windsor,shore,loon activity,3
+Sadawga,,Whitingham,boat/shore,loon activity,3
+Salem,,Derby,boat/shore,pair activity,2
+Seymour,,Morgan,boat,extra loon activity,2
+Shadow (Glover),,Glover,boat/shore,pair activity,2
+Shelburne,,Shelburne,boat,loon activity,3
+Sherman,,Readsboro,shore/boat,loon activity,1
+Silver (Barnard),,Barnard,boat/shore,pair activity,2
+Silver (Georgia/Farifax),,Georgia,hike,loon activity,3
+Silver (Leicester),,Leicester,shore,territory status,1
+Sodom,,Calais,shore,loon activity,3
+Somerset,,Somerset,boat,territory status,1
+South America,,Ferdinand,hike,loon activity,3
+South Bay,,Newport,boat,loon activity,3
+Spring,,Shrewsbury,boat/shore,territory status,1
+St. Catherine,North,Wells,boat,loon activity,1
+St. Catherine,South,Wells,boat,loon activity,1
+Stannard,,Stannard,hike,loon activity,3
+Stiles,,Waterford,shore,territory status,1
+Stoughton,,Weathersfield,shore,loon activity,3
+Stratton,,Stratton,hike,pair activity,2
+Sugar Hill Res.,,Goshen,shore/boat,territory status,1
+Sunrise (Benson),,Benson,shore,loon activity,2
+Sunset (Benson),,Benson,boat/shore,pair activity,1
+Sunset (Marlboro),,Marlboro,boat/shore,territory status,1
+Thurman Dix,,Orange,shore,territory status,1
+Ticklenaked,,Ryegate,shore/boat,territory status,1
+Tiny,,Plymouth,hike,loon activity,3
+Turtle ,,Holland,boat/shore,territory status,1
+Upper Symes,,Ryegate,boat,loon activity,3
+Wallace,,Canaan,boat/shore,pair activity,2
+Wallingford,,Wallingford,hike,territory status,1
+Waterbury Res,North,Waterbury,boat,territory status,1
+Waterbury Res,South,Waterbury,boat,pair activity,1
+West Hill,,Cabot,shore/boat,loon activity,1
+West Mountain,,Maidstone,hike,territory status,1
+Wheeler,,Brunswick,shore,loon activity,3
+Willoughby,,Westmore,boat/shore,pair activity,2
+Winona (Bristol),,Bristol,boat,loon activity,3
+Wolcott,,Wolcott,boat,territory status,1
+Woodbury,,Woodbury,boat,territory status,1
+Wrightsville,,Worcester,shore/boat,loon activity,3
+Zack Woods,,Hyde Park,shore/boat,territory status,1

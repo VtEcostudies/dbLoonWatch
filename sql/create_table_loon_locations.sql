@@ -20,7 +20,7 @@ ALTER TABLE vt_loon_locations ADD CONSTRAINT fk_waterbody_id FOREIGN KEY (waterB
 ALTER TABLE vt_loon_locations ADD COLUMN locationTownId integer;
 ALTER TABLE vt_loon_locations ADD CONSTRAINT fk_loon_location_town_id FOREIGN KEY (locationTownId) REFERENCES vt_town ("townId");
 
---fix incorrect town names in loon_locations
+--fix incorrect town names in vt_loon_locations
 update vt_loon_locations set locationTown='Hubbardton' where locationTown='Hubbarton';
 
 --set loon location townId from vt_town
@@ -41,6 +41,8 @@ update vt_town set "townAlias"=E'Avery\'s Gore' where "townName"='Averys Gore';
 
 --update locationName, trim leading & trailing whitespace
 update vt_loon_locations set locationName=TRIM(BOTH FROM locationName);
+--update Silver Lake in Barnard to have capitalized parenthetial townName
+update vt_loon_locations set locationName='Silver (Barnard)' where locationName='Silver (barnard)';
 
 -- fix loon location towns that are misspelled or incorrect
 update vt_loon_locations set locationTown='Townshend' where locationTown='Townsend';
@@ -54,6 +56,7 @@ update vt_loon_locations set locationTown='Newport City' where locationName='Sou
 --fix other loon locations whose towns are incorrect
 update vt_loon_locations set locationTown='Elmore' where locationName='Hardwood';
 update vt_loon_locations set locationTown='Eden' where locationName='South (Eden)';
+
 
 --update waterBodyId where loon locationName == waterBodyId and town == town
 update vt_loon_locations l
