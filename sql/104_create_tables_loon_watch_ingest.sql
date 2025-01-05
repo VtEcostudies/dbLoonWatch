@@ -1,5 +1,6 @@
+SET SEARCH_PATH TO loonWatch,public; --this makes table references use SEARCH_PATH to find the default schema
 
---create table loonwatch_ingest_backup as select * from loonWatch_ingest;
+--create table loonWatch_ingest_backup as select * from loonWatch_ingest;
 
 --drop table if exists loonWatch_ingest;
 
