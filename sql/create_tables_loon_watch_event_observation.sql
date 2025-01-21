@@ -13,7 +13,8 @@ create table if not exists loonWatch_event (
 	lwEventObserverCount INTEGER,
 	lwEventStart TIME WITHOUT TIME ZONE NOT NULL,
 	lwEventStop TIME WITHOUT TIME ZONE NOT NULL,
-	lwEventSketchUrl TEXT,
+	lwEventType TEXT,
+	--lwEventSketchUrl TEXT,
 	lwEventEagle TEXT,
 	lwEventOsprey TEXT,
 	lwEventOther TEXT
